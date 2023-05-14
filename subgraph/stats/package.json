@@ -1,0 +1,20 @@
+{
+  "name": "gmx",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "create-local": "graph create graphprotocol/stats --node http://127.0.0.1:8020",
+    "build": "graph build",
+    "deploy-prod": "graph deploy --product hosted-service gmx-io/gmx-avalanche-stats",
+    "deploy-test": "graph deploy --product hosted-service alphamatesdev/goerli-gmx-stats --deploy-key 8dd21550a2ca94ebc3402f70320a2a3c",
+    "deploy-local": "graph deploy graphprotocol/stats --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
+    "watch-local": "graph deploy graphprotocol/stats --watch --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.46.1",
+    "@graphprotocol/graph-ts": "0.29.3",
+    "ethers": "^5.4.6",
+    "moment": "^2.29.1",
+    "source-map-support": "^0.5.21"
+  }
+}

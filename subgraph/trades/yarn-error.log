@@ -1,0 +1,41 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\leech\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js cache clean
+
+PATH: 
+  C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\chocolatey\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\GnuWin32\bin;C:\Users\leech\.cargo\bin;C:\Users\leech\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\CMake\bin;C:\Program Files\LLVM\bin;E:\Sui\tools\protoc-21.9-win64\bin;C:\Program Files\Git\cmd;C:\Program Files\Go\bin;C:\TDM-GCC-64\bin;C:\Users\leech\.cargo\bin\;C:\Program Files\nodejs\;C:\Users\leech\.cargo\bin;C:\Users\leech\AppData\Local\Microsoft\WindowsApps;C:\Users\leech\AppData\Local\GitHubDesktop\bin;C:\Users\leech\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\leech\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\heroku\bin;C:\Users\leech\go\bin;C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin;C:\Users\leech\.cargo\bin;C:\Users\leech\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EBUSY: resource busy or locked, rmdir 'C:\Users\leech\AppData\Local\Yarn\Cache\v6\.tmp\635a589b19f877b340cadb07d216b623'
+
+npm manifest: 
+  {
+    "name": "gmx",
+    "license": "UNLICENSED",
+    "scripts": {
+      "codegen": "graph codegen",
+      "build": "graph build",
+      "deploy-prod": "graph deploy --product hosted-service gmx-io/gmx-avalanche-stats",
+      "deploy-test": "graph deploy --product hosted-service alphamatesdev/goerli-trades --deploy-key 8dd21550a2ca94ebc3402f70320a2a3c"
+    },
+    "dependencies": {
+      "@graphprotocol/graph-cli": "0.43.0",
+      "@graphprotocol/graph-ts": "0.29.3",
+      "ethers": "^5.4.6",
+      "moment": "^2.29.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
