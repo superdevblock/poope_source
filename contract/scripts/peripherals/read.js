@@ -61,8 +61,8 @@ async function readFeeConfig(vault) {
   console.log("vault.hasDynamicFees", (await vault.hasDynamicFees()).toString())
 }
 
-async function readBlpManager(blpManager) {
-  console.log("blpManager.cooldownDuration", (await blpManager.cooldownDuration()).toString())
+async function readPlpManager(plpManager) {
+  console.log("plpManager.cooldownDuration", (await plpManager.cooldownDuration()).toString())
 }
 
 async function getPool(tokenAddress0, tokenAddress1, fees) {
@@ -76,25 +76,25 @@ async function main() {
   // const vault = await contractAt("Vault", "0xDE3590067c811b6F023b557ed45E4f1067859663")
   // const weth = { address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1" }
   // const usdc = { address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8" }
-  // const blu = { address: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a" }
+  // const poope = { address: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a" }
   // const tokens = ["0x82aF49447D8a07e3bd95BD0d56f35241523fBab1", "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f"]
   // const usdgAmount = expandDecimals(1, 18)
-  // const blpManager = await contractAt("BlpManager", "0x91425Ac4431d068980d497924DD540Ae274f3270")
+  // const plpManager = await contractAt("PlpManager", "0x91425Ac4431d068980d497924DD540Ae274f3270")
 
-  // await readBlpManager(blpManager)
+  // await readPlpManager(plpManager)
 
   // await getPool(weth.address, usdc.address, 500)
-  // await getPool(weth.address, blu.address, 10000)
+  // await getPool(weth.address, poope.address, 10000)
 
   const vault = await contractAt("Vault", "0x489ee077994B6658eAfA855C308275EAd8097C4A")
-  const blpManager = await contractAt("BlpManager", "0x321F653eED006AD1C29D174e17d96351BDe22649")
+  const plpManager = await contractAt("PlpManager", "0x321F653eED006AD1C29D174e17d96351BDe22649")
   let startTime = Date.now()
   await vault.getMinPrice("0x82aF49447D8a07e3bd95BD0d56f35241523fBab1")
   console.log("vault.getMinPrice", Date.now() - startTime)
 
   startTime = Date.now()
-  await blpManager.getAums()
-  console.log("blpManager.getAums", Date.now() - startTime)
+  await plpManager.getAums()
+  console.log("plpManager.getAums", Date.now() - startTime)
 }
 
 main()

@@ -8,7 +8,7 @@ import "./interfaces/IHandlerTarget.sol";
 import "../access/interfaces/IAdmin.sol";
 import "../core/interfaces/IVault.sol";
 import "../core/interfaces/IVaultUtils.sol";
-import "../core/interfaces/IBlpManager.sol";
+import "../core/interfaces/IPlpManager.sol";
 import "../referrals/interfaces/IReferralStorage.sol";
 import "../tokens/interfaces/IYieldToken.sol";
 import "../tokens/interfaces/IBaseToken.sol";
@@ -32,7 +32,7 @@ contract Timelock is ITimelock {
 
     address public tokenManager;
     address public mintReceiver;
-    address public blpManager;
+    address public plpManager;
     uint256 public maxTokenSupply;
 
     uint256 public marginFeeBasisPoints;
@@ -89,7 +89,7 @@ contract Timelock is ITimelock {
         uint256 _buffer;
         address _tokenManager;
         address _mintReceiver;
-        address _blpManager;
+        address _plpManager;
         uint256 _maxTokenSupply;
         uint256 _marginFeeBasisPoints;
         uint256 _maxMarginFeeBasisPoints;
@@ -101,7 +101,7 @@ contract Timelock is ITimelock {
         buffer = params._buffer;
         tokenManager = params._tokenManager;
         mintReceiver = params._mintReceiver;
-        blpManager = params._blpManager;
+        plpManager = params._plpManager;
         maxTokenSupply = params._maxTokenSupply;
 
         marginFeeBasisPoints = params._marginFeeBasisPoints;
@@ -288,17 +288,17 @@ contract Timelock is ITimelock {
     }
 
     function updateUsdgSupply(uint256 usdgAmount) external onlyKeeperAndAbove {
-        address usdg = IBlpManager(blpManager).usdg();
-        uint256 balance = IERC20(usdg).balanceOf(blpManager);
+        address usdg = IPlpManager(plpManager).usdg();
+        uint256 balance = IERC20(usdg).balanceOf(plpManager);
 
         IUSDG(usdg).addVault(address(this));
 
         if (usdgAmount > balance) {
             uint256 mintAmount = usdgAmount.sub(balance);
-            IUSDG(usdg).mint(blpManager, mintAmount);
+            IUSDG(usdg).mint(plpManager, mintAmount);
         } else {
             uint256 burnAmount = balance.sub(usdgAmount);
-            IUSDG(usdg).burn(blpManager, burnAmount);
+            IUSDG(usdg).burn(plpManager, burnAmount);
         }
 
         IUSDG(usdg).removeVault(address(this));

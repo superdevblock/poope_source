@@ -53,8 +53,8 @@ async function main() {
   }
 
   const output = {
-    bluPrice: baseData.bluPrice,
-    esbluRewards: baseData.esbluRewards,
+    poopePrice: baseData.poopePrice,
+    espoopeRewards: baseData.espoopeRewards,
     fromTimestamp: baseData.fromTimestamp,
     toTimestamp: baseData.toTimestamp,
     network: baseData.network,
@@ -96,13 +96,13 @@ async function main() {
       baseTradesCount: x.tradesCount,
       otherTradesCount: y.tradesCount,
 
-      esbluRewards: BigNumber.from(x.esbluRewards || 0).sub(BigNumber.from(y.esbluRewards || 0)).toString(),
-      baseEsbluRewards: x.esbluRewards || 0,
-      otherEsbluRewards: y.esbluRewards || 0,
+      espoopeRewards: BigNumber.from(x.espoopeRewards || 0).sub(BigNumber.from(y.espoopeRewards || 0)).toString(),
+      baseEspoopeRewards: x.espoopeRewards || 0,
+      otherEspoopeRewards: y.espoopeRewards || 0,
 
-      esbluRewardsUsd: BigNumber.from(x.esbluRewardsUsd || 0).sub(BigNumber.from(y.esbluRewardsUsd || 0)).toString(),
-      baseEsbluRewardsUsd: x.esbluRewardsUsd,
-      otherEsbluRewardsUsd: y.esbluRewardsUsd,
+      espoopeRewardsUsd: BigNumber.from(x.espoopeRewardsUsd || 0).sub(BigNumber.from(y.espoopeRewardsUsd || 0)).toString(),
+      baseEspoopeRewardsUsd: x.espoopeRewardsUsd,
+      otherEspoopeRewardsUsd: y.espoopeRewardsUsd,
 
       tierId: x.tierId,
     }
@@ -128,8 +128,8 @@ async function main() {
 
   for (const [prop, precision] of [
     ['volume', 1e30],
-    ['esbluRewards', 1e18],
-    ['esbluRewardsUsd', 1e30],
+    ['espoopeRewards', 1e18],
+    ['espoopeRewardsUsd', 1e30],
     ['totalRebateUsd', 1e30],
   ]) {
     const capitalizedProp = prop[0].toUpperCase() + prop.slice(1)

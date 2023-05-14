@@ -14,15 +14,15 @@ async function main() {
   const list = LIST
   const usdc = await contractAt("Token", "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8", wallet)
   const usdcDecimals = 6
-  const blu = await contractAt("Token", "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a", wallet)
-  const bluDecimals = 18
+  const poope = await contractAt("Token", "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a", wallet)
+  const poopeDecimals = 18
   const shouldSendTxn = false
 
   const minCount = 0
   let count = 0
 
   let totalUsdc = bigNumberify(0)
-  let totalBlu = bigNumberify(0)
+  let totalPoope = bigNumberify(0)
 
   for (let i = 0; i < list.length; i++) {
     const item = list[i]
@@ -34,18 +34,18 @@ async function main() {
         await sendTxn(usdc.transfer(item.account, amount), `${count}: usdc.transfer(${item.account}, ${amount})`)
       }
     }
-    if (item.blu && parseFloat(item.blu) !== 0) {
+    if (item.poope && parseFloat(item.poope) !== 0) {
       count++
-      const amount = ethers.utils.parseUnits(item.blu, bluDecimals)
-      totalBlu = totalBlu.add(amount)
+      const amount = ethers.utils.parseUnits(item.poope, poopeDecimals)
+      totalPoope = totalPoope.add(amount)
       if (shouldSendTxn && count >= minCount) {
-        await sendTxn(blu.transfer(item.account, amount), `${count}: blu.transfer(${item.account}, ${amount})`)
+        await sendTxn(poope.transfer(item.account, amount), `${count}: poope.transfer(${item.account}, ${amount})`)
       }
     }
   }
 
   console.log("total USDC", ethers.utils.formatUnits(totalUsdc, usdcDecimals))
-  console.log("total BLU", ethers.utils.formatUnits(totalBlu, bluDecimals))
+  console.log("total POOPE", ethers.utils.formatUnits(totalPoope, poopeDecimals))
 }
 
 main()

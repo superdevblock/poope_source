@@ -5,40 +5,40 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-import "../core/interfaces/IBlpManager.sol";
+import "../core/interfaces/IPlpManager.sol";
 
 import "./interfaces/IRewardTracker.sol";
 import "./interfaces/IRewardTracker.sol";
 
-// provide a way to transfer staked BLP tokens by unstaking from the sender
+// provide a way to transfer staked PLP tokens by unstaking from the sender
 // and staking for the receiver
 // tests in RewardRouterV2.js
-contract StakedBlp {
+contract StakedPlp {
     using SafeMath for uint256;
 
-    string public constant name = "StakedBlp";
-    string public constant symbol = "sBLP";
+    string public constant name = "StakedPlp";
+    string public constant symbol = "sPLP";
     uint8 public constant decimals = 18;
 
-    address public blp;
-    IBlpManager public blpManager;
-    address public stakedBlpTracker;
-    address public feeBlpTracker;
+    address public plp;
+    IPlpManager public plpManager;
+    address public stakedPlpTracker;
+    address public feePlpTracker;
 
     mapping (address => mapping (address => uint256)) public allowances;
 
     event Approval(address indexed owner, address indexed spender, uint256 value);
 
     constructor(
-        address _blp,
-        IBlpManager _blpManager,
-        address _stakedBlpTracker,
-        address _feeBlpTracker
+        address _plp,
+        IPlpManager _plpManager,
+        address _stakedPlpTracker,
+        address _feePlpTracker
     ) {
-        blp = _blp;
-        blpManager = _blpManager;
-        stakedBlpTracker = _stakedBlpTracker;
-        feeBlpTracker = _feeBlpTracker;
+        plp = _plp;
+        plpManager = _plpManager;
+        stakedPlpTracker = _stakedPlpTracker;
+        feePlpTracker = _feePlpTracker;
     }
 
     function allowance(address _owner, address _spender) external view returns (uint256) {
@@ -56,23 +56,23 @@ contract StakedBlp {
     }
 
     function transferFrom(address _sender, address _recipient, uint256 _amount) external returns (bool) {
-        uint256 nextAllowance = allowances[_sender][msg.sender].sub(_amount, "StakedBlp: transfer amount exceeds allowance");
+        uint256 nextAllowance = allowances[_sender][msg.sender].sub(_amount, "StakedPlp: transfer amount exceeds allowance");
         _approve(_sender, msg.sender, nextAllowance);
         _transfer(_sender, _recipient, _amount);
         return true;
     }
 
     function balanceOf(address _account) external view returns (uint256) {
-        return IRewardTracker(feeBlpTracker).depositBalances(_account, blp);
+        return IRewardTracker(feePlpTracker).depositBalances(_account, plp);
     }
 
     function totalSupply() external view returns (uint256) {
-        return IERC20(stakedBlpTracker).totalSupply();
+        return IERC20(stakedPlpTracker).totalSupply();
     }
 
     function _approve(address _owner, address _spender, uint256 _amount) private {
-        require(_owner != address(0), "StakedBlp: approve from the zero address");
-        require(_spender != address(0), "StakedBlp: approve to the zero address");
+        require(_owner != address(0), "StakedPlp: approve from the zero address");
+        require(_spender != address(0), "StakedPlp: approve to the zero address");
 
         allowances[_owner][_spender] = _amount;
 
@@ -80,18 +80,18 @@ contract StakedBlp {
     }
 
     function _transfer(address _sender, address _recipient, uint256 _amount) private {
-        require(_sender != address(0), "StakedBlp: transfer from the zero address");
-        require(_recipient != address(0), "StakedBlp: transfer to the zero address");
+        require(_sender != address(0), "StakedPlp: transfer from the zero address");
+        require(_recipient != address(0), "StakedPlp: transfer to the zero address");
 
         require(
-            blpManager.lastAddedAt(_sender).add(blpManager.cooldownDuration()) <= block.timestamp,
-            "StakedBlp: cooldown duration not yet passed"
+            plpManager.lastAddedAt(_sender).add(plpManager.cooldownDuration()) <= block.timestamp,
+            "StakedPlp: cooldown duration not yet passed"
         );
 
-        IRewardTracker(stakedBlpTracker).unstakeForAccount(_sender, feeBlpTracker, _amount, _sender);
-        IRewardTracker(feeBlpTracker).unstakeForAccount(_sender, blp, _amount, _sender);
+        IRewardTracker(stakedPlpTracker).unstakeForAccount(_sender, feePlpTracker, _amount, _sender);
+        IRewardTracker(feePlpTracker).unstakeForAccount(_sender, plp, _amount, _sender);
 
-        IRewardTracker(feeBlpTracker).stakeForAccount(_sender, _recipient, blp, _amount);
-        IRewardTracker(stakedBlpTracker).stakeForAccount(_recipient, _recipient, feeBlpTracker, _amount);
+        IRewardTracker(feePlpTracker).stakeForAccount(_sender, _recipient, plp, _amount);
+        IRewardTracker(stakedPlpTracker).stakeForAccount(_recipient, _recipient, feePlpTracker, _amount);
     }
 }

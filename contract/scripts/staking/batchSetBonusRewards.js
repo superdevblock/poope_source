@@ -1,14 +1,14 @@
 const { getFrameSigner, deployContract, contractAt, sendTxn } = require("../shared/helpers")
 const { expandDecimals } = require("../../test/shared/utilities")
-const { DISTRIBUTION_LIST } = require("../../data/esBluDistribution/distributionList1")
+const { DISTRIBUTION_LIST } = require("../../data/esPoopeDistribution/distributionList1")
 
 async function main() {
   const signer = await getFrameSigner()
 
   const wallet = { address: "0x5F799f365Fa8A2B60ac0429C48B153cA5a6f0Cf8" }
   const timelock = await contractAt("Timelock", "0x3F3E77421E30271568eF7A0ab5c5F2667675341e", signer)
-  const esBlu = await contractAt("EsBLU", "0xf42Ae1D54fd613C9bb14810b0588FaAa09a426cA")
-  const blpVester = await contractAt("Vester", "0xA75287d2f8b217273E7FCD7E86eF07D33972042E")
+  const esPoope = await contractAt("EsPOOPE", "0xf42Ae1D54fd613C9bb14810b0588FaAa09a426cA")
+  const plpVester = await contractAt("Vester", "0xA75287d2f8b217273E7FCD7E86eF07D33972042E")
   const distributionList = DISTRIBUTION_LIST
 
   const batchSize = 30
@@ -24,7 +24,7 @@ async function main() {
       console.log("accounts", accounts)
       console.log("amounts", amounts.map(amount => amount.toString()))
       console.log("sending batch", i, accounts.length, amounts.length)
-      await sendTxn(timelock.batchSetBonusRewards(blpVester.address,  accounts, amounts), "timelock.batchSetBonusRewards")
+      await sendTxn(timelock.batchSetBonusRewards(plpVester.address,  accounts, amounts), "timelock.batchSetBonusRewards")
 
       accounts = []
       amounts = []
@@ -33,7 +33,7 @@ async function main() {
 
   if (accounts.length > 0) {
     console.log("sending final batch", distributionList.length, accounts.length, amounts.length)
-    await sendTxn(timelock.batchSetBonusRewards(blpVester.address,  accounts, amounts), "timelock.batchSetBonusRewards")
+    await sendTxn(timelock.batchSetBonusRewards(plpVester.address,  accounts, amounts), "timelock.batchSetBonusRewards")
   }
 }
 

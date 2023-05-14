@@ -21,7 +21,7 @@ function sleep(ms) {
 
 async function getArbValues() {
   return {
-    serverHost: "https://blu-server-mainnet.uw.r.appspot.com",
+    serverHost: "https://poope-server-mainnet.uw.r.appspot.com",
     serverAdminApiKey: ARBITRUM_SERVER_ADMIN_API_KEY,
     vaultAddress: "0x489ee077994b6658eafa855c308275ead8097c4a",
     shortsTrackerAddress: "0xf58eEc83Ba28ddd79390B9e90C4d3EbfF1d434da",
@@ -37,7 +37,7 @@ async function getArbValues() {
 
 async function getAvaxValues() {
   return {
-    serverHost: "https://blu-avax-server.uc.r.appspot.com",
+    serverHost: "https://poope-avax-server.uc.r.appspot.com",
     // serverHost: "http://localhost:8080",
     serverAdminApiKey: AVAX_SERVER_ADMIN_API_KEY,
     vaultAddress: "0x9ab2de34a33fb459b538c43f251eb825645e8595",

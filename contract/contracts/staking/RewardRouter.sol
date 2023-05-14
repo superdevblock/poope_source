@@ -11,7 +11,7 @@ import "@openzeppelin/contracts/utils/Address.sol";
 import "./interfaces/IRewardTracker.sol";
 import "../tokens/interfaces/IMintable.sol";
 import "../tokens/interfaces/IWETH.sol";
-import "../core/interfaces/IBlpManager.sol";
+import "../core/interfaces/IPlpManager.sol";
 import "../access/Governable.sol";
 
 contract RewardRouter is ReentrancyGuard, Governable {
@@ -23,26 +23,26 @@ contract RewardRouter is ReentrancyGuard, Governable {
 
     address public weth;
 
-    address public blu;
-    address public esBlu;
-    address public bnBlu;
+    address public poope;
+    address public esPoope;
+    address public bnPoope;
 
-    address public blp; // BLU Liquidity Provider token
+    address public plp; // POOPE Liquidity Provider token
 
-    address public stakedBluTracker;
-    address public bonusBluTracker;
-    address public feeBluTracker;
+    address public stakedPoopeTracker;
+    address public bonusPoopeTracker;
+    address public feePoopeTracker;
 
-    address public stakedBlpTracker;
-    address public feeBlpTracker;
+    address public stakedPlpTracker;
+    address public feePlpTracker;
 
-    address public blpManager;
+    address public plpManager;
 
-    event StakeBlu(address account, uint256 amount);
-    event UnstakeBlu(address account, uint256 amount);
+    event StakePoope(address account, uint256 amount);
+    event UnstakePoope(address account, uint256 amount);
 
-    event StakeBlp(address account, uint256 amount);
-    event UnstakeBlp(address account, uint256 amount);
+    event StakePlp(address account, uint256 amount);
+    event UnstakePlp(address account, uint256 amount);
 
     receive() external payable {
         require(msg.sender == weth, "Router: invalid sender");
@@ -50,16 +50,16 @@ contract RewardRouter is ReentrancyGuard, Governable {
 
     struct initParams {
         address _weth;
-        address _blu;
-        address _esBlu;
-        address _bnBlu;
-        address _blp;
-        address _stakedBluTracker;
-        address _bonusBluTracker;
-        address _feeBluTracker;
-        address _feeBlpTracker;
-        address _stakedBlpTracker;
-        address _blpManager;
+        address _poope;
+        address _esPoope;
+        address _bnPoope;
+        address _plp;
+        address _stakedPoopeTracker;
+        address _bonusPoopeTracker;
+        address _feePoopeTracker;
+        address _feePlpTracker;
+        address _stakedPlpTracker;
+        address _plpManager;
     }
 
     function initialize(initParams memory params) external onlyGov {
@@ -68,20 +68,20 @@ contract RewardRouter is ReentrancyGuard, Governable {
 
         weth = params._weth;
 
-        blu = params._blu;
-        esBlu = params._esBlu;
-        bnBlu = params._bnBlu;
+        poope = params._poope;
+        esPoope = params._esPoope;
+        bnPoope = params._bnPoope;
 
-        blp = params._blp;
+        plp = params._plp;
 
-        stakedBluTracker = params._stakedBluTracker;
-        bonusBluTracker = params._bonusBluTracker;
-        feeBluTracker = params._feeBluTracker;
+        stakedPoopeTracker = params._stakedPoopeTracker;
+        bonusPoopeTracker = params._bonusPoopeTracker;
+        feePoopeTracker = params._feePoopeTracker;
 
-        feeBlpTracker = params._feeBlpTracker;
-        stakedBlpTracker = params._stakedBlpTracker;
+        feePlpTracker = params._feePlpTracker;
+        stakedPlpTracker = params._stakedPlpTracker;
 
-        blpManager = params._blpManager;
+        plpManager = params._plpManager;
     }
 
     // to help users who accidentally send their tokens to this contract
@@ -89,89 +89,89 @@ contract RewardRouter is ReentrancyGuard, Governable {
         IERC20(_token).safeTransfer(_account, _amount);
     }
 
-    function batchStakeBluForAccount(address[] memory _accounts, uint256[] memory _amounts) external nonReentrant onlyGov {
-        address _blu = blu;
+    function batchStakePoopeForAccount(address[] memory _accounts, uint256[] memory _amounts) external nonReentrant onlyGov {
+        address _poope = poope;
         for (uint256 i = 0; i < _accounts.length; i++) {
-            _stakeBlu(msg.sender, _accounts[i], _blu, _amounts[i]);
+            _stakePoope(msg.sender, _accounts[i], _poope, _amounts[i]);
         }
     }
 
-    function stakeBluForAccount(address _account, uint256 _amount) external nonReentrant onlyGov {
-        _stakeBlu(msg.sender, _account, blu, _amount);
+    function stakePoopeForAccount(address _account, uint256 _amount) external nonReentrant onlyGov {
+        _stakePoope(msg.sender, _account, poope, _amount);
     }
 
-    function stakeBlu(uint256 _amount) external nonReentrant {
-        _stakeBlu(msg.sender, msg.sender, blu, _amount);
+    function stakePoope(uint256 _amount) external nonReentrant {
+        _stakePoope(msg.sender, msg.sender, poope, _amount);
     }
 
-    function stakeEsBlu(uint256 _amount) external nonReentrant {
-        _stakeBlu(msg.sender, msg.sender, esBlu, _amount);
+    function stakeEsPoope(uint256 _amount) external nonReentrant {
+        _stakePoope(msg.sender, msg.sender, esPoope, _amount);
     }
 
-    function unstakeBlu(uint256 _amount) external nonReentrant {
-        _unstakeBlu(msg.sender, blu, _amount);
+    function unstakePoope(uint256 _amount) external nonReentrant {
+        _unstakePoope(msg.sender, poope, _amount);
     }
 
-    function unstakeEsBlu(uint256 _amount) external nonReentrant {
-        _unstakeBlu(msg.sender, esBlu, _amount);
+    function unstakeEsPoope(uint256 _amount) external nonReentrant {
+        _unstakePoope(msg.sender, esPoope, _amount);
     }
 
-    function mintAndStakeBlp(address _token, uint256 _amount, uint256 _minUsdg, uint256 _minBlp) external nonReentrant returns (uint256) {
+    function mintAndStakePlp(address _token, uint256 _amount, uint256 _minUsdg, uint256 _minPlp) external nonReentrant returns (uint256) {
         require(_amount > 0, "RewardRouter: invalid _amount");
 
         address account = msg.sender;
-        uint256 blpAmount = IBlpManager(blpManager).addLiquidityForAccount(account, account, _token, _amount, _minUsdg, _minBlp);
-        IRewardTracker(feeBlpTracker).stakeForAccount(account, account, blp, blpAmount);
-        IRewardTracker(stakedBlpTracker).stakeForAccount(account, account, feeBlpTracker, blpAmount);
+        uint256 plpAmount = IPlpManager(plpManager).addLiquidityForAccount(account, account, _token, _amount, _minUsdg, _minPlp);
+        IRewardTracker(feePlpTracker).stakeForAccount(account, account, plp, plpAmount);
+        IRewardTracker(stakedPlpTracker).stakeForAccount(account, account, feePlpTracker, plpAmount);
 
-        emit StakeBlp(account, blpAmount);
+        emit StakePlp(account, plpAmount);
 
-        return blpAmount;
+        return plpAmount;
     }
 
-    function mintAndStakeBlpETH(uint256 _minUsdg, uint256 _minBlp) external payable nonReentrant returns (uint256) {
+    function mintAndStakePlpETH(uint256 _minUsdg, uint256 _minPlp) external payable nonReentrant returns (uint256) {
         require(msg.value > 0, "RewardRouter: invalid msg.value");
 
         IWETH(weth).deposit{value: msg.value}();
-        IERC20(weth).approve(blpManager, msg.value);
+        IERC20(weth).approve(plpManager, msg.value);
 
         address account = msg.sender;
-        uint256 blpAmount = IBlpManager(blpManager).addLiquidityForAccount(address(this), account, weth, msg.value, _minUsdg, _minBlp);
+        uint256 plpAmount = IPlpManager(plpManager).addLiquidityForAccount(address(this), account, weth, msg.value, _minUsdg, _minPlp);
 
-        IRewardTracker(feeBlpTracker).stakeForAccount(account, account, blp, blpAmount);
-        IRewardTracker(stakedBlpTracker).stakeForAccount(account, account, feeBlpTracker, blpAmount);
+        IRewardTracker(feePlpTracker).stakeForAccount(account, account, plp, plpAmount);
+        IRewardTracker(stakedPlpTracker).stakeForAccount(account, account, feePlpTracker, plpAmount);
 
-        emit StakeBlp(account, blpAmount);
+        emit StakePlp(account, plpAmount);
 
-        return blpAmount;
+        return plpAmount;
     }
 
-    function unstakeAndRedeemBlp(address _tokenOut, uint256 _blpAmount, uint256 _minOut, address _receiver) external nonReentrant returns (uint256) {
-        require(_blpAmount > 0, "RewardRouter: invalid _blpAmount");
+    function unstakeAndRedeemPlp(address _tokenOut, uint256 _plpAmount, uint256 _minOut, address _receiver) external nonReentrant returns (uint256) {
+        require(_plpAmount > 0, "RewardRouter: invalid _plpAmount");
 
         address account = msg.sender;
-        IRewardTracker(stakedBlpTracker).unstakeForAccount(account, feeBlpTracker, _blpAmount, account);
-        IRewardTracker(feeBlpTracker).unstakeForAccount(account, blp, _blpAmount, account);
-        uint256 amountOut = IBlpManager(blpManager).removeLiquidityForAccount(account, _tokenOut, _blpAmount, _minOut, _receiver);
+        IRewardTracker(stakedPlpTracker).unstakeForAccount(account, feePlpTracker, _plpAmount, account);
+        IRewardTracker(feePlpTracker).unstakeForAccount(account, plp, _plpAmount, account);
+        uint256 amountOut = IPlpManager(plpManager).removeLiquidityForAccount(account, _tokenOut, _plpAmount, _minOut, _receiver);
 
-        emit UnstakeBlp(account, _blpAmount);
+        emit UnstakePlp(account, _plpAmount);
 
         return amountOut;
     }
 
-    function unstakeAndRedeemBlpETH(uint256 _blpAmount, uint256 _minOut, address payable _receiver) external nonReentrant returns (uint256) {
-        require(_blpAmount > 0, "RewardRouter: invalid _blpAmount");
+    function unstakeAndRedeemPlpETH(uint256 _plpAmount, uint256 _minOut, address payable _receiver) external nonReentrant returns (uint256) {
+        require(_plpAmount > 0, "RewardRouter: invalid _plpAmount");
 
         address account = msg.sender;
-        IRewardTracker(stakedBlpTracker).unstakeForAccount(account, feeBlpTracker, _blpAmount, account);
-        IRewardTracker(feeBlpTracker).unstakeForAccount(account, blp, _blpAmount, account);
-        uint256 amountOut = IBlpManager(blpManager).removeLiquidityForAccount(account, weth, _blpAmount, _minOut, address(this));
+        IRewardTracker(stakedPlpTracker).unstakeForAccount(account, feePlpTracker, _plpAmount, account);
+        IRewardTracker(feePlpTracker).unstakeForAccount(account, plp, _plpAmount, account);
+        uint256 amountOut = IPlpManager(plpManager).removeLiquidityForAccount(account, weth, _plpAmount, _minOut, address(this));
 
         IWETH(weth).withdraw(amountOut);
 
         _receiver.sendValue(amountOut);
 
-        emit UnstakeBlp(account, _blpAmount);
+        emit UnstakePlp(account, _plpAmount);
 
         return amountOut;
     }
@@ -179,25 +179,25 @@ contract RewardRouter is ReentrancyGuard, Governable {
     function claim() external nonReentrant {
         address account = msg.sender;
 
-        IRewardTracker(feeBluTracker).claimForAccount(account, account);
-        IRewardTracker(feeBlpTracker).claimForAccount(account, account);
+        IRewardTracker(feePoopeTracker).claimForAccount(account, account);
+        IRewardTracker(feePlpTracker).claimForAccount(account, account);
 
-        IRewardTracker(stakedBluTracker).claimForAccount(account, account);
-        IRewardTracker(stakedBlpTracker).claimForAccount(account, account);
+        IRewardTracker(stakedPoopeTracker).claimForAccount(account, account);
+        IRewardTracker(stakedPlpTracker).claimForAccount(account, account);
     }
 
-    function claimEsBlu() external nonReentrant {
+    function claimEsPoope() external nonReentrant {
         address account = msg.sender;
 
-        IRewardTracker(stakedBluTracker).claimForAccount(account, account);
-        IRewardTracker(stakedBlpTracker).claimForAccount(account, account);
+        IRewardTracker(stakedPoopeTracker).claimForAccount(account, account);
+        IRewardTracker(stakedPlpTracker).claimForAccount(account, account);
     }
 
     function claimFees() external nonReentrant {
         address account = msg.sender;
 
-        IRewardTracker(feeBluTracker).claimForAccount(account, account);
-        IRewardTracker(feeBlpTracker).claimForAccount(account, account);
+        IRewardTracker(feePoopeTracker).claimForAccount(account, account);
+        IRewardTracker(feePlpTracker).claimForAccount(account, account);
     }
 
     function compound() external nonReentrant {
@@ -215,60 +215,60 @@ contract RewardRouter is ReentrancyGuard, Governable {
     }
 
     function _compound(address _account) private {
-        _compoundBlu(_account);
-        _compoundBlp(_account);
+        _compoundPoope(_account);
+        _compoundPlp(_account);
     }
 
-    function _compoundBlu(address _account) private {
-        uint256 esBluAmount = IRewardTracker(stakedBluTracker).claimForAccount(_account, _account);
-        if (esBluAmount > 0) {
-            _stakeBlu(_account, _account, esBlu, esBluAmount);
+    function _compoundPoope(address _account) private {
+        uint256 esPoopeAmount = IRewardTracker(stakedPoopeTracker).claimForAccount(_account, _account);
+        if (esPoopeAmount > 0) {
+            _stakePoope(_account, _account, esPoope, esPoopeAmount);
         }
 
-        uint256 bnBluAmount = IRewardTracker(bonusBluTracker).claimForAccount(_account, _account);
-        if (bnBluAmount > 0) {
-            IRewardTracker(feeBluTracker).stakeForAccount(_account, _account, bnBlu, bnBluAmount);
-        }
-    }
-
-    function _compoundBlp(address _account) private {
-        uint256 esBluAmount = IRewardTracker(stakedBlpTracker).claimForAccount(_account, _account);
-        if (esBluAmount > 0) {
-            _stakeBlu(_account, _account, esBlu, esBluAmount);
+        uint256 bnPoopeAmount = IRewardTracker(bonusPoopeTracker).claimForAccount(_account, _account);
+        if (bnPoopeAmount > 0) {
+            IRewardTracker(feePoopeTracker).stakeForAccount(_account, _account, bnPoope, bnPoopeAmount);
         }
     }
 
-    function _stakeBlu(address _fundingAccount, address _account, address _token, uint256 _amount) private {
+    function _compoundPlp(address _account) private {
+        uint256 esPoopeAmount = IRewardTracker(stakedPlpTracker).claimForAccount(_account, _account);
+        if (esPoopeAmount > 0) {
+            _stakePoope(_account, _account, esPoope, esPoopeAmount);
+        }
+    }
+
+    function _stakePoope(address _fundingAccount, address _account, address _token, uint256 _amount) private {
         require(_amount > 0, "RewardRouter: invalid _amount");
 
-        IRewardTracker(stakedBluTracker).stakeForAccount(_fundingAccount, _account, _token, _amount);
-        IRewardTracker(bonusBluTracker).stakeForAccount(_account, _account, stakedBluTracker, _amount);
-        IRewardTracker(feeBluTracker).stakeForAccount(_account, _account, bonusBluTracker, _amount);
+        IRewardTracker(stakedPoopeTracker).stakeForAccount(_fundingAccount, _account, _token, _amount);
+        IRewardTracker(bonusPoopeTracker).stakeForAccount(_account, _account, stakedPoopeTracker, _amount);
+        IRewardTracker(feePoopeTracker).stakeForAccount(_account, _account, bonusPoopeTracker, _amount);
 
-        emit StakeBlu(_account, _amount);
+        emit StakePoope(_account, _amount);
     }
 
-    function _unstakeBlu(address _account, address _token, uint256 _amount) private {
+    function _unstakePoope(address _account, address _token, uint256 _amount) private {
         require(_amount > 0, "RewardRouter: invalid _amount");
 
-        uint256 balance = IRewardTracker(stakedBluTracker).stakedAmounts(_account);
+        uint256 balance = IRewardTracker(stakedPoopeTracker).stakedAmounts(_account);
 
-        IRewardTracker(feeBluTracker).unstakeForAccount(_account, bonusBluTracker, _amount, _account);
-        IRewardTracker(bonusBluTracker).unstakeForAccount(_account, stakedBluTracker, _amount, _account);
-        IRewardTracker(stakedBluTracker).unstakeForAccount(_account, _token, _amount, _account);
+        IRewardTracker(feePoopeTracker).unstakeForAccount(_account, bonusPoopeTracker, _amount, _account);
+        IRewardTracker(bonusPoopeTracker).unstakeForAccount(_account, stakedPoopeTracker, _amount, _account);
+        IRewardTracker(stakedPoopeTracker).unstakeForAccount(_account, _token, _amount, _account);
 
-        uint256 bnBluAmount = IRewardTracker(bonusBluTracker).claimForAccount(_account, _account);
-        if (bnBluAmount > 0) {
-            IRewardTracker(feeBluTracker).stakeForAccount(_account, _account, bnBlu, bnBluAmount);
+        uint256 bnPoopeAmount = IRewardTracker(bonusPoopeTracker).claimForAccount(_account, _account);
+        if (bnPoopeAmount > 0) {
+            IRewardTracker(feePoopeTracker).stakeForAccount(_account, _account, bnPoope, bnPoopeAmount);
         }
 
-        uint256 stakedBnBlu = IRewardTracker(feeBluTracker).depositBalances(_account, bnBlu);
-        if (stakedBnBlu > 0) {
-            uint256 reductionAmount = stakedBnBlu.mul(_amount).div(balance);
-            IRewardTracker(feeBluTracker).unstakeForAccount(_account, bnBlu, reductionAmount, _account);
-            IMintable(bnBlu).burn(_account, reductionAmount);
+        uint256 stakedBnPoope = IRewardTracker(feePoopeTracker).depositBalances(_account, bnPoope);
+        if (stakedBnPoope > 0) {
+            uint256 reductionAmount = stakedBnPoope.mul(_amount).div(balance);
+            IRewardTracker(feePoopeTracker).unstakeForAccount(_account, bnPoope, reductionAmount, _account);
+            IMintable(bnPoope).burn(_account, reductionAmount);
         }
 
-        emit UnstakeBlu(_account, _amount);
+        emit UnstakePoope(_account, _amount);
     }
 }

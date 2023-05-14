@@ -4,16 +4,16 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 const { ArgumentParser } = require('argparse');
 const ethers = require('ethers')
 
-const ARBITRUM_SUBGRAPH_ENDPOINT = 'https://api.thegraph.com/subgraphs/name/blu-io/blu-arbitrum-referrals'
-const AVALANCHE_SUBGRAPH_ENDPOINT = 'https://api.thegraph.com/subgraphs/name/blu-io/blu-avalanche-referrals'
-const CRONOS_SUBGRAPH_ENDPOINT = 'https://graph-node.bluespade.xyz/subgraphs/name/graphprotocol/referrals'
+const ARBITRUM_SUBGRAPH_ENDPOINT = 'https://api.thegraph.com/subgraphs/name/poope-io/poope-arbitrum-referrals'
+const AVALANCHE_SUBGRAPH_ENDPOINT = 'https://api.thegraph.com/subgraphs/name/poope-io/poope-avalanche-referrals'
+const CRONOS_SUBGRAPH_ENDPOINT = 'https://graph-node.poopeespade.xyz/subgraphs/name/graphprotocol/referrals'
 
 const BigNumber = ethers.BigNumber
 const { formatUnits, parseUnits } = ethers.utils
 const SHARE_DIVISOR = BigNumber.from("1000000000") // 1e9
-const BONUS_TIER = 2 // for EsBLU distributions
+const BONUS_TIER = 2 // for EsPOOPE distributions
 const USD_DECIMALS = 30
-const BLU_DECIMALS = 18
+const POOPE_DECIMALS = 18
 
 function stringToFixed(s, n) {
   return Number(s).toFixed(n)
@@ -71,12 +71,12 @@ async function getReferrersTiers(network) {
   }, {})
 }
 
-async function queryDistributionData(network, fromTimestamp, toTimestamp, account, bluPrice, esbluRewards) {
-  if (bluPrice) {
-    bluPrice = parseUnits(bluPrice, USD_DECIMALS)
+async function queryDistributionData(network, fromTimestamp, toTimestamp, account, poopePrice, espoopeRewards) {
+  if (poopePrice) {
+    poopePrice = parseUnits(poopePrice, USD_DECIMALS)
   }
-  if (esbluRewards) {
-    esbluRewards = parseUnits(esbluRewards, BLU_DECIMALS)
+  if (espoopeRewards) {
+    espoopeRewards = parseUnits(espoopeRewards, POOPE_DECIMALS)
   }
   let referrerCondition = ""
   let referralCondition = ""
@@ -202,30 +202,30 @@ async function queryDistributionData(network, fromTimestamp, toTimestamp, accoun
     data.allReferrersRebateUsd = allReferrersRebateUsd
     data.account = account
     data.share = data.rebateUsd.mul(SHARE_DIVISOR).div(allReferrersRebateUsd)
-    data.esbluUsd
+    data.espoopeUsd
   })
-  if (bluPrice && esbluRewards) {
-    const esbluRewardsUsdLimit = esbluRewards.mul(bluPrice).div(expandDecimals(1, BLU_DECIMALS))
-    let esbluRewardsUsdTotal = BigNumber.from(0)
+  if (poopePrice && espoopeRewards) {
+    const espoopeRewardsUsdLimit = espoopeRewards.mul(poopePrice).div(expandDecimals(1, POOPE_DECIMALS))
+    let espoopeRewardsUsdTotal = BigNumber.from(0)
     Object.values(referrersRebatesData).forEach(data => {
       if (data.tierId !== BONUS_TIER) {
         return
       }
-      data.esbluRewardsUsd = data.volume.div(1000).div(20) // 0.1% margin fee, 0.05% of fee is EsBLU bonus rewards
-      data.esbluRewards = data.esbluRewardsUsd
+      data.espoopeRewardsUsd = data.volume.div(1000).div(20) // 0.1% margin fee, 0.05% of fee is EsPOOPE bonus rewards
+      data.espoopeRewards = data.espoopeRewardsUsd
         .mul(expandDecimals(1, USD_DECIMALS))
-        .div(bluPrice)
+        .div(poopePrice)
         .div(expandDecimals(1, 12))
-      esbluRewardsUsdTotal = esbluRewardsUsdTotal.add(data.esbluRewardsUsd)
+      espoopeRewardsUsdTotal = espoopeRewardsUsdTotal.add(data.espoopeRewardsUsd)
     })
 
-    if (esbluRewardsUsdTotal.gt(esbluRewardsUsdLimit)) {
-      const denominator = esbluRewardsUsdTotal.mul(USD_DECIMALS).div(esbluRewardsUsdLimit)
+    if (espoopeRewardsUsdTotal.gt(espoopeRewardsUsdLimit)) {
+      const denominator = espoopeRewardsUsdTotal.mul(USD_DECIMALS).div(espoopeRewardsUsdLimit)
       Object.values(referrersRebatesData).forEach(data => {
-        data.esbluRewardsUsd = data.esbluRewardsUsd.mul(USD_DECIMALS).div(denominator)
-        data.esbluRewards = data.esbluRewardsUsd
+        data.espoopeRewardsUsd = data.espoopeRewardsUsd.mul(USD_DECIMALS).div(denominator)
+        data.espoopeRewards = data.espoopeRewardsUsd
           .mul(expandDecimals(1, USD_DECIMALS))
-          .div(bluPrice)
+          .div(poopePrice)
           .div(expandDecimals(1, 12))
       })
     }
@@ -240,8 +240,8 @@ async function queryDistributionData(network, fromTimestamp, toTimestamp, accoun
     shareDivisor: SHARE_DIVISOR.toString(),
     referrers: [],
     referrals: [],
-    bluPrice,
-    esbluRewards
+    poopePrice,
+    espoopeRewards
   }
   console.log("\nTotal referral volume: %s ($%s)",
     totalReferralVolume.toString(),
@@ -273,8 +273,8 @@ async function queryDistributionData(network, fromTimestamp, toTimestamp, accoun
       "rebateUsd, $": stringToFixed(formatUnits(data.rebateUsd, USD_DECIMALS), 4),
       trades: data.tradesCount,
       tierId: data.tierId,
-      "esbluRewards, $": data.esbluRewardsUsd ? formatUnits(data.esbluRewardsUsd, USD_DECIMALS) : null,
-      esbluRewards: data.esbluRewards ? formatUnits(data.esbluRewards, BLU_DECIMALS) : null,
+      "espoopeRewards, $": data.espoopeRewardsUsd ? formatUnits(data.espoopeRewardsUsd, USD_DECIMALS) : null,
+      espoopeRewards: data.espoopeRewards ? formatUnits(data.espoopeRewards, POOPE_DECIMALS) : null,
     })
     output.referrers.push({
       account: data.account,
@@ -284,8 +284,8 @@ async function queryDistributionData(network, fromTimestamp, toTimestamp, accoun
       rebateUsd: data.rebateUsd.toString(),
       totalRebateUsd: data.totalRebateUsd.toString(),
       tierId: data.tierId,
-      esbluRewards: data.esbluRewards ? data.esbluRewards.toString() : null,
-      esbluRewardsUsd: data.esbluRewardsUsd ? data.esbluRewardsUsd.toString() : null,
+      espoopeRewards: data.espoopeRewards ? data.espoopeRewards.toString() : null,
+      espoopeRewardsUsd: data.espoopeRewardsUsd ? data.espoopeRewardsUsd.toString() : null,
     })
   }
   console.table(consoleData)
@@ -355,9 +355,9 @@ async function main() {
     default: "2022-04-27"
   });
   parser.add_argument('-a', '--0x16970d8Fb91d6B54b0b825DFB3B46908a12602d3', { help: 'Account address' })
-  parser.add_argument('-g', '--blu-price', { help: 'BLU TWAP price' })
+  parser.add_argument('-g', '--poope-price', { help: 'POOPE TWAP price' })
   parser.add_argument('-e', '--5000', {
-    help: 'Amount of EsBLU to distribute to Tier 3',
+    help: 'Amount of EsPOOPE to distribute to Tier 3',
     default: "5000"
   })
 
@@ -381,8 +381,8 @@ async function main() {
     fromTimestamp,
     toTimestamp,
     args.account,
-    args.blu_price,
-    args.esblu_rewards
+    args.poope_price,
+    args.espoope_rewards
   )
 }
 

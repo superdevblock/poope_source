@@ -24,16 +24,16 @@ async function main() {
   // await sendTxn(vaultPriceFeed.setPriceSampleSpace(1), "vaultPriceFeed.setPriceSampleSpace")
   // await sendTxn(vaultPriceFeed.setIsAmmEnabled(false), "vaultPriceFeed.setIsAmmEnabled")
 
-  const blp = await deployContract("BLP", [])
-  // const blp = await contractAt("BLP", "0x3712329C2bb19Bb8FFf501fdCa96c8CFba010348")
-  await sendTxn(blp.setInPrivateTransferMode(true), "blp.setInPrivateTransferMode")
+  const plp = await deployContract("PLP", [])
+  // const plp = await contractAt("PLP", "0x3712329C2bb19Bb8FFf501fdCa96c8CFba010348")
+  await sendTxn(plp.setInPrivateTransferMode(true), "plp.setInPrivateTransferMode")
 
-  const blpManager = await deployContract("BlpManager", [vault.address, usdg.address, blp.address, 15 * 60])
-  // const blpManager = await contractAt("BlpManager", "0xDe25a87529bcD43465086b6c8EB77e9B486f29Ee")
+  const plpManager = await deployContract("PlpManager", [vault.address, usdg.address, plp.address, 15 * 60])
+  // const plpManager = await contractAt("PlpManager", "0xDe25a87529bcD43465086b6c8EB77e9B486f29Ee")
 
-  await sendTxn(blpManager.setInPrivateMode(true), "blpManager.setInPrivateMode")
-  await sendTxn(blp.setMinter(blpManager.address, true), "blp.setMinter")
-  await sendTxn(usdg.addVault(blpManager.address), "usdg.addVault(blpManager)")
+  await sendTxn(plpManager.setInPrivateMode(true), "plpManager.setInPrivateMode")
+  await sendTxn(plp.setMinter(plpManager.address, true), "plp.setMinter")
+  await sendTxn(usdg.addVault(plpManager.address), "usdg.addVault(plpManager)")
 
   await sendTxn(vault.initialize(
     router.address, // router
@@ -47,7 +47,7 @@ async function main() {
   await sendTxn(vault.setFundingRate(60 * 60, 100, 100), "vault.setFundingRate")
 
   await sendTxn(vault.setInManagerMode(true), "vault.setInManagerMode")
-  await sendTxn(vault.setManager(blpManager.address, true), "vault.setManager")
+  await sendTxn(vault.setManager(plpManager.address, true), "vault.setManager")
 
   await sendTxn(vault.setFees(
     10, // _taxBasisPoints

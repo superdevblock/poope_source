@@ -53,7 +53,7 @@ async function getFeesUsd(vault, reader, tokenInfo) {
   return feesUsd
 }
 
-async function getBluPrice(ethPrice) {
+async function getPoopePrice(ethPrice) {
   const uniPool = await contractAt("UniPool", "0x80A9ae39310abf666A87C743d6ebBD0E8C42158E")
   const uniPoolSlot0 = await uniPool.slot0()
 
@@ -83,13 +83,13 @@ async function getArbValues() {
   const tokenInfo = await getInfoTokens(vault, reader, tokens)
   const nativeTokenPrice = tokenInfo[tokens.nativeToken.address].maxPrice
   const feesUsd = await getFeesUsd(vault, reader, tokenInfo)
-  const stakedBlu = await contractAt("Token", "0xd2D1162512F927a7e282Ef43a362659E4F2a728F", signer)
-  const stakedBluSupply = await stakedBlu.totalSupply()
+  const stakedPoope = await contractAt("Token", "0xd2D1162512F927a7e282Ef43a362659E4F2a728F", signer)
+  const stakedPoopeSupply = await stakedPoope.totalSupply()
   const { totalTransferAmount: keeperCosts } = await getArbKeeperValues()
-  const blpManager = await contractAt("BlpManager", "0x321F653eED006AD1C29D174e17d96351BDe22649", signer)
-  const blpAum = await blpManager.getAum(true)
+  const plpManager = await contractAt("PlpManager", "0x321F653eED006AD1C29D174e17d96351BDe22649", signer)
+  const plpAum = await plpManager.getAum(true)
 
-  return { vault, reader, tokens, tokenInfo, nativeTokenPrice, feesUsd, stakedBlu, stakedBluSupply, keeperCosts, blpManager, blpAum }
+  return { vault, reader, tokens, tokenInfo, nativeTokenPrice, feesUsd, stakedPoope, stakedPoopeSupply, keeperCosts, plpManager, plpAum }
 }
 
 async function getAvaxValues() {
@@ -100,13 +100,13 @@ async function getAvaxValues() {
   const tokenInfo = await getInfoTokens(vault, reader, tokens)
   const nativeTokenPrice = tokenInfo[tokens.nativeToken.address].maxPrice
   const feesUsd = await getFeesUsd(vault, reader, tokenInfo)
-  const stakedBlu = await contractAt("Token", "0x4d268a7d4C16ceB5a606c173Bd974984343fea13", signer)
-  const stakedBluSupply = await stakedBlu.totalSupply()
+  const stakedPoope = await contractAt("Token", "0x4d268a7d4C16ceB5a606c173Bd974984343fea13", signer)
+  const stakedPoopeSupply = await stakedPoope.totalSupply()
   const { totalTransferAmount: keeperCosts } = await getAvaxKeeperValues()
-  const blpManager = await contractAt("BlpManager", "0xe1ae4d4b06A5Fe1fc288f6B4CD72f9F8323B107F", signer)
-  const blpAum = await blpManager.getAum(true)
+  const plpManager = await contractAt("PlpManager", "0xe1ae4d4b06A5Fe1fc288f6B4CD72f9F8323B107F", signer)
+  const plpAum = await plpManager.getAum(true)
 
-  return { vault, reader, tokens, tokenInfo, nativeTokenPrice, feesUsd, stakedBlu, stakedBluSupply, keeperCosts, blpManager, blpAum }
+  return { vault, reader, tokens, tokenInfo, nativeTokenPrice, feesUsd, stakedPoope, stakedPoopeSupply, keeperCosts, plpManager, plpAum }
 }
 
 async function main() {
@@ -117,20 +117,20 @@ async function main() {
 
   const ethPrice = values.arbitrum.nativeTokenPrice
   const avaxPrice = values.avax.nativeTokenPrice
-  const bluPrice = await getBluPrice(ethPrice)
+  const poopePrice = await getPoopePrice(ethPrice)
 
   const data = [
     ["ETH Price", formatAmount(ethPrice, 30, 2)],
     ["AVAX Price", formatAmount(avaxPrice, 30, 2)],
-    ["BLU Price", formatAmount(bluPrice, 30, 2)],
+    ["POOPE Price", formatAmount(poopePrice, 30, 2)],
     ["ARB Fees", formatAmount(values.arbitrum.feesUsd, 30, 2)],
     ["AVAX Fees", formatAmount(values.avax.feesUsd, 30, 2)],
-    ["ARB sbfBLU", formatAmount(values.arbitrum.stakedBluSupply, 18, 2)],
-    ["AVAX sbfBLU", formatAmount(values.avax.stakedBluSupply, 18, 2)],
+    ["ARB sbfPOOPE", formatAmount(values.arbitrum.stakedPoopeSupply, 18, 2)],
+    ["AVAX sbfPOOPE", formatAmount(values.avax.stakedPoopeSupply, 18, 2)],
     ["ARB Keeper Costs", formatAmount(values.arbitrum.keeperCosts, 18, 2)],
     ["AVAX Keeper Costs", formatAmount(values.avax.keeperCosts, 18, 2)],
-    ["BLP AUM (ARB)", formatAmount(values.arbitrum.blpAum, 30, 2)],
-    ["BLP AUM (AVAX)", formatAmount(values.avax.blpAum, 30, 2)],
+    ["PLP AUM (ARB)", formatAmount(values.arbitrum.plpAum, 30, 2)],
+    ["PLP AUM (AVAX)", formatAmount(values.avax.plpAum, 30, 2)],
   ]
 
   for (let i = 0; i < data.length; i++) {

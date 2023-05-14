@@ -53,13 +53,13 @@ const distribute = async () => {
     nftHolders[from].count--
   }
 
-  const stakedBluBalances = await processFile(inputDir + "staked-blu-balances.csv")
+  const stakedPoopeBalances = await processFile(inputDir + "staked-poope-balances.csv")
   const vestedBalances = await processFile(inputDir + "vested-balances.csv")
 
   const holders = {}
 
-  for (let i = 0; i < stakedBluBalances.length; i++) {
-    const tokenHolder = stakedBluBalances[i]
+  for (let i = 0; i < stakedPoopeBalances.length; i++) {
+    const tokenHolder = stakedPoopeBalances[i]
     const account = tokenHolder.HolderAddress.toLowerCase()
 
     if (holders[account] === undefined) { holders[account] = 0 }
@@ -110,31 +110,31 @@ const distribute = async () => {
 
   let accounts = []
   let amounts = []
-  const totalEsBlu = 4000
-  let totalEsBluAmount = bigNumberify(0)
+  const totalEsPoope = 4000
+  let totalEsPoopeAmount = bigNumberify(0)
 
   const batchSender = await contractAt("BatchSender", "0x401Ab96410BcdCA81b79c68D0D664D478906C184")
-  const esBlu = await contractAt("Token", "0xf42Ae1D54fd613C9bb14810b0588FaAa09a426cA")
+  const esPoope = await contractAt("Token", "0xf42Ae1D54fd613C9bb14810b0588FaAa09a426cA")
   if (shouldSendTokens) {
-    await sendTxn(esBlu.approve(batchSender.address, expandDecimals(totalEsBlu, 18)), "esBlu.approve")
+    await sendTxn(esPoope.approve(batchSender.address, expandDecimals(totalEsPoope, 18)), "esPoope.approve")
   }
 
   const batchSize = 500
 
   for (let i = 0; i < balanceList.length; i++) {
     const { account, balance } = balanceList[i]
-    const esBluValue = (totalEsBlu - 1) * balance / totalBalance
-    const esBluAmount = ethers.utils.parseUnits(esBluValue.toFixed(4), 18)
+    const esPoopeValue = (totalEsPoope - 1) * balance / totalBalance
+    const esPoopeAmount = ethers.utils.parseUnits(esPoopeValue.toFixed(4), 18)
 
     accounts.push(account)
-    amounts.push(esBluAmount)
-    totalEsBluAmount = totalEsBluAmount.add(esBluAmount)
+    amounts.push(esPoopeAmount)
+    totalEsPoopeAmount = totalEsPoopeAmount.add(esPoopeAmount)
 
-    console.log(`${i+1},${account},${esBluValue},${esBluAmount.toString()}`)
+    console.log(`${i+1},${account},${esPoopeValue},${esPoopeAmount.toString()}`)
 
     if (accounts.length === batchSize && shouldSendTokens) {
       console.log("sending batch", i, accounts.length, amounts.length)
-      await sendTxn(batchSender.send(esBlu.address,  accounts, amounts), "batchSender.send")
+      await sendTxn(batchSender.send(esPoope.address,  accounts, amounts), "batchSender.send")
 
       accounts = []
       amounts = []
@@ -143,10 +143,10 @@ const distribute = async () => {
 
   if (accounts.length > 0 && shouldSendTokens) {
     console.log("sending final batch", balanceList.length, accounts.length, amounts.length)
-    await sendTxn(batchSender.send(esBlu.address,  accounts, amounts), "batchSender.send")
+    await sendTxn(batchSender.send(esPoope.address,  accounts, amounts), "batchSender.send")
   }
 
-  console.log("totalEsBluAmount", totalEsBluAmount.toString())
+  console.log("totalEsPoopeAmount", totalEsPoopeAmount.toString())
 }
 
 const run = async () => {

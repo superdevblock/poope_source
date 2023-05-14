@@ -5,7 +5,7 @@ const { expandDecimals, bigNumberify } = require("../../test/shared/utilities")
 
 const ethPrice = "1328"
 const avaxPrice = "16"
-const bluPrice = "36"
+const poopePrice = "36"
 
 const shouldSendTxn = false
 
@@ -34,20 +34,20 @@ const { AddressZero } = ethers.constants
 
 async function getArbValues() {
   const batchSender = await contractAt("BatchSender", "0x1070f775e8eb466154BBa8FA0076C4Adc7FE17e8")
-  const esBlu = await contractAt("Token", "0xf42Ae1D54fd613C9bb14810b0588FaAa09a426cA")
+  const esPoope = await contractAt("Token", "0xf42Ae1D54fd613C9bb14810b0588FaAa09a426cA")
   const nativeTokenPrice = ethPrice
   const data = arbitrumData
 
-  return { batchSender, esBlu, nativeTokenPrice, data }
+  return { batchSender, esPoope, nativeTokenPrice, data }
 }
 
 async function getAvaxValues() {
   const batchSender = await contractAt("BatchSender", "0xF0f929162751DD723fBa5b86A9B3C88Dc1D4957b")
-  const esBlu = await contractAt("Token", "0xFf1489227BbAAC61a9209A08929E4c2a526DdD17")
+  const esPoope = await contractAt("Token", "0xFf1489227BbAAC61a9209A08929E4c2a526DdD17")
   const nativeTokenPrice = avaxPrice
   const data = avaxData
 
-  return { batchSender, esBlu, nativeTokenPrice, data }
+  return { batchSender, esPoope, nativeTokenPrice, data }
 }
 
 async function getValues() {
@@ -62,7 +62,7 @@ async function getValues() {
 
 async function main() {
   const wallet = { address: "0x5F799f365Fa8A2B60ac0429C48B153cA5a6f0Cf8" }
-  const { batchSender, esBlu, nativeTokenPrice, data } = await getValues()
+  const { batchSender, esPoope, nativeTokenPrice, data } = await getValues()
   const { nativeToken } = tokens
   const nativeTokenContract = await contractAt("Token", nativeToken.address)
 
@@ -81,16 +81,16 @@ async function main() {
   let totalDiscountAmount = bigNumberify(0)
   let totalDiscountUsd = bigNumberify(0)
   let allDiscountUsd = bigNumberify(0)
-  let totalEsBluAmount = bigNumberify(0)
+  let totalEsPoopeAmount = bigNumberify(0)
   const affiliateAccounts = []
   const affiliateAmounts = []
   const discountAccounts = []
   const discountAmounts = []
-  const esBluAccounts = []
-  const esBluAmounts = []
+  const esPoopeAccounts = []
+  const esPoopeAmounts = []
 
   for (let i = 0; i < affiliatesData.length; i++) {
-    const { account, rebateUsd, esbluRewardsUsd } = affiliatesData[i]
+    const { account, rebateUsd, espoopeRewardsUsd } = affiliatesData[i]
     allAffiliateUsd = allAffiliateUsd.add(rebateUsd)
 
     if (account === AddressZero) { continue }
@@ -101,11 +101,11 @@ async function main() {
     totalAffiliateAmount = totalAffiliateAmount.add(amount)
     totalAffiliateUsd = totalAffiliateUsd.add(rebateUsd)
 
-    if (esbluRewardsUsd) {
-      const esBluAmount = bigNumberify(esbluRewardsUsd).mul(expandDecimals(1, 18)).div(expandDecimals(bluPrice, 30))
-      esBluAccounts.push(account)
-      esBluAmounts.push(esBluAmount)
-      totalEsBluAmount = totalEsBluAmount.add(esBluAmount)
+    if (espoopeRewardsUsd) {
+      const esPoopeAmount = bigNumberify(espoopeRewardsUsd).mul(expandDecimals(1, 18)).div(expandDecimals(poopePrice, 30))
+      esPoopeAccounts.push(account)
+      esPoopeAmounts.push(esPoopeAmount)
+      totalEsPoopeAmount = totalEsPoopeAmount.add(esPoopeAmount)
     }
   }
 
@@ -143,7 +143,7 @@ async function main() {
   console.log("all trader rebates (USD)", ethers.utils.formatUnits(allDiscountUsd, 30))
   console.log(`total ${nativeToken.name}`, ethers.utils.formatUnits(totalNativeAmount, 18))
   console.log(`total USD`, ethers.utils.formatUnits(totalAffiliateUsd.add(totalDiscountUsd), 30))
-  console.log(`total esBlu`, ethers.utils.formatUnits(totalEsBluAmount, 18))
+  console.log(`total esPoope`, ethers.utils.formatUnits(totalEsPoopeAmount, 18))
 
   const batchSize = 150
 
@@ -181,15 +181,15 @@ async function main() {
       await sendTxn(batchSender.sendAndEmit(nativeToken.address, accounts, amounts, traderDiscountsTypeId), "batchSender.sendAndEmit(nativeToken, trader rebates)")
     })
 
-    await sendTxn(esBlu.approve(batchSender.address, totalEsBluAmount), "esBlu.approve")
+    await sendTxn(esPoope.approve(batchSender.address, totalEsPoopeAmount), "esPoope.approve")
 
-    await processBatch([esBluAccounts, esBluAmounts], batchSize, async (currentBatch) => {
+    await processBatch([esPoopeAccounts, esPoopeAmounts], batchSize, async (currentBatch) => {
       printBatch(currentBatch)
 
       const accounts = currentBatch.map((item) => item[0])
       const amounts = currentBatch.map((item) => item[1])
 
-      await sendTxn(batchSender.sendAndEmit(esBlu.address, accounts, amounts, affiliateRewardsTypeId), "batchSender.sendAndEmit(nativeToken, esBlu affiliate rewards)")
+      await sendTxn(batchSender.sendAndEmit(esPoope.address, accounts, amounts, affiliateRewardsTypeId), "batchSender.sendAndEmit(nativeToken, esPoope affiliate rewards)")
     })
   }
 }

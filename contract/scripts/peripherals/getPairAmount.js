@@ -5,7 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const parse = require('csv-parse')
 
-const inputFile = path.resolve(__dirname, "../..") + "/data/holders/vestedBluHolders.csv"
+const inputFile = path.resolve(__dirname, "../..") + "/data/holders/vestedPoopeHolders.csv"
 
 const processFile = async (file) => {
   records = []
@@ -23,13 +23,13 @@ const processFile = async (file) => {
 
 async function main() {
   const holderList = await processFile(inputFile)
-  const bluVester = await contractAt("Vester", "0x199070DDfd1CFb69173aa2F7e20906F26B363004")
+  const poopeVester = await contractAt("Vester", "0x199070DDfd1CFb69173aa2F7e20906F26B363004")
   const data = []
 
   console.log("holderList", holderList.length)
   for (let i = 0; i < holderList.length; i++) {
     const account = holderList[i].HolderAddress
-    const pairAmount = await bluVester.pairAmounts(account)
+    const pairAmount = await poopeVester.pairAmounts(account)
     console.log(`${i+1},${account},${ethers.utils.formatUnits(pairAmount, 18)}`)
     data.push([account, ethers.utils.formatUnits(pairAmount, 18)])
   }
