@@ -11,7 +11,7 @@ export default function ExchangeBanner(props) {
     <div className="ExchangeBanner">
       <p className="ExchangeBanner-text">
         <Trans>
-          Trade on BLU and win <span className="ExchangeBanner-price">$250.000</span> in prizes! Live until November
+          Trade on POOPE and win <span className="ExchangeBanner-price">$250.000</span> in prizes! Live until November
           30th,{" "}
           <ExternalLink
             href="https://bluespade.medium.com//gmx-trading-competition-win-250-000-usd-in-prizes-1346504b96f6"

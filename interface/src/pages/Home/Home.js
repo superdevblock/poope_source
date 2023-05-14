@@ -36,16 +36,16 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   //   answer: "GMX is a decentralized spot and perpetual exchange that supports low swap fees and zero price impact trades.<br><br>Trading is supported by a unique multi-asset pool that earns liquidity providers fees from market making, swap fees, leverage trading (spreads, funding fees & liquidations), and asset rebalancing.<br><br>Dynamic pricing is supported by Chainlink Oracles along with TWAP pricing from leading volume DEXs."
   // }, {
   //   id: 2,
-  //   question: "What is the BLU Governance Token? ",
-  //   answer: "The BLU token is the governance token of the BLU ecosystem, it provides the token owner voting rights on the direction of the BLU platform.<br><br>Additionally, when BLU is staked you will earn 30% of the platform-generated fees, you will also earn Escrowed BLU tokens and Multiplier Points."
+  //   question: "What is the POOPE Governance Token? ",
+  //   answer: "The POOPE token is the governance token of the POOPE ecosystem, it provides the token owner voting rights on the direction of the POOPE platform.<br><br>Additionally, when POOPE is staked you will earn 30% of the platform-generated fees, you will also earn Escrowed POOPE tokens and Multiplier Points."
   // }, {
   //   id: 3,
-  //   question: "What is the BLP Token? ",
-  //   answer: "The BLP token represents the liquidity users provide to the BLU platform for Swaps and Margin Trading.<br><br>To provide liquidity to BLP you <a href='https://gmx.io/buy_blp' target='_blank'>trade</a> your crypto asset BTC, ETH, LINK, UNI, USDC, USDT, MIM, or FRAX to the liquidity pool, in exchange, you gain exposure to a diversified index of tokens while earning 50% of the platform trading fees and esBLU."
+  //   question: "What is the PLP Token? ",
+  //   answer: "The PLP token represents the liquidity users provide to the POOPE platform for Swaps and Margin Trading.<br><br>To provide liquidity to PLP you <a href='https://gmx.io/buy_plp' target='_blank'>trade</a> your crypto asset BTC, ETH, LINK, UNI, USDC, USDT, MIM, or FRAX to the liquidity pool, in exchange, you gain exposure to a diversified index of tokens while earning 50% of the platform trading fees and esPOOPE."
   // }, {
   //   id: 4,
   //   question: "What can I trade on GMX? ",
-  //   answer: "On BLU you can swap or margin trade any of the following assets: ETH, BTC, LINK, UNI, USDC, USDT, MIM, FRAX, with others to be added. "
+  //   answer: "On POOPE you can swap or margin trade any of the following assets: ETH, BTC, LINK, UNI, USDC, USDT, MIM, FRAX, with others to be added. "
   // }]
 
   // const toggleFAQContent = function(index) {
@@ -302,7 +302,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <Trans>Available on your preferred network</Trans>
             </div>
             <div className="Home-cta-info__description">
-              <Trans>BLU is currently live on Cronos and Goerli.</Trans>
+              <Trans>POOPE is currently live on Cronos and Goerli.</Trans>
             </div>
           </div>
           <div className="Home-cta-options">

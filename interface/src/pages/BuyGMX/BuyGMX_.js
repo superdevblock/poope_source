@@ -45,10 +45,10 @@ export default function BuyGMX() {
                 <Trans>Buy / Transfer ETH</Trans>
               </div>
               <div className="Page-description">
-                <Trans>ETH is needed on Arbitrum to purchase BLU.</Trans>
+                <Trans>ETH is needed on Arbitrum to purchase POOPE.</Trans>
                 <br />
                 {/* <Trans>
-                  To purchase BLU on <span onClick={() => onNetworkSelect(AVALANCHE)}>Avalanche</span>, please change
+                  To purchase POOPE on <span onClick={() => onNetworkSelect(AVALANCHE)}>Avalanche</span>, please change
                   your network.
                 </Trans> */}
               </div>
@@ -121,10 +121,10 @@ export default function BuyGMX() {
                 <Trans>Buy / Transfer AVAX</Trans>
               </div>
               <div className="Page-description">
-                <Trans>Avax is needed on Avalanche to purchase BLU.</Trans>
+                <Trans>Avax is needed on Avalanche to purchase POOPE.</Trans>
                 <br />
                 {/* <Trans>
-                  To purchase BLU on <span onClick={() => onNetworkSelect(ARBITRUM)}>Arbitrum</span>, please change your
+                  To purchase POOPE on <span onClick={() => onNetworkSelect(ARBITRUM)}>Arbitrum</span>, please change your
                   network.
                 </Trans> */}
               </div>
@@ -192,7 +192,7 @@ export default function BuyGMX() {
             <div className="buy-card">
               <div className="section-title-content">
                 <div className="card-title">
-                  <Trans>Buy BLU</Trans>
+                  <Trans>Buy POOPE</Trans>
                 </div>
               </div>
               <div className="App-card no-height">
@@ -210,7 +210,7 @@ export default function BuyGMX() {
                       imgSrc={gmxAvax}
                       href="https://traderjoexyz.com/trade?outputCurrency=0xDc2C540Fd99eb5dC424095C8C6A63f7c805D46e9#/"
                     >
-                      <Trans>Purchase BLU</Trans>
+                      <Trans>Purchase POOPE</Trans>
                     </Button>
                   </div>
                 </div>
@@ -224,7 +224,7 @@ export default function BuyGMX() {
             <div className="buy-card">
               <div className="section-title-content">
                 <div className="card-title">
-                  <Trans>Buy BLU</Trans>
+                  <Trans>Buy POOPE</Trans>
                 </div>
               </div>
               <div className="App-card no-height">
@@ -242,7 +242,7 @@ export default function BuyGMX() {
                       imgSrc={gmxArbitrum}
                       href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a"
                     >
-                      <Trans>Purchase BLU</Trans>
+                      <Trans>Purchase POOPE</Trans>
                     </Button>
                   </div>
                 </div>
@@ -251,13 +251,13 @@ export default function BuyGMX() {
             <div className="buy-card">
               <div className="section-title-content">
                 <div className="card-title">
-                  <Trans>Buy BLU Bonds</Trans>
+                  <Trans>Buy POOPE Bonds</Trans>
                 </div>
               </div>
               <div className="App-card no-height">
                 <div className="App-card-content no-title">
                   <div className="BuyGMXGLP-description">
-                    <Trans>BLU bonds can be bought on Olympus Pro with a discount and a small vesting period:</Trans>
+                    <Trans>POOPE bonds can be bought on Olympus Pro with a discount and a small vesting period:</Trans>
                   </div>
                   <div className="buy-gmx">
                     <Button size="xl" imgSrc={ohmArbitrum} href="https://pro.olympusdao.finance/#/partners/GMX">

@@ -42,19 +42,19 @@ msgid "<0/>Profit price: {0} ${1}. This rule applies for the next {2}, until {3}
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install Coinbase Wallet</0> to start using BLU"
+msgid "<0>Install Coinbase Wallet</0> to start using POOPE"
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install Coinbase Wallet</0>, and use BLU with its built-in browser"
+msgid "<0>Install Coinbase Wallet</0>, and use POOPE with its built-in browser"
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install MetaMask</0> to start using BLU"
+msgid "<0>Install MetaMask</0> to start using POOPE"
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install MetaMask</0>, and use BLU with its built-in browser"
+msgid "<0>Install MetaMask</0>, and use POOPE with its built-in browser"
 msgstr ""
 
 #: src/components/Exchange/OrdersToa.js
@@ -70,12 +70,12 @@ msgid "<0>Return to </0><1>Homepage</1> <2>or </2> <3>Trade</3>"
 msgstr ""
 
 #: src/components/Glp/SwapErrorModal.tsx
-msgid "<0>The pool's capacity has been reached for {0}. Please use another token to buy BLP.</0><1>Check the \"Save on Fees\" section for tokens with the lowest fees.</1>"
+msgid "<0>The pool's capacity has been reached for {0}. Please use another token to buy PLP.</0><1>Check the \"Save on Fees\" section for tokens with the lowest fees.</1>"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<1/><2/>esBLU tokens that have been converted to BLU will remain as BLU tokens.<3/><4/>To claim BLU tokens without withdrawing, use the \"Claim\" button under the Total Rewards section.<5/><6/></0>"
-msgstr "<0>모든 토큰이 인출되고 취소되며 베스팅이 중지됩니다.<1/><2/>BLU로 변환된 esBLU 토큰은 BLU 토큰으로 유지됩니다.<3/><4/>인출하지 않고 BLU 토큰을 수령하기 위해서는 총 보상 섹션 아래의 \"수령하기\" 버튼을 사용해주세요."
+msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<1/><2/>esPOOPE tokens that have been converted to POOPE will remain as POOPE tokens.<3/><4/>To claim POOPE tokens without withdrawing, use the \"Claim\" button under the Total Rewards section.<5/><6/></0>"
+msgstr "<0>모든 토큰이 인출되고 취소되며 베스팅이 중지됩니다.<1/><2/>POOPE로 변환된 esPOOPE 토큰은 POOPE 토큰으로 유지됩니다.<3/><4/>인출하지 않고 POOPE 토큰을 수령하기 위해서는 총 보상 섹션 아래의 \"수령하기\" 버튼을 사용해주세요."
 
 #: src/lib/wallets/index.js
 msgid "<0>Your wallet is not connected to {0}.</0><1/><2>Switch to {1}</2><3>Add {2}</3>"
@@ -178,12 +178,12 @@ msgid "Affiliates"
 msgstr "제휴"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "After claiming you will be able to vest a maximum of {0} esBLU at a ratio of {1} {stakingToken} to 1 esBLU."
-msgstr "수령 후 {1} {stake} 대 1 esBLU 비율로 최대 {0}개의 esBLU를 베스팅 할 수 있습니다."
+msgid "After claiming you will be able to vest a maximum of {0} esPOOPE at a ratio of {1} {stakingToken} to 1 esPOOPE."
+msgstr "수령 후 {1} {stake} 대 1 esPOOPE 비율로 최대 {0}개의 esPOOPE를 베스팅 할 수 있습니다."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "After claiming, the esBLU tokens will be airdropped to your account on the selected network within 7 days."
-msgstr "수령 후, esBLU 토큰은 7일 이내에 선택한 네트워크의 계정으로 에어드랍됩니다."
+msgid "After claiming, the esPOOPE tokens will be airdropped to your account on the selected network within 7 days."
+msgstr "수령 후, esPOOPE 토큰은 7일 이내에 선택한 네트워크의 계정으로 에어드랍됩니다."
 
 #: src/pages/BuyGMX/BuyGMX.js
 #: src/pages/BuyGMX/BuyGMX.js
@@ -248,8 +248,8 @@ msgstr ""
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
 #: src/pages/Stake/StakeV2.js
-msgid "Approve BLU"
-msgstr "BLU 승인"
+msgid "Approve POOPE"
+msgstr "POOPE 승인"
 
 #: src/components/Exchange/PositionEditor.js
 #: src/components/Exchange/SwapBox.js
@@ -264,8 +264,8 @@ msgid "Approve {stakingTokenSymbol}"
 msgstr "{stakingTokenSymbol} 승인"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Approving BLU..."
-msgstr "BLU 승인중..."
+msgid "Approving POOPE..."
+msgstr "POOPE 승인중..."
 
 #: src/components/Exchange/PositionEditor.js
 #: src/components/Exchange/SwapBox.js
@@ -294,7 +294,7 @@ msgid "Arbitrum Icon"
 msgstr ""
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
-msgid "As there is not enough liquidity in BLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
+msgid "As there is not enough liquidity in PLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV1.js
@@ -302,8 +302,8 @@ msgid "Assets Under Management"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "Assets Under Management: BLU staked (All chains) + BLP pool ({chainName})"
-msgstr "자산운용규모: 스테이킹된 BLU + BLP 풀 ({chainName})"
+msgid "Assets Under Management: POOPE staked (All chains) + PLP pool ({chainName})"
+msgstr "자산운용규모: 스테이킹된 POOPE + PLP 풀 ({chainName})"
 
 #: src/components/Glp/GlpSwap.js
 msgid "Available"
@@ -318,12 +318,12 @@ msgstr "사용가능 유동성"
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
-msgid "Available amount to deposit into BLP."
-msgstr "BLP에 예치할 수 있는 양"
+msgid "Available amount to deposit into PLP."
+msgstr "PLP에 예치할 수 있는 양"
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
-msgid "Available amount to withdraw from BLP. Funds not utilized by current open positions."
+msgid "Available amount to withdraw from PLP. Funds not utilized by current open positions."
 msgstr ""
 
 #: src/pages/Home/Home.js
@@ -349,8 +349,8 @@ msgid "Avalanche Icon"
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "Avax is needed on Avalanche to purchase BLU."
-msgstr "Avalanche에서 BLU를 구입하기 위해서는 Avax가 필요합니다."
+msgid "Avax is needed on Avalanche to purchase POOPE."
+msgstr "Avalanche에서 POOPE를 구입하기 위해서는 Avax가 필요합니다."
 
 #: src/components/Exchange/SwapBox.js
 msgid "Balance"
@@ -417,8 +417,8 @@ msgid "Buy"
 msgstr "구매"
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "Buy / Sell BLP"
-msgstr "BLP 구매 / 판매"
+msgid "Buy / Sell PLP"
+msgstr "PLP 구매 / 판매"
 
 #: src/pages/BuyGMX/BuyGMX.js
 msgid "Buy / Transfer AVAX"
@@ -440,26 +440,26 @@ msgstr "ETH 구매 "
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/pages/Stake/StakeV2.js
-msgid "Buy BLP"
-msgstr "BLP 구매"
+msgid "Buy PLP"
+msgstr "PLP 구매"
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "Buy BLP Icon"
+msgid "Buy PLP Icon"
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.js
 #: src/pages/BuyGMX/BuyGMX.js
 #: src/pages/Stake/StakeV2.js
-msgid "Buy BLU"
-msgstr "BLU 구매"
+msgid "Buy POOPE"
+msgstr "POOPE 구매"
 
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "Buy BLU Bonds"
-msgstr "BLU 채권 구매"
+msgid "Buy POOPE Bonds"
+msgstr "POOPE 채권 구매"
 
 #: src/pages/Buy/Buy.js
-msgid "Buy BLU or BLP"
-msgstr "BLU 혹은 BLP 구매"
+msgid "Buy POOPE or PLP"
+msgstr "POOPE 혹은 PLP 구매"
 
 #: src/components/Glp/GlpSwap.js
 msgid "Buy failed."
@@ -551,8 +551,8 @@ msgstr "수령하기"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Claim BLU Rewards"
-msgstr "BLU 보상 수령하기"
+msgid "Claim POOPE Rewards"
+msgstr "POOPE 보상 수령하기"
 
 #: src/pages/Stake/StakeV2.js
 msgid "Claim Rewards"
@@ -564,13 +564,13 @@ msgid "Claim completed!"
 msgstr "수령 완료!"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Claim esBLU"
-msgstr "esBLU 수령하기"
+msgid "Claim esPOOPE"
+msgstr "esPOOPE 수령하기"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Claim esBLU Rewards"
-msgstr "esBLU 보상 수령하기"
+msgid "Claim esPOOPE Rewards"
+msgstr "esPOOPE 보상 수령하기"
 
 #: src/pages/Stake/StakeV1.js
 msgid "Claim failed"
@@ -780,8 +780,8 @@ msgid "Continue"
 msgstr "계속하기"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Convert esBLU tokens to BLU tokens.<0/>Please read the <1>vesting details</1> before using the vaults."
-msgstr "esBLU 토큰을 BLU 토큰으로 변환합니다.<0/>볼트를 사용하기 전 <1>베스팅 세부정보</1>를 읽어주세요."
+msgid "Convert esPOOPE tokens to POOPE tokens.<0/>Please read the <1>vesting details</1> before using the vaults."
+msgstr "esPOOPE 토큰을 POOPE 토큰으로 변환합니다.<0/>볼트를 사용하기 전 <1>베스팅 세부정보</1>를 읽어주세요."
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
@@ -902,7 +902,7 @@ msgid "Dashboard"
 msgstr "대시보드"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Dashboard for BLU referral stats"
+msgid "Dashboard for POOPE referral stats"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
@@ -1043,8 +1043,8 @@ msgid "Download"
 msgstr "다운로드"
 
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "ETH is needed on Arbitrum to purchase BLU."
-msgstr "Arbitrum에서 BLU를 구매하기 위해서는 ETH가 필요합니다."
+msgid "ETH is needed on Arbitrum to purchase POOPE."
+msgstr "Arbitrum에서 POOPE를 구매하기 위해서는 ETH가 필요합니다."
 
 #: src/components/Header/AppHeaderLinks.tsx
 #: src/pages/Stake/StakeV2.js
@@ -1219,12 +1219,12 @@ msgstr "진입 가격"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Escrowed BLU"
+msgid "Escrowed POOPE"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Escrowed BLU APR"
-msgstr "esBLU APR"
+msgid "Escrowed POOPE APR"
+msgstr "esPOOPE APR"
 
 #: src/pages/OrdersOverview/OrdersOverview.js
 msgid "Execute"
@@ -1278,15 +1278,15 @@ msgid "Fees are high to swap from {0} to {1}. <0/>{2} is needed for collateral."
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Fees generated by BLU"
+msgid "Fees generated by POOPE"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Fees may vary depending on which asset you sell BLP for. <0/>Enter the amount of BLP you want to redeem in the order form, then check here to compare fees."
+msgid "Fees may vary depending on which asset you sell PLP for. <0/>Enter the amount of PLP you want to redeem in the order form, then check here to compare fees."
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Fees may vary depending on which asset you use to buy BLP. <0/>Enter the amount of BLP you want to purchase in the order form, then check here to compare fees."
+msgid "Fees may vary depending on which asset you use to buy PLP. <0/>Enter the amount of PLP you want to purchase in the order form, then check here to compare fees."
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
@@ -1334,115 +1334,115 @@ msgid "GBC NFTs APR tracker and rewards"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "BLP Index Composition"
-msgstr "BLP 인덱스 구성"
+msgid "PLP Index Composition"
+msgstr "PLP 인덱스 구성"
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "BLP Pool"
+msgid "PLP Pool"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "BLP Vault"
+msgid "PLP Vault"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "BLP buy disabled, pending {0} upgrade"
+msgid "PLP buy disabled, pending {0} upgrade"
 msgstr ""
 
 #: src/components/TokenCard/TokenCard.js
-msgid "BLP is the liquidity provider token. Accrues 70% of the platform's generated fees."
-msgstr "BLP는 유동성 공급 토큰입니다. 플랫폼에서 생성되는 수수료의 70%를 축적하세요."
+msgid "PLP is the liquidity provider token. Accrues 70% of the platform's generated fees."
+msgstr "PLP는 유동성 공급 토큰입니다. 플랫폼에서 생성되는 수수료의 70%를 축적하세요."
 
 #: src/components/Glp/GlpSwap.js
-msgid "BLP sell disabled, pending {0} upgrade"
+msgid "PLP sell disabled, pending {0} upgrade"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Announcements and Updates"
+msgid "POOPE Announcements and Updates"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Blueberry NFTs"
+msgid "POOPE Blueberry NFTs"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Governance Page"
+msgid "POOPE Governance Page"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Pages"
-msgstr "BLU 페이지"
+msgid "POOPE Pages"
+msgstr "POOPE 페이지"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Perpetuals Data"
+msgid "POOPE Perpetuals Data"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Proposals Voting page"
+msgid "POOPE Proposals Voting page"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Stats Page"
+msgid "POOPE Stats Page"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "BLU Vault"
+msgid "POOPE Vault"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Weekly Updates"
+msgid "POOPE Weekly Updates"
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "BLU bonds can be bought on Olympus Pro with a discount and a small vesting period:"
-msgstr "BLU 채권은 Olympus Pro에서 약간의 베스팅 기간과 함께 할인된 가격으로 구매할 수 있습니다."
+msgid "POOPE bonds can be bought on Olympus Pro with a discount and a small vesting period:"
+msgstr "POOPE 채권은 Olympus Pro에서 약간의 베스팅 기간과 함께 할인된 가격으로 구매할 수 있습니다."
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU community discussion"
+msgid "POOPE community discussion"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU dashboards and analytics."
-msgstr "BLU 대시보드 및 통계"
+msgid "POOPE dashboards and analytics."
+msgstr "POOPE 대시보드 및 통계"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU ecosystem pages."
-msgstr "BLU 이코시스템 페이지"
+msgid "POOPE ecosystem pages."
+msgstr "POOPE 이코시스템 페이지"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU explorer for stats and traders"
+msgid "POOPE explorer for stats and traders"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU fundamentals"
+msgid "POOPE fundamentals"
 msgstr ""
 
 #: src/pages/Home/Home.js
-msgid "BLU is currently live on Arbitrum and Avalanche."
-msgstr "BLU는 현재 Arbitrum과 Avalanche에서 이용할 수 있습니다."
+msgid "POOPE is currently live on Arbitrum and Avalanche."
+msgstr "POOPE는 현재 Arbitrum과 Avalanche에서 이용할 수 있습니다."
 
 #: src/pages/Jobs/Jobs.js
-msgid "BLU is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
+msgid "POOPE is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
 msgstr ""
 
 #: src/components/TokenCard/TokenCard.js
-msgid "BLU is the utility and governance token. Accrues 30% of the platform's generated fees."
-msgstr "BLU는 유틸리티 및 거버넌스 토큰입니다. 플랫폼에서 생성되는 수수료의 30%를 축적하세요."
+msgid "POOPE is the utility and governance token. Accrues 30% of the platform's generated fees."
+msgstr "POOPE는 유틸리티 및 거버넌스 토큰입니다. 플랫폼에서 생성되는 수수료의 30%를 축적하세요."
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU staking calculator"
+msgid "POOPE staking calculator"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU staking rewards updates and insights"
+msgid "POOPE staking rewards updates and insights"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "BLU transfers not yet enabled"
-msgstr "BLU 전송이 아직 불가능합니다."
+msgid "POOPE transfers not yet enabled"
+msgstr "POOPE 전송이 아직 불가능합니다."
 
 #: src/components/Referrals/AddAffiliateCode.js
 msgid "Generate Referral Code"
@@ -1453,8 +1453,8 @@ msgid "Generating shareable image..."
 msgstr ""
 
 #: src/pages/Referrals/Referrals.js
-msgid "Get fee discounts and earn rebates through the BLU referral program.<0/>For more information, please read the <1>referral program details</1>."
-msgstr "BLU 추천 프로그램을 통해 수수료 할인 및 리베이트를 받으세요.<0/>자세한 내용은 <1>추천 프로그램 세부 정보를 참조하세요."
+msgid "Get fee discounts and earn rebates through the POOPE referral program.<0/>For more information, please read the <1>referral program details</1>."
+msgstr "POOPE 추천 프로그램을 통해 수수료 할인 및 리베이트를 받으세요.<0/>자세한 내용은 <1>추천 프로그램 세부 정보를 참조하세요."
 
 #: src/components/Exchange/SwapBox.js
 msgid "High Slippage, Swap Anyway"
@@ -1541,8 +1541,8 @@ msgid "Insufficient Available Liquidity to swap to {0}:"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Insufficient BLP balance"
-msgstr "BLP 잔고 부족"
+msgid "Insufficient PLP balance"
+msgstr "PLP 잔고 부족"
 
 #: src/components/Exchange/SwapBox.js
 #: src/components/Exchange/SwapBox.js
@@ -1610,7 +1610,7 @@ msgid "Invalid token indexToken: \"{0}\" collateralToken: \"{1}\""
 msgstr ""
 
 #: src/pages/Jobs/Jobs.js
-msgid "Job openings at BLU."
+msgid "Job openings at POOPE."
 msgstr ""
 
 #: src/pages/Jobs/Jobs.js
@@ -1638,7 +1638,7 @@ msgid "Leaderboard"
 msgstr "리더보드"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Leaderboard for BLU traders"
+msgid "Leaderboard for POOPE traders"
 msgstr ""
 
 #: src/components/Exchange/PositionEditor.js
@@ -1888,11 +1888,11 @@ msgid "Max leverage: 100x"
 msgstr "최대 레버리지: 100x"
 
 #: src/components/Glp/GlpSwap.js
-msgid "Max pool capacity reached for {0}. Please mint BLP using another token"
+msgid "Max pool capacity reached for {0}. Please mint PLP using another token"
 msgstr "{0}의 최대 풀 수용량에 도달했습니다"
 
 #: src/components/Glp/GlpSwap.js
-msgid "Max pool capacity reached for {0}<0/><1/>Please mint BLP using another token"
+msgid "Max pool capacity reached for {0}<0/><1/>Please mint PLP using another token"
 msgstr ""
 
 #: src/App/App.js
@@ -2081,8 +2081,8 @@ msgid "No PnLs found"
 msgstr "손익을 찾지 못했습니다."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "No esBLU to claim"
-msgstr "수령할 수 있는 esBLU가 없습니다"
+msgid "No esPOOPE to claim"
+msgstr "수령할 수 있는 esPOOPE가 없습니다"
 
 #: src/components/Exchange/OrdersList.js
 #: src/components/Exchange/OrdersList.js
@@ -2099,7 +2099,7 @@ msgid "No open positions"
 msgstr "열려있는 포지션이 없습니다"
 
 #: src/pages/Jobs/Jobs.js
-msgid "No open positions at BLU currently"
+msgid "No open positions at POOPE currently"
 msgstr ""
 
 #: src/pages/OrdersOverview/OrdersOverview.js
@@ -2302,15 +2302,15 @@ msgid "Pay: {0} USD"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "Platform and BLP index tokens."
-msgstr "플랫폼과 BLP 지수 토큰."
+msgid "Platform and PLP index tokens."
+msgstr "플랫폼과 PLP 지수 토큰."
 
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Please input a referral code to benefit from fee discounts."
 msgstr "수수료 할인의 혜택을 받으려면 추천 코드를 입력해주세요."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Please only use this for full account transfers.<0/>This will transfer all your BLU, esBLU, BLP and Multiplier Points to your new account.<1/>Transfers are only supported if the receiving account has not staked BLU or BLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
+msgid "Please only use this for full account transfers.<0/>This will transfer all your POOPE, esPOOPE, PLP and Multiplier Points to your new account.<1/>Transfers are only supported if the receiving account has not staked POOPE or PLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
 msgstr ""
 
 #: src/components/Migration/Migration.js
@@ -2450,12 +2450,12 @@ msgid "Profit price: {0} ${1}. This rule applies for the next {2}, until {3}."
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Projects developed by the BLU community."
-msgstr "BLU 커뮤니티가 개발한 프로젝트"
+msgid "Projects developed by the POOPE community."
+msgstr "POOPE 커뮤니티가 개발한 프로젝트"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Projects integrated with BLU."
-msgstr "BLU와 통합된 프로젝트"
+msgid "Projects integrated with POOPE."
+msgstr "POOPE와 통합된 프로젝트"
 
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js
@@ -2463,13 +2463,13 @@ msgid "Protocol analytics"
 msgstr ""
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "Purchase <0>BLP tokens</0> to earn {nativeTokenSymbol} fees from swaps and leverages trading."
+msgid "Purchase <0>PLP tokens</0> to earn {nativeTokenSymbol} fees from swaps and leverages trading."
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.js
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "Purchase BLU"
-msgstr "BLU 구입"
+msgid "Purchase POOPE"
+msgstr "POOPE 구입"
 
 #: src/pages/Stake/StakeV2.js
 msgid "Purchase Insurance"
@@ -2514,12 +2514,12 @@ msgid "Receiver Address"
 msgstr "수령할 주소"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Receiver has not staked BLP tokens before"
-msgstr "수취인은 지금까지 BLP 토큰을 스테이킹한 적이 없습니다."
+msgid "Receiver has not staked PLP tokens before"
+msgstr "수취인은 지금까지 PLP 토큰을 스테이킹한 적이 없습니다."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Receiver has not staked BLU tokens before"
-msgstr "수취인은 지금까지 BLU 토큰을 스테이킹한 적이 없습니다."
+msgid "Receiver has not staked POOPE tokens before"
+msgstr "수취인은 지금까지 POOPE 토큰을 스테이킹한 적이 없습니다."
 
 #: src/components/Glp/GlpSwap.js
 msgid "Redemption time not yet reached"
@@ -2624,7 +2624,7 @@ msgid "Reserved for Vesting"
 msgstr "베스팅을 위해 리저브됨"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Returns calculator for BLU and BLP"
+msgid "Returns calculator for POOPE and PLP"
 msgstr ""
 
 #: src/pages/Stake/StakeV1.js
@@ -2698,8 +2698,8 @@ msgstr "자신에게 전송하는 것은 지원되지 않습니다"
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/pages/Stake/StakeV2.js
-msgid "Sell BLP"
-msgstr "BLP 판매"
+msgid "Sell PLP"
+msgstr "PLP 판매"
 
 #: src/components/Glp/GlpSwap.js
 msgid "Sell failed."
@@ -2719,12 +2719,12 @@ msgid "Selling..."
 msgstr "판매중..."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Sender has withdrawn all tokens from BLP Vesting Vault"
-msgstr "BLP의 베스팅 볼트에서 모든 토큰을 인출했습니다."
+msgid "Sender has withdrawn all tokens from PLP Vesting Vault"
+msgstr "PLP의 베스팅 볼트에서 모든 토큰을 인출했습니다."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Sender has withdrawn all tokens from BLU Vesting Vault"
-msgstr "BLU의 베스팅 볼트에서 모든 토큰을 인출했습니다."
+msgid "Sender has withdrawn all tokens from POOPE Vesting Vault"
+msgstr "POOPE의 베스팅 볼트에서 모든 토큰을 인출했습니다."
 
 #: src/App/App.js
 #: src/components/Header/AppHeaderLinks.tsx
@@ -2825,28 +2825,28 @@ msgid "Stake"
 msgstr "스테이킹"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake <0>BLU</0> and <1>BLP</1> to earn rewards."
-msgstr "<0>BLU</0>과 <1>BLP</1>를 스테이킹하여 보상을 획득하세요."
+msgid "Stake <0>POOPE</0> and <1>PLP</1> to earn rewards."
+msgstr "<0>POOPE</0>과 <1>PLP</1>를 스테이킹하여 보상을 획득하세요."
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake BLU"
+msgid "Stake POOPE"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake BLU Rewards"
-msgstr "BLU 보상 스테이킹"
+msgid "Stake POOPE Rewards"
+msgstr "POOPE 보상 스테이킹"
 
 #: src/pages/Stake/StakeV2.js
 msgid "Stake Multiplier Points"
 msgstr "멀티플라이어 포인트 스테이킹"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake esBLU"
+msgid "Stake esPOOPE"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake esBLU Rewards"
-msgstr "esBLU 보상 스테이킹"
+msgid "Stake esPOOPE Rewards"
+msgstr "esPOOPE 보상 스테이킹"
 
 #: src/pages/Stake/StakeV1.js
 msgid "Stake failed"
@@ -3040,11 +3040,11 @@ msgid "Telegram Groups"
 msgstr "텔레그램 그룹"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Telegram bot for BLU position updates"
+msgid "Telegram bot for POOPE position updates"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Telegram bot for Open Interest on BLU"
+msgid "Telegram bot for Open Interest on POOPE"
 msgstr ""
 
 #: src/components/Footer/Footer.js
@@ -3052,7 +3052,7 @@ msgid "Terms and Conditions"
 msgstr "약관"
 
 #: src/pages/Stake/StakeV1.js
-msgid "The <0>BLU migration</0> is in progress, please migrate your GMT, xGMT, GMT-USDG and xGMT-USDG tokens.<1/>USDG tokens will continue to function as before and do not need to be migrated."
+msgid "The <0>POOPE migration</0> is in progress, please migrate your GMT, xGMT, GMT-USDG and xGMT-USDG tokens.<1/>USDG tokens will continue to function as before and do not need to be migrated."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
@@ -3064,7 +3064,7 @@ msgid "The Gambit protocol is in beta, please read the <0>staking details</0>be
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The address of the esBLU (IOU) token is {esGmxIouAddress}."
+msgid "The address of the esPOOPE (IOU) token is {esGmxIouAddress}."
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -3072,12 +3072,12 @@ msgid "The borrow fee is calculated as (assets borrowed) / (total assets in pool
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The esBLU (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
-msgstr "\"esBLU (IOU) 토큰의 주소는 {esGmxIouAddress} 입니다."
+msgid "The esPOOPE (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
+msgstr "\"esPOOPE (IOU) 토큰의 주소는 {esGmxIouAddress} 입니다."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The esBLU tokens can be staked or vested at any time."
-msgstr "esBLU는 언제든지 스테이킹하거나 베스팅 할 수 있습니다."
+msgid "The esPOOPE tokens can be staked or vested at any time."
+msgstr "esPOOPE는 언제든지 스테이킹하거나 베스팅 할 수 있습니다."
 
 #: src/lib/contracts/callContract.tsx
 msgid "The mark price has changed, consider increasing your Allowed Slippage by clicking on the \"...\" icon next to your address."
@@ -3108,7 +3108,7 @@ msgid "The spread is > 1%, please ensure the trade details are acceptable before
 msgstr ""
 
 #: src/components/ModalViews/RedirectModal.js
-msgid "The website is a community deployed and maintained instance of the open source <0>BLU front end</0>, hosted and served on the distributed, peer-to-peer <1>IPFS network</1>."
+msgid "The website is a community deployed and maintained instance of the open source <0>POOPE front end</0>, hosted and served on the distributed, peer-to-peer <1>IPFS network</1>."
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -3173,12 +3173,12 @@ msgid "To complete the transfer, you must switch your connected account to {rece
 msgstr "전송을 완료하려면 {receiver} 계정에 다시 연결해야 합니다."
 
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "To purchase BLU on <0>Arbitrum</0>, please change your network."
-msgstr "<0>Arbitrum</0>에서 BLU를 구입하려면 네트워크를 변경해주세요."
+msgid "To purchase POOPE on <0>Arbitrum</0>, please change your network."
+msgstr "<0>Arbitrum</0>에서 POOPE를 구입하려면 네트워크를 변경해주세요."
 
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "To purchase BLU on <0>Avalanche</0>, please change your network."
-msgstr "<0>Avalanche</0>에서 BLU를 구입하려면 네트워크를 변경해주세요."
+msgid "To purchase POOPE on <0>Avalanche</0>, please change your network."
+msgstr "<0>Avalanche</0>에서 POOPE를 구입하려면 네트워크를 변경해주세요."
 
 #: src/components/Glp/GlpSwap.js
 msgid "To reduce fees, select a different asset to pay with."
@@ -3282,8 +3282,8 @@ msgid "Total fees earned since {0}: {1} USD<0/>Fee assets: {feeText}"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "Total value of tokens in BLP pool ({chainName})"
-msgstr "BLP 풀 ({chainName})의 토큰 총액"
+msgid "Total value of tokens in PLP pool ({chainName})"
+msgstr "PLP 풀 ({chainName})의 토큰 총액"
 
 #: src/components/StatsTooltip/StatsTooltip.tsx
 msgid "Total:"
@@ -3299,7 +3299,7 @@ msgid "Trade BTC, ETH, AVAX and other top cryptocurrencies with up to 100x lever
 msgstr "지갑에서 직접 최대 100배의 레버리지로 BTC, ETH, AVAX 및 기타 주요 암호화폐 거래"
 
 #: src/components/Exchange/ExchangeBanner.js
-msgid "Trade on BLU and win <0>$250.000</0> in prizes! Live until November 30th, <1>click here</1> to learn more."
+msgid "Trade on POOPE and win <0>$250.000</0> in prizes! Live until November 30th, <1>click here</1> to learn more."
 msgstr ""
 
 #: src/pages/Referrals/Referrals.js
@@ -3448,15 +3448,15 @@ msgid "Unstake"
 msgstr "언스테이킹"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake BLU"
-msgstr "BLU 언스테이킹"
+msgid "Unstake POOPE"
+msgstr "POOPE 언스테이킹"
 
 #: src/pages/Stake/StakeV2.js
 msgid "Unstake completed!"
 msgstr "언스테이킹 완료!"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake esBLU"
+msgid "Unstake esPOOPE"
 msgstr ""
 
 #: src/pages/Stake/StakeV1.js
@@ -3540,28 +3540,28 @@ msgid "Vest"
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with BLP on Arbitrum"
-msgstr "Arbitrum에서 BLP로 베스팅하기"
+msgid "Vest with PLP on Arbitrum"
+msgstr "Arbitrum에서 PLP로 베스팅하기"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with BLP on Avalanche"
-msgstr "Avalanche에서 BLU로 베스팅하기"
+msgid "Vest with PLP on Avalanche"
+msgstr "Avalanche에서 POOPE로 베스팅하기"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with BLU on Arbitrum"
-msgstr "Arbitrum에서 BLU로 베스팅하기"
+msgid "Vest with POOPE on Arbitrum"
+msgstr "Arbitrum에서 POOPE로 베스팅하기"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with BLU on Avalanche"
-msgstr "Avalanche에서 BLU로 베스팅하기"
+msgid "Vest with POOPE on Avalanche"
+msgstr "Avalanche에서 POOPE로 베스팅하기"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Vested BLP not withdrawn"
-msgstr "베스트팅된 BLP에서 인출되지 않은 양"
+msgid "Vested PLP not withdrawn"
+msgstr "베스트팅된 PLP에서 인출되지 않은 양"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Vested BLU not withdrawn"
-msgstr "베스트팅된 BLU에서 인출되지 않은 양"
+msgid "Vested POOPE not withdrawn"
+msgstr "베스트팅된 POOPE에서 인출되지 않은 양"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
@@ -3677,12 +3677,12 @@ msgid "Withdraw failed."
 msgstr "인출 실패."
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdraw from BLP Vault"
-msgstr "BLP 볼트에서 인출"
+msgid "Withdraw from PLP Vault"
+msgstr "PLP 볼트에서 인출"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdraw from BLU Vault"
-msgstr "BLU 볼트에서 인출"
+msgid "Withdraw from POOPE Vault"
+msgstr "POOPE 볼트에서 인출"
 
 #: src/pages/Stake/StakeV2.js
 msgid "Withdraw submitted."
@@ -3721,7 +3721,7 @@ msgid "Yield Vaults"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Yield simulator for BLU"
+msgid "Yield simulator for POOPE"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
@@ -3733,7 +3733,7 @@ msgid "You are earning {nativeTokenSymbol} rewards with {0} tokens.<0/>Tokens: {
 msgstr "귀하는 {nativeTokenSymbol} 보상을 {0} 토큰으로 얻고 있습니다.<0/> 토큰: {amountStr}"
 
 #: src/components/ModalViews/RedirectModal.js
-msgid "You are leaving BLU.io and will be redirected to a third party, independent website."
+msgid "You are leaving POOPE.io and will be redirected to a third party, independent website."
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.js
@@ -3758,8 +3758,8 @@ msgid "You can check your claim history <0>here</0>."
 msgstr "<0>여기</0>에서 수령한 내역을 확인할 수 있습니다."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "You can currently vest a maximum of {0} esBLU tokens at a ratio of {1} {stakingToken} to 1 esBLU."
-msgstr "{1} {stakingToken} 대 1 esBLU 비율로 최대 {0} esBLU 토큰을 현재 베스팅 할 수 있습니다."
+msgid "You can currently vest a maximum of {0} esPOOPE tokens at a ratio of {1} {stakingToken} to 1 esPOOPE."
+msgstr "{1} {stakingToken} 대 1 esPOOPE 비율로 최대 {0} esPOOPE 토큰을 현재 베스팅 할 수 있습니다."
 
 #: src/pages/BuyGMX/BuyGMX.js
 msgid "You can transfer AVAX to Avalanche using any of the below options."
@@ -3795,11 +3795,11 @@ msgid "You have not deposited any tokens for vesting."
 msgstr "베스트팅을 위한 토큰이 예치되지 않았습니다."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "You have {0} esBLU (IOU) tokens."
+msgid "You have {0} esPOOPE (IOU) tokens."
 msgstr "귀하는 {0} esGMx (IOU) 토큰을 보유하고 있습니다."
 
 #: src/pages/Stake/StakeV2.js
-msgid "You need a total of at least {0} {stakeTokenLabel} to vest {1} esBLU."
+msgid "You need a total of at least {0} {stakeTokenLabel} to vest {1} esPOOPE."
 msgstr ""
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
@@ -3823,8 +3823,8 @@ msgid "You will receive at least {0} {1} if this order is executed. The executio
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Your esBLU (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
-msgstr "귀하의 esBLU(IOU) 잔액은 수령 후 수령액만큼 감소하는데 이는 상정된 행동입니다."
+msgid "Your esPOOPE (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
+msgstr "귀하의 esPOOPE(IOU) 잔액은 수령 후 수령액만큼 감소하는데 이는 상정된 행동입니다."
 
 #: src/components/Exchange/ConfirmationBox.js
 msgid "Your position's collateral after deducting fees."
@@ -3907,24 +3907,24 @@ msgid "{0} Capacity Reached"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "{0} BLP (${1})"
-msgstr "{0} BLP (${1})"
+msgid "{0} PLP (${1})"
+msgstr "{0} PLP (${1})"
 
 #: src/components/Glp/GlpSwap.js
-msgid "{0} BLP bought with {1} {2}!"
-msgstr "{1} {2}로 BLP를 구매하였습니다!"
+msgid "{0} PLP bought with {1} {2}!"
+msgstr "{1} {2}로 PLP를 구매하였습니다!"
 
 #: src/components/Glp/GlpSwap.js
-msgid "{0} BLP have been reserved for vesting."
-msgstr "{0} BLP가 베스팅을 위해 리저브되었습니다."
+msgid "{0} PLP have been reserved for vesting."
+msgstr "{0} PLP가 베스팅을 위해 리저브되었습니다."
 
 #: src/components/Glp/GlpSwap.js
-msgid "{0} BLP sold for {1} {2}!"
-msgstr "{0} BLP를 {1} {2}로 판매하였습니다!"
+msgid "{0} PLP sold for {1} {2}!"
+msgstr "{0} PLP를 {1} {2}로 판매하였습니다!"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "{0} BLU tokens can be claimed, use the options under the Total Rewards section to claim them."
+msgid "{0} POOPE tokens can be claimed, use the options under the Total Rewards section to claim them."
 msgstr ""
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
@@ -3947,7 +3947,7 @@ msgid "{0} is above its target weight.<0/><1/>Get lower fees to <2>swap</2> toke
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "{0} is below its target weight.<0/><1/>Get lower fees to <2>buy BLP</2> with {1},  and to <3>swap</3> {2} for other tokens."
+msgid "{0} is below its target weight.<0/><1/>Get lower fees to <2>buy PLP</2> with {1},  and to <3>swap</3> {2} for other tokens."
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -3979,7 +3979,7 @@ msgstr "{0}이(가) 주문 폼에서 선택되었습니다."
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "{0} tokens have been converted to BLU from the {1} esBLU deposited for vesting."
+msgid "{0} tokens have been converted to POOPE from the {1} esPOOPE deposited for vesting."
 msgstr ""
 
 #: src/components/Exchange/TradeHistory.js
@@ -4044,5 +4044,5 @@ msgid "{volumeLabel} Volume"
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy BLU on {0}"
+msgid "Buy POOPE on {0}"
 msgstr ""

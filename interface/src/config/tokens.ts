@@ -481,7 +481,7 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
       imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
     },
     {
-      name: "Escrowed BLU",
+      name: "Escrowed POOPE",
       symbol: "esGMX",
       address: getContract(ARBITRUM, "ES_GMX"),
       decimals: 18,
@@ -496,21 +496,21 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
   ],
   [AVALANCHE]: [
     {
-      name: "BLU",
-      symbol: "BLU",
+      name: "POOPE",
+      symbol: "POOPE",
       address: getContract(AVALANCHE, "GMX"),
       decimals: 18,
       imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
     },
     {
-      name: "Escrowed BLU",
-      symbol: "esBLU",
+      name: "Escrowed POOPE",
+      symbol: "esPOOPE",
       address: getContract(AVALANCHE, "ES_GMX"),
       decimals: 18,
     },
     {
-      name: "BLU LP",
-      symbol: "BLP",
+      name: "POOPE LP",
+      symbol: "PLP",
       address: getContract(ARBITRUM, "GLP"),
       decimals: 18,
       imageUrl: "https://github.com/BlueSpade-Dex/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
@@ -518,21 +518,21 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
   ],
   [GOERLI_TESTNET]: [
     {
-      name: "BLU",
-      symbol: "BLU",
+      name: "POOPE",
+      symbol: "POOPE",
       address: getContract(GOERLI_TESTNET, "GMX"),
       decimals: 18,
       imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
     },
     {
-      name: "Escrowed BLU",
-      symbol: "esBLU",
+      name: "Escrowed POOPE",
+      symbol: "esPOOPE",
       address: getContract(GOERLI_TESTNET, "ES_GMX"),
       decimals: 18,
     },
     {
-      name: "BLU LP",
-      symbol: "BLP",
+      name: "POOPE LP",
+      symbol: "PLP",
       address: getContract(GOERLI_TESTNET, "GLP"),
       decimals: 18,
       imageUrl: "https://github.com/BlueSpade-Dex/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
@@ -541,20 +541,20 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
   [CRONOS]: [
     {
       name: "Bluespade",
-      symbol: "BLU",
+      symbol: "POOPE",
       address: getContract(CRONOS, "GMX"),
       decimals: 18,
       imageUrl: "",
     },
     {
-      name: "Escrowed BLU",
-      symbol: "esBLU",
+      name: "Escrowed POOPE",
+      symbol: "esPOOPE",
       address: getContract(CRONOS, "ES_GMX"),
       decimals: 18,
     },
     {
-      name: "BLU LP",
-      symbol: "BLP",
+      name: "POOPE LP",
+      symbol: "PLP",
       address: getContract(CRONOS, "GLP"),
       decimals: 18,
       imageUrl: "",
@@ -583,15 +583,15 @@ export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } }
   [AVALANCHE]: {
     // avalanche
     GMX: {
-      name: "BLU",
-      symbol: "BLU",
+      name: "POOPE",
+      symbol: "POOPE",
       decimals: 18,
       address: getContract(AVALANCHE, "GMX"),
       imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
     },
     GLP: {
-      name: "BLU LP",
-      symbol: "BLP",
+      name: "POOPE LP",
+      symbol: "PLP",
       decimals: 18,
       address: getContract(AVALANCHE, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
       imageUrl: "https://github.com/BlueSpade-Dex/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
@@ -600,15 +600,15 @@ export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } }
   [GOERLI_TESTNET]: {
     // GOERLI_TESTNET
     GMX: {
-      name: "BLU",
-      symbol: "BLU",
+      name: "POOPE",
+      symbol: "POOPE",
       decimals: 18,
       address: getContract(GOERLI_TESTNET, "GMX"),
       imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
     },
     GLP: {
-      name: "BLU LP",
-      symbol: "BLP",
+      name: "POOPE LP",
+      symbol: "PLP",
       decimals: 18,
       address: getContract(GOERLI_TESTNET, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
       imageUrl: "https://github.com/BlueSpade-Dex/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
@@ -618,14 +618,14 @@ export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } }
     // CRONOS
     GMX: {
       name: "Bluespade",
-      symbol: "BLU",
+      symbol: "POOPE",
       decimals: 18,
       address: getContract(CRONOS, "GMX"),
       imageUrl: "",
     },
     GLP: {
-      name: "BLU LP",
-      symbol: "BLP",
+      name: "POOPE LP",
+      symbol: "PLP",
       decimals: 18,
       address: getContract(CRONOS, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
       imageUrl: "",

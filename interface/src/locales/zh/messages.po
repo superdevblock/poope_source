@@ -42,19 +42,19 @@ msgid "<0/>Profit price: {0} ${1}. This rule applies for the next {2}, until {3}
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install Coinbase Wallet</0> to start using BLU"
+msgid "<0>Install Coinbase Wallet</0> to start using POOPE"
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install Coinbase Wallet</0>, and use BLU with its built-in browser"
+msgid "<0>Install Coinbase Wallet</0>, and use POOPE with its built-in browser"
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install MetaMask</0> to start using BLU"
+msgid "<0>Install MetaMask</0> to start using POOPE"
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install MetaMask</0>, and use BLU with its built-in browser"
+msgid "<0>Install MetaMask</0>, and use POOPE with its built-in browser"
 msgstr ""
 
 #: src/components/Exchange/OrdersToa.js
@@ -70,12 +70,12 @@ msgid "<0>Return to </0><1>Homepage</1> <2>or </2> <3>Trade</3>"
 msgstr ""
 
 #: src/components/Glp/SwapErrorModal.tsx
-msgid "<0>The pool's capacity has been reached for {0}. Please use another token to buy BLP.</0><1>Check the \"Save on Fees\" section for tokens with the lowest fees.</1>"
+msgid "<0>The pool's capacity has been reached for {0}. Please use another token to buy PLP.</0><1>Check the \"Save on Fees\" section for tokens with the lowest fees.</1>"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<1/><2/>esBLU tokens that have been converted to BLU will remain as BLU tokens.<3/><4/>To claim BLU tokens without withdrawing, use the \"Claim\" button under the Total Rewards section.<5/><6/></0>"
-msgstr "这将撤回和取消保留所有代币并暂停授权。<1/><2/>esBLU 代币已转换为 BLU 将保留为 BLU 代币。<3/><4/>要在不撤回的情况下领取 BLU 代币，点选 “总奖励”下的“领取”按钮。<5/><6/></0>"
+msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<1/><2/>esPOOPE tokens that have been converted to POOPE will remain as POOPE tokens.<3/><4/>To claim POOPE tokens without withdrawing, use the \"Claim\" button under the Total Rewards section.<5/><6/></0>"
+msgstr "这将撤回和取消保留所有代币并暂停授权。<1/><2/>esPOOPE 代币已转换为 POOPE 将保留为 POOPE 代币。<3/><4/>要在不撤回的情况下领取 POOPE 代币，点选 “总奖励”下的“领取”按钮。<5/><6/></0>"
 
 #: src/lib/wallets/index.js
 msgid "<0>Your wallet is not connected to {0}.</0><1/><2>Switch to {1}</2><3>Add {2}</3>"
@@ -178,12 +178,12 @@ msgid "Affiliates"
 msgstr "结盟企业"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "After claiming you will be able to vest a maximum of {0} esBLU at a ratio of {1} {stakingToken} to 1 esBLU."
-msgstr "申领后，您将能够以{1}比{1}的比例获得最多{0}esBLU的。{stakingToken}比1esBLU。\""
+msgid "After claiming you will be able to vest a maximum of {0} esPOOPE at a ratio of {1} {stakingToken} to 1 esPOOPE."
+msgstr "申领后，您将能够以{1}比{1}的比例获得最多{0}esPOOPE的。{stakingToken}比1esPOOPE。\""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "After claiming, the esBLU tokens will be airdropped to your account on the selected network within 7 days."
-msgstr "申领后，esBLU代币将在7天内空投到您所选网络的账户中"
+msgid "After claiming, the esPOOPE tokens will be airdropped to your account on the selected network within 7 days."
+msgstr "申领后，esPOOPE代币将在7天内空投到您所选网络的账户中"
 
 #: src/pages/BuyGMX/BuyGMX.js
 #: src/pages/BuyGMX/BuyGMX.js
@@ -248,8 +248,8 @@ msgstr ""
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
 #: src/pages/Stake/StakeV2.js
-msgid "Approve BLU"
-msgstr "核准BLU"
+msgid "Approve POOPE"
+msgstr "核准POOPE"
 
 #: src/components/Exchange/PositionEditor.js
 #: src/components/Exchange/SwapBox.js
@@ -264,8 +264,8 @@ msgid "Approve {stakingTokenSymbol}"
 msgstr "核准"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Approving BLU..."
-msgstr "核准BLU中"
+msgid "Approving POOPE..."
+msgstr "核准POOPE中"
 
 #: src/components/Exchange/PositionEditor.js
 #: src/components/Exchange/SwapBox.js
@@ -294,7 +294,7 @@ msgid "Arbitrum Icon"
 msgstr ""
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
-msgid "As there is not enough liquidity in BLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
+msgid "As there is not enough liquidity in PLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV1.js
@@ -302,8 +302,8 @@ msgid "Assets Under Management"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "Assets Under Management: BLU staked (All chains) + BLP pool ({chainName})"
-msgstr "管理资产。 BLU质押（所有链）+BLP池（{链名}）"
+msgid "Assets Under Management: POOPE staked (All chains) + PLP pool ({chainName})"
+msgstr "管理资产。 POOPE质押（所有链）+PLP池（{链名}）"
 
 #: src/components/Glp/GlpSwap.js
 msgid "Available"
@@ -318,12 +318,12 @@ msgstr "可用的流动资金"
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
-msgid "Available amount to deposit into BLP."
-msgstr "可供存入BLP的金额"
+msgid "Available amount to deposit into PLP."
+msgstr "可供存入PLP的金额"
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
-msgid "Available amount to withdraw from BLP. Funds not utilized by current open positions."
+msgid "Available amount to withdraw from PLP. Funds not utilized by current open positions."
 msgstr ""
 
 #: src/pages/Home/Home.js
@@ -349,8 +349,8 @@ msgid "Avalanche Icon"
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "Avax is needed on Avalanche to purchase BLU."
-msgstr "在Avalanche上需要Avax来购买BLU"
+msgid "Avax is needed on Avalanche to purchase POOPE."
+msgstr "在Avalanche上需要Avax来购买POOPE"
 
 #: src/components/Exchange/SwapBox.js
 msgid "Balance"
@@ -417,8 +417,8 @@ msgid "Buy"
 msgstr "购买"
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "Buy / Sell BLP"
-msgstr "购买/出售BLP"
+msgid "Buy / Sell PLP"
+msgstr "购买/出售PLP"
 
 #: src/pages/BuyGMX/BuyGMX.js
 msgid "Buy / Transfer AVAX"
@@ -440,26 +440,26 @@ msgstr "购买ETH"
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/pages/Stake/StakeV2.js
-msgid "Buy BLP"
-msgstr "购买BLP"
+msgid "Buy PLP"
+msgstr "购买PLP"
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "Buy BLP Icon"
+msgid "Buy PLP Icon"
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.js
 #: src/pages/BuyGMX/BuyGMX.js
 #: src/pages/Stake/StakeV2.js
-msgid "Buy BLU"
-msgstr "购买BLU"
+msgid "Buy POOPE"
+msgstr "购买POOPE"
 
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "Buy BLU Bonds"
-msgstr "购买BLU债券"
+msgid "Buy POOPE Bonds"
+msgstr "购买POOPE债券"
 
 #: src/pages/Buy/Buy.js
-msgid "Buy BLU or BLP"
-msgstr "购买BLU或BLP"
+msgid "Buy POOPE or PLP"
+msgstr "购买POOPE或PLP"
 
 #: src/components/Glp/GlpSwap.js
 msgid "Buy failed."
@@ -551,8 +551,8 @@ msgstr "领取"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Claim BLU Rewards"
-msgstr "领取BLU奖励"
+msgid "Claim POOPE Rewards"
+msgstr "领取POOPE奖励"
 
 #: src/pages/Stake/StakeV2.js
 msgid "Claim Rewards"
@@ -564,13 +564,13 @@ msgid "Claim completed!"
 msgstr "领取完成"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Claim esBLU"
-msgstr "领取esBLU"
+msgid "Claim esPOOPE"
+msgstr "领取esPOOPE"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Claim esBLU Rewards"
-msgstr "领取esBLU奖励"
+msgid "Claim esPOOPE Rewards"
+msgstr "领取esPOOPE奖励"
 
 #: src/pages/Stake/StakeV1.js
 msgid "Claim failed"
@@ -780,8 +780,8 @@ msgid "Continue"
 msgstr "继续"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Convert esBLU tokens to BLU tokens.<0/>Please read the <1>vesting details</1> before using the vaults."
-msgstr "将esBLU代币转换为BLU代币。<0/>使用金库前请阅读<1>投资细节</1>"
+msgid "Convert esPOOPE tokens to POOPE tokens.<0/>Please read the <1>vesting details</1> before using the vaults."
+msgstr "将esPOOPE代币转换为POOPE代币。<0/>使用金库前请阅读<1>投资细节</1>"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
@@ -902,7 +902,7 @@ msgid "Dashboard"
 msgstr "仪表板"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Dashboard for BLU referral stats"
+msgid "Dashboard for POOPE referral stats"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
@@ -1043,8 +1043,8 @@ msgid "Download"
 msgstr "下载"
 
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "ETH is needed on Arbitrum to purchase BLU."
-msgstr "在Arbitrum上需使用ETH来购买BLU"
+msgid "ETH is needed on Arbitrum to purchase POOPE."
+msgstr "在Arbitrum上需使用ETH来购买POOPE"
 
 #: src/components/Header/AppHeaderLinks.tsx
 #: src/pages/Stake/StakeV2.js
@@ -1219,12 +1219,12 @@ msgstr "入场价格"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Escrowed BLU"
+msgid "Escrowed POOPE"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Escrowed BLU APR"
-msgstr "托管的BLU年利率"
+msgid "Escrowed POOPE APR"
+msgstr "托管的POOPE年利率"
 
 #: src/pages/OrdersOverview/OrdersOverview.js
 msgid "Execute"
@@ -1278,15 +1278,15 @@ msgid "Fees are high to swap from {0} to {1}. <0/>{2} is needed for collateral."
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Fees generated by BLU"
+msgid "Fees generated by POOPE"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Fees may vary depending on which asset you sell BLP for. <0/>Enter the amount of BLP you want to redeem in the order form, then check here to compare fees."
+msgid "Fees may vary depending on which asset you sell PLP for. <0/>Enter the amount of PLP you want to redeem in the order form, then check here to compare fees."
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Fees may vary depending on which asset you use to buy BLP. <0/>Enter the amount of BLP you want to purchase in the order form, then check here to compare fees."
+msgid "Fees may vary depending on which asset you use to buy PLP. <0/>Enter the amount of PLP you want to purchase in the order form, then check here to compare fees."
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
@@ -1334,115 +1334,115 @@ msgid "GBC NFTs APR tracker and rewards"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "BLP Index Composition"
-msgstr "BLP指数构成"
+msgid "PLP Index Composition"
+msgstr "PLP指数构成"
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "BLP Pool"
+msgid "PLP Pool"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "BLP Vault"
+msgid "PLP Vault"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "BLP buy disabled, pending {0} upgrade"
+msgid "PLP buy disabled, pending {0} upgrade"
 msgstr ""
 
 #: src/components/TokenCard/TokenCard.js
-msgid "BLP is the liquidity provider token. Accrues 70% of the platform's generated fees."
-msgstr "BLP是流动性提供者代币。累积了70%平台产生的费用"
+msgid "PLP is the liquidity provider token. Accrues 70% of the platform's generated fees."
+msgstr "PLP是流动性提供者代币。累积了70%平台产生的费用"
 
 #: src/components/Glp/GlpSwap.js
-msgid "BLP sell disabled, pending {0} upgrade"
+msgid "PLP sell disabled, pending {0} upgrade"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Announcements and Updates"
+msgid "POOPE Announcements and Updates"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Blueberry NFTs"
+msgid "POOPE Blueberry NFTs"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Governance Page"
+msgid "POOPE Governance Page"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Pages"
-msgstr "BLU页面"
+msgid "POOPE Pages"
+msgstr "POOPE页面"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Perpetuals Data"
+msgid "POOPE Perpetuals Data"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Proposals Voting page"
+msgid "POOPE Proposals Voting page"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Stats Page"
+msgid "POOPE Stats Page"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "BLU Vault"
+msgid "POOPE Vault"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU Weekly Updates"
+msgid "POOPE Weekly Updates"
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "BLU bonds can be bought on Olympus Pro with a discount and a small vesting period:"
-msgstr "BLU债券可以在Olympus Pro上购买，可获得折扣，并且有较小的归属期"
+msgid "POOPE bonds can be bought on Olympus Pro with a discount and a small vesting period:"
+msgstr "POOPE债券可以在Olympus Pro上购买，可获得折扣，并且有较小的归属期"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU community discussion"
+msgid "POOPE community discussion"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU dashboards and analytics."
-msgstr "BLU信息板和分析"
+msgid "POOPE dashboards and analytics."
+msgstr "POOPE信息板和分析"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU ecosystem pages."
-msgstr "BLU 生态系统页面"
+msgid "POOPE ecosystem pages."
+msgstr "POOPE 生态系统页面"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU explorer for stats and traders"
+msgid "POOPE explorer for stats and traders"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU fundamentals"
+msgid "POOPE fundamentals"
 msgstr ""
 
 #: src/pages/Home/Home.js
-msgid "BLU is currently live on Arbitrum and Avalanche."
-msgstr "BLU目前在Arbitrum和Avalanche上线"
+msgid "POOPE is currently live on Arbitrum and Avalanche."
+msgstr "POOPE目前在Arbitrum和Avalanche上线"
 
 #: src/pages/Jobs/Jobs.js
-msgid "BLU is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
+msgid "POOPE is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
 msgstr ""
 
 #: src/components/TokenCard/TokenCard.js
-msgid "BLU is the utility and governance token. Accrues 30% of the platform's generated fees."
-msgstr "BLU是效用和治理代币。拥有30%累积平台产生的费用"
+msgid "POOPE is the utility and governance token. Accrues 30% of the platform's generated fees."
+msgstr "POOPE是效用和治理代币。拥有30%累积平台产生的费用"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU staking calculator"
+msgid "POOPE staking calculator"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "BLU staking rewards updates and insights"
+msgid "POOPE staking rewards updates and insights"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "BLU transfers not yet enabled"
-msgstr "尚未启用BLU转账功能"
+msgid "POOPE transfers not yet enabled"
+msgstr "尚未启用POOPE转账功能"
 
 #: src/components/Referrals/AddAffiliateCode.js
 msgid "Generate Referral Code"
@@ -1453,8 +1453,8 @@ msgid "Generating shareable image..."
 msgstr ""
 
 #: src/pages/Referrals/Referrals.js
-msgid "Get fee discounts and earn rebates through the BLU referral program.<0/>For more information, please read the <1>referral program details</1>."
-msgstr "通过BLU推荐计划获得折扣和赚取回扣。<0/>更多信息，请阅读<1>推荐计划细节</1>。\""
+msgid "Get fee discounts and earn rebates through the POOPE referral program.<0/>For more information, please read the <1>referral program details</1>."
+msgstr "通过POOPE推荐计划获得折扣和赚取回扣。<0/>更多信息，请阅读<1>推荐计划细节</1>。\""
 
 #: src/components/Exchange/SwapBox.js
 msgid "High Slippage, Swap Anyway"
@@ -1541,8 +1541,8 @@ msgid "Insufficient Available Liquidity to swap to {0}:"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Insufficient BLP balance"
-msgstr "BLP余额不足"
+msgid "Insufficient PLP balance"
+msgstr "PLP余额不足"
 
 #: src/components/Exchange/SwapBox.js
 #: src/components/Exchange/SwapBox.js
@@ -1610,7 +1610,7 @@ msgid "Invalid token indexToken: \"{0}\" collateralToken: \"{1}\""
 msgstr ""
 
 #: src/pages/Jobs/Jobs.js
-msgid "Job openings at BLU."
+msgid "Job openings at POOPE."
 msgstr ""
 
 #: src/pages/Jobs/Jobs.js
@@ -1638,7 +1638,7 @@ msgid "Leaderboard"
 msgstr "排行榜"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Leaderboard for BLU traders"
+msgid "Leaderboard for POOPE traders"
 msgstr ""
 
 #: src/components/Exchange/PositionEditor.js
@@ -1888,11 +1888,11 @@ msgid "Max leverage: 100x"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Max pool capacity reached for {0}. Please mint BLP using another token"
-msgstr "已达到{0}池的最大容量。请使用另一个代币挖BLP"
+msgid "Max pool capacity reached for {0}. Please mint PLP using another token"
+msgstr "已达到{0}池的最大容量。请使用另一个代币挖PLP"
 
 #: src/components/Glp/GlpSwap.js
-msgid "Max pool capacity reached for {0}<0/><1/>Please mint BLP using another token"
+msgid "Max pool capacity reached for {0}<0/><1/>Please mint PLP using another token"
 msgstr ""
 
 #: src/App/App.js
@@ -2081,8 +2081,8 @@ msgid "No PnLs found"
 msgstr "未发现PnLs"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "No esBLU to claim"
-msgstr "没有esBLU可供索取"
+msgid "No esPOOPE to claim"
+msgstr "没有esPOOPE可供索取"
 
 #: src/components/Exchange/OrdersList.js
 #: src/components/Exchange/OrdersList.js
@@ -2099,7 +2099,7 @@ msgid "No open positions"
 msgstr "没有未完成的仓位"
 
 #: src/pages/Jobs/Jobs.js
-msgid "No open positions at BLU currently"
+msgid "No open positions at POOPE currently"
 msgstr ""
 
 #: src/pages/OrdersOverview/OrdersOverview.js
@@ -2302,15 +2302,15 @@ msgid "Pay: {0} USD"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "Platform and BLP index tokens."
-msgstr "平台和BLP指数代币"
+msgid "Platform and PLP index tokens."
+msgstr "平台和PLP指数代币"
 
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Please input a referral code to benefit from fee discounts."
 msgstr "请输入推荐代码，以获得折扣"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Please only use this for full account transfers.<0/>This will transfer all your BLU, esBLU, BLP and Multiplier Points to your new account.<1/>Transfers are only supported if the receiving account has not staked BLU or BLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
+msgid "Please only use this for full account transfers.<0/>This will transfer all your POOPE, esPOOPE, PLP and Multiplier Points to your new account.<1/>Transfers are only supported if the receiving account has not staked POOPE or PLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
 msgstr ""
 
 #: src/components/Migration/Migration.js
@@ -2450,12 +2450,12 @@ msgid "Profit price: {0} ${1}. This rule applies for the next {2}, until {3}."
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Projects developed by the BLU community."
-msgstr "由BLU社区所开发项目"
+msgid "Projects developed by the POOPE community."
+msgstr "由POOPE社区所开发项目"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Projects integrated with BLU."
-msgstr "与BLU整合的项目"
+msgid "Projects integrated with POOPE."
+msgstr "与POOPE整合的项目"
 
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js
@@ -2463,13 +2463,13 @@ msgid "Protocol analytics"
 msgstr ""
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "Purchase <0>BLP tokens</0> to earn {nativeTokenSymbol} fees from swaps and leverages trading."
-msgstr "购买<0>BLP代币</0>，从掉期和杠杆交易中获得{nativeTokenSymbol}费用"
+msgid "Purchase <0>PLP tokens</0> to earn {nativeTokenSymbol} fees from swaps and leverages trading."
+msgstr "购买<0>PLP代币</0>，从掉期和杠杆交易中获得{nativeTokenSymbol}费用"
 
 #: src/pages/BuyGMX/BuyGMX.js
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "Purchase BLU"
-msgstr "购买BLU"
+msgid "Purchase POOPE"
+msgstr "购买POOPE"
 
 #: src/pages/Stake/StakeV2.js
 msgid "Purchase Insurance"
@@ -2514,12 +2514,12 @@ msgid "Receiver Address"
 msgstr "收取地址"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Receiver has not staked BLP tokens before"
-msgstr "收款人未质押过BLP代币"
+msgid "Receiver has not staked PLP tokens before"
+msgstr "收款人未质押过PLP代币"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Receiver has not staked BLU tokens before"
-msgstr "收款人未质押过BLU代币"
+msgid "Receiver has not staked POOPE tokens before"
+msgstr "收款人未质押过POOPE代币"
 
 #: src/components/Glp/GlpSwap.js
 msgid "Redemption time not yet reached"
@@ -2624,7 +2624,7 @@ msgid "Reserved for Vesting"
 msgstr "保留授权"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Returns calculator for BLU and BLP"
+msgid "Returns calculator for POOPE and PLP"
 msgstr ""
 
 #: src/pages/Stake/StakeV1.js
@@ -2698,8 +2698,8 @@ msgstr "不支持自行转让"
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/pages/Stake/StakeV2.js
-msgid "Sell BLP"
-msgstr "出售BLP"
+msgid "Sell PLP"
+msgstr "出售PLP"
 
 #: src/components/Glp/GlpSwap.js
 msgid "Sell failed."
@@ -2719,12 +2719,12 @@ msgid "Selling..."
 msgstr "出售中..."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Sender has withdrawn all tokens from BLP Vesting Vault"
-msgstr "发送者已从BLP授权金库中撤回所有代币"
+msgid "Sender has withdrawn all tokens from PLP Vesting Vault"
+msgstr "发送者已从PLP授权金库中撤回所有代币"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Sender has withdrawn all tokens from BLU Vesting Vault"
-msgstr "发送者已从BLU授权金库中撤回所有代币"
+msgid "Sender has withdrawn all tokens from POOPE Vesting Vault"
+msgstr "发送者已从POOPE授权金库中撤回所有代币"
 
 #: src/App/App.js
 #: src/components/Header/AppHeaderLinks.tsx
@@ -2825,28 +2825,28 @@ msgid "Stake"
 msgstr "质押"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake <0>BLU</0> and <1>BLP</1> to earn rewards."
-msgstr "投入<0>BLU</0>和<1>BLP</1>以获得奖励"
+msgid "Stake <0>POOPE</0> and <1>PLP</1> to earn rewards."
+msgstr "投入<0>POOPE</0>和<1>PLP</1>以获得奖励"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake BLU"
+msgid "Stake POOPE"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake BLU Rewards"
-msgstr "质押BLU奖励"
+msgid "Stake POOPE Rewards"
+msgstr "质押POOPE奖励"
 
 #: src/pages/Stake/StakeV2.js
 msgid "Stake Multiplier Points"
 msgstr "质押倍数点"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake esBLU"
+msgid "Stake esPOOPE"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake esBLU Rewards"
-msgstr "质押esBLU奖励"
+msgid "Stake esPOOPE Rewards"
+msgstr "质押esPOOPE奖励"
 
 #: src/pages/Stake/StakeV1.js
 msgid "Stake failed"
@@ -3040,11 +3040,11 @@ msgid "Telegram Groups"
 msgstr "Telegram群组"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Telegram bot for BLU position updates"
+msgid "Telegram bot for POOPE position updates"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Telegram bot for Open Interest on BLU"
+msgid "Telegram bot for Open Interest on POOPE"
 msgstr ""
 
 #: src/components/Footer/Footer.js
@@ -3052,7 +3052,7 @@ msgid "Terms and Conditions"
 msgstr "条款及细则"
 
 #: src/pages/Stake/StakeV1.js
-msgid "The <0>BLU migration</0> is in progress, please migrate your GMT, xGMT, GMT-USDG and xGMT-USDG tokens.<1/>USDG tokens will continue to function as before and do not need to be migrated."
+msgid "The <0>POOPE migration</0> is in progress, please migrate your GMT, xGMT, GMT-USDG and xGMT-USDG tokens.<1/>USDG tokens will continue to function as before and do not need to be migrated."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
@@ -3064,20 +3064,20 @@ msgid "The Gambit protocol is in beta, please read the <0>staking details</0>be
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The address of the esBLU (IOU) token is {esGmxIouAddress}."
-msgstr "esBLU（IOU）代币的地址是{esGmxIouAddress}"
+msgid "The address of the esPOOPE (IOU) token is {esGmxIouAddress}."
+msgstr "esPOOPE（IOU）代币的地址是{esGmxIouAddress}"
 
 #: src/components/Exchange/SwapBox.js
 msgid "The borrow fee is calculated as (assets borrowed) / (total assets in pool) * 0.01% per hour."
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The esBLU (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
-msgstr "esBLU（IOU）代币是可以转让的，如果你愿意，你可以把代币加入你的钱包，并把它发送到另一个地址"
+msgid "The esPOOPE (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
+msgstr "esPOOPE（IOU）代币是可以转让的，如果你愿意，你可以把代币加入你的钱包，并把它发送到另一个地址"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The esBLU tokens can be staked or vested at any time."
-msgstr "esBLU代币可以在任何时候被质押或授权"
+msgid "The esPOOPE tokens can be staked or vested at any time."
+msgstr "esPOOPE代币可以在任何时候被质押或授权"
 
 #: src/lib/contracts/callContract.tsx
 msgid "The mark price has changed, consider increasing your Allowed Slippage by clicking on the \"...\" icon next to your address."
@@ -3108,7 +3108,7 @@ msgid "The spread is > 1%, please ensure the trade details are acceptable before
 msgstr ""
 
 #: src/components/ModalViews/RedirectModal.js
-msgid "The website is a community deployed and maintained instance of the open source <0>BLU front end</0>, hosted and served on the distributed, peer-to-peer <1>IPFS network</1>."
+msgid "The website is a community deployed and maintained instance of the open source <0>POOPE front end</0>, hosted and served on the distributed, peer-to-peer <1>IPFS network</1>."
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -3173,12 +3173,12 @@ msgid "To complete the transfer, you must switch your connected account to {rece
 msgstr "为了完成转移，你必须将你的连接账户切换到{receiver}"
 
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "To purchase BLU on <0>Arbitrum</0>, please change your network."
-msgstr "要在<0>Arbitrum</0>上购买BLU，请更换你的网络"
+msgid "To purchase POOPE on <0>Arbitrum</0>, please change your network."
+msgstr "要在<0>Arbitrum</0>上购买POOPE，请更换你的网络"
 
 #: src/pages/BuyGMX/BuyGMX.js
-msgid "To purchase BLU on <0>Avalanche</0>, please change your network."
-msgstr "要在<0>Avalanche</0>上购买BLU，请改变你的网络"
+msgid "To purchase POOPE on <0>Avalanche</0>, please change your network."
+msgstr "要在<0>Avalanche</0>上购买POOPE，请改变你的网络"
 
 #: src/components/Glp/GlpSwap.js
 msgid "To reduce fees, select a different asset to pay with."
@@ -3282,8 +3282,8 @@ msgid "Total fees earned since {0}: {1} USD<0/>Fee assets: {feeText}"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "Total value of tokens in BLP pool ({chainName})"
-msgstr "BLP池中的代币总值({chainName})"
+msgid "Total value of tokens in PLP pool ({chainName})"
+msgstr "PLP池中的代币总值({chainName})"
 
 #: src/components/StatsTooltip/StatsTooltip.tsx
 msgid "Total:"
@@ -3299,7 +3299,7 @@ msgid "Trade BTC, ETH, AVAX and other top cryptocurrencies with up to 100x lever
 msgstr "直接从你的钱包交易BTC、ETH、AVAX和其他顶级加密货币，杠杆率最高可达30倍"
 
 #: src/components/Exchange/ExchangeBanner.js
-msgid "Trade on BLU and win <0>$250.000</0> in prizes! Live until November 30th, <1>click here</1> to learn more."
+msgid "Trade on POOPE and win <0>$250.000</0> in prizes! Live until November 30th, <1>click here</1> to learn more."
 msgstr ""
 
 #: src/pages/Referrals/Referrals.js
@@ -3448,15 +3448,15 @@ msgid "Unstake"
 msgstr "解除质押"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake BLU"
-msgstr "BLU解除质押"
+msgid "Unstake POOPE"
+msgstr "POOPE解除质押"
 
 #: src/pages/Stake/StakeV2.js
 msgid "Unstake completed!"
 msgstr "解除质押完成"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake esBLU"
+msgid "Unstake esPOOPE"
 msgstr ""
 
 #: src/pages/Stake/StakeV1.js
@@ -3540,28 +3540,28 @@ msgid "Vest"
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with BLP on Arbitrum"
-msgstr "在Arbitrum上授权BLP"
+msgid "Vest with PLP on Arbitrum"
+msgstr "在Arbitrum上授权PLP"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with BLP on Avalanche"
-msgstr "在Avalanche上授权BLP"
+msgid "Vest with PLP on Avalanche"
+msgstr "在Avalanche上授权PLP"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with BLU on Arbitrum"
-msgstr "在Arbitrum上授权BLU"
+msgid "Vest with POOPE on Arbitrum"
+msgstr "在Arbitrum上授权POOPE"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with BLU on Avalanche"
-msgstr "在Avalanche上授权BLU"
+msgid "Vest with POOPE on Avalanche"
+msgstr "在Avalanche上授权POOPE"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Vested BLP not withdrawn"
-msgstr "归属的BLP未被撤回"
+msgid "Vested PLP not withdrawn"
+msgstr "归属的PLP未被撤回"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Vested BLU not withdrawn"
-msgstr "归属的BLU未被撤回"
+msgid "Vested POOPE not withdrawn"
+msgstr "归属的POOPE未被撤回"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
@@ -3677,12 +3677,12 @@ msgid "Withdraw failed."
 msgstr "提领失败"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdraw from BLP Vault"
-msgstr "从BLP库中提领"
+msgid "Withdraw from PLP Vault"
+msgstr "从PLP库中提领"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdraw from BLU Vault"
-msgstr "从BLU库中提领"
+msgid "Withdraw from POOPE Vault"
+msgstr "从POOPE库中提领"
 
 #: src/pages/Stake/StakeV2.js
 msgid "Withdraw submitted."
@@ -3721,7 +3721,7 @@ msgid "Yield Vaults"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Yield simulator for BLU"
+msgid "Yield simulator for POOPE"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
@@ -3733,7 +3733,7 @@ msgid "You are earning {nativeTokenSymbol} rewards with {0} tokens.<0/>Tokens: {
 msgstr "你正在用{0}代币赚取{nativeTokenSymbol}奖励。<0/>代币：{amountStr}"
 
 #: src/components/ModalViews/RedirectModal.js
-msgid "You are leaving BLU.io and will be redirected to a third party, independent website."
+msgid "You are leaving POOPE.io and will be redirected to a third party, independent website."
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.js
@@ -3758,8 +3758,8 @@ msgid "You can check your claim history <0>here</0>."
 msgstr "你可以在这里查看你的提领历史<0></0>"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "You can currently vest a maximum of {0} esBLU tokens at a ratio of {1} {stakingToken} to 1 esBLU."
-msgstr "目前，您最多可以授权{0}个esBLU代币，比例为{1}个esBLU。 {stakingToken}对1esBLU"
+msgid "You can currently vest a maximum of {0} esPOOPE tokens at a ratio of {1} {stakingToken} to 1 esPOOPE."
+msgstr "目前，您最多可以授权{0}个esPOOPE代币，比例为{1}个esPOOPE。 {stakingToken}对1esPOOPE"
 
 #: src/pages/BuyGMX/BuyGMX.js
 msgid "You can transfer AVAX to Avalanche using any of the below options."
@@ -3795,11 +3795,11 @@ msgid "You have not deposited any tokens for vesting."
 msgstr "你尚未存入任何可用于授权的代币"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "You have {0} esBLU (IOU) tokens."
-msgstr "你有{0}个esBLU (IOU) 代币"
+msgid "You have {0} esPOOPE (IOU) tokens."
+msgstr "你有{0}个esPOOPE (IOU) 代币"
 
 #: src/pages/Stake/StakeV2.js
-msgid "You need a total of at least {0} {stakeTokenLabel} to vest {1} esBLU."
+msgid "You need a total of at least {0} {stakeTokenLabel} to vest {1} esPOOPE."
 msgstr ""
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
@@ -3823,8 +3823,8 @@ msgid "You will receive at least {0} {1} if this order is executed. The executio
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Your esBLU (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
-msgstr "你的esBLU（IOU）余额在提领后将减少您的领回金额，这是可预期的"
+msgid "Your esPOOPE (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
+msgstr "你的esPOOPE（IOU）余额在提领后将减少您的领回金额，这是可预期的"
 
 #: src/components/Exchange/ConfirmationBox.js
 msgid "Your position's collateral after deducting fees."
@@ -3907,24 +3907,24 @@ msgid "{0} Capacity Reached"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "{0} BLP (${1})"
-msgstr "{0} BLP (${1})"
+msgid "{0} PLP (${1})"
+msgstr "{0} PLP (${1})"
 
 #: src/components/Glp/GlpSwap.js
-msgid "{0} BLP bought with {1} {2}!"
-msgstr "{0}BLP以{1}{2}买入!"
+msgid "{0} PLP bought with {1} {2}!"
+msgstr "{0}PLP以{1}{2}买入!"
 
 #: src/components/Glp/GlpSwap.js
-msgid "{0} BLP have been reserved for vesting."
-msgstr "{0}BLP已被保留用于授权"
+msgid "{0} PLP have been reserved for vesting."
+msgstr "{0}PLP已被保留用于授权"
 
 #: src/components/Glp/GlpSwap.js
-msgid "{0} BLP sold for {1} {2}!"
-msgstr "{0}BLP以{1}{2}售出 !"
+msgid "{0} PLP sold for {1} {2}!"
+msgstr "{0}PLP以{1}{2}售出 !"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "{0} BLU tokens can be claimed, use the options under the Total Rewards section to claim them."
+msgid "{0} POOPE tokens can be claimed, use the options under the Total Rewards section to claim them."
 msgstr ""
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
@@ -3947,7 +3947,7 @@ msgid "{0} is above its target weight.<0/><1/>Get lower fees to <2>swap</2> toke
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "{0} is below its target weight.<0/><1/>Get lower fees to <2>buy BLP</2> with {1},  and to <3>swap</3> {2} for other tokens."
+msgid "{0} is below its target weight.<0/><1/>Get lower fees to <2>buy PLP</2> with {1},  and to <3>swap</3> {2} for other tokens."
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -3979,7 +3979,7 @@ msgstr "{0}在指令表中选择"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "{0} tokens have been converted to BLU from the {1} esBLU deposited for vesting."
+msgid "{0} tokens have been converted to POOPE from the {1} esPOOPE deposited for vesting."
 msgstr ""
 
 #: src/components/Exchange/TradeHistory.js
@@ -4044,5 +4044,5 @@ msgid "{volumeLabel} Volume"
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy BLU on {0}"
+msgid "Buy POOPE on {0}"
 msgstr ""

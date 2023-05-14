@@ -125,10 +125,10 @@ export default function BeginAccountTransfer(props) {
       return t`Wallet is not connected`;
     }
     if (hasVestedGmx) {
-      return t`Vested BLU not withdrawn`;
+      return t`Vested POOPE not withdrawn`;
     }
     if (hasVestedGlp) {
-      return t`Vested BLP not withdrawn`;
+      return t`Vested PLP not withdrawn`;
     }
     if (!receiver || receiver.length === 0) {
       return t`Enter Receiver Address`;
@@ -171,7 +171,7 @@ export default function BeginAccountTransfer(props) {
       return error;
     }
     if (needApproval) {
-      return t`Approve BLU`;
+      return t`Approve POOPE`;
     }
     if (isApproving) {
       return t`Approving...`;
@@ -236,9 +236,9 @@ export default function BeginAccountTransfer(props) {
           <Trans>
             Please only use this for full account transfers.
             <br />
-            This will transfer all your BLU, esBLU, BLP and Multiplier Points to your new account.
+            This will transfer all your POOPE, esPOOPE, PLP and Multiplier Points to your new account.
             <br />
-            Transfers are only supported if the receiving account has not staked BLU or BLP tokens before.
+            Transfers are only supported if the receiving account has not staked POOPE or PLP tokens before.
             <br />
             Transfers are one-way, you will not be able to transfer staked tokens back to the sending account.
           </Trans>
@@ -268,16 +268,16 @@ export default function BeginAccountTransfer(props) {
           </div>
           <div className="BeginAccountTransfer-validations">
             <ValidationRow isValid={!hasVestedGmx}>
-              <Trans>Sender has withdrawn all tokens from BLU Vesting Vault</Trans>
+              <Trans>Sender has withdrawn all tokens from POOPE Vesting Vault</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasVestedGlp}>
-              <Trans>Sender has withdrawn all tokens from BLP Vesting Vault</Trans>
+              <Trans>Sender has withdrawn all tokens from PLP Vesting Vault</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasStakedGmx}>
-              <Trans>Receiver has not staked BLU tokens before</Trans>
+              <Trans>Receiver has not staked POOPE tokens before</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasStakedGlp}>
-              <Trans>Receiver has not staked BLP tokens before</Trans>
+              <Trans>Receiver has not staked PLP tokens before</Trans>
             </ValidationRow>
           </div>
           <div className="input-row">

@@ -383,8 +383,8 @@ export default function DashboardV2() {
                     <br />
                     <br />
                     Get lower fees to{" "}
-                    <Link to="/buy_blp" target="_blank" rel="noopener noreferrer">
-                      buy BLP
+                    <Link to="/buy_plp" target="_blank" rel="noopener noreferrer">
+                      buy PLP
                     </Link>{" "}
                     with {tokenInfo.symbol},&nbsp; and to{" "}
                     <Link to="/trade" target="_blank" rel="noopener noreferrer">
@@ -565,21 +565,21 @@ export default function DashboardV2() {
                       handle={`$${formatAmount(tvl, USD_DECIMALS, 0, true)}`}
                       position="right-bottom"
                       renderContent={() => (
-                        <span>{t`Assets Under Management: BLU staked (All chains) + BLP pool (${chainName})`}</span>
-                        // <div>{t`Assets Under Management: BLU staked (All chains) + BLP pool (${chainName})`}</div>
+                        <span>{t`Assets Under Management: POOPE staked (All chains) + PLP pool (${chainName})`}</span>
+                        // <div>{t`Assets Under Management: POOPE staked (All chains) + PLP pool (${chainName})`}</div>
                       )}
                     />
                   </div>
                 </div>
                 <div className="App-card-row">
                   <div className="label">
-                    <Trans>BLP Pool</Trans>
+                    <Trans>PLP Pool</Trans>
                   </div>
                   <div>
                     <TooltipComponent
                       handle={`$${formatAmount(aum, USD_DECIMALS, 0, true)}`}
                       position="right-bottom"
-                      renderContent={() => <span>{t`Total value of tokens in BLP pool (${chainName})`}</span>}
+                      renderContent={() => <span>{t`Total value of tokens in PLP pool (${chainName})`}</span>}
                     />
                   </div>
                 </div>
@@ -763,7 +763,7 @@ export default function DashboardV2() {
               {chainId === CRONOS && <img src={cronos24Icon} alt="cronos24Icon" />}
             </div>
             <div className="Page-description">
-              <Trans>Platform and BLP index tokens.</Trans>
+              <Trans>Platform and PLP index tokens.</Trans>
             </div>
           </div>
           <div className="DashboardV2-token-cards">
@@ -773,11 +773,11 @@ export default function DashboardV2() {
                   <div className="App-card-title">
                     <div className="App-card-title-mark">
                       <div className="App-card-title-mark-icon">
-                        <img src={gmx40Icon} alt="BLU Token Icon" />
+                        <img src={gmx40Icon} alt="POOPE Token Icon" />
                       </div>
                       <div className="App-card-title-mark-info">
-                        <div className="App-card-title-mark-title">BLU</div>
-                        <div className="App-card-title-mark-subtitle">BLU</div>
+                        <div className="App-card-title-mark-title">POOPE</div>
+                        <div className="App-card-title-mark-subtitle">POOPE</div>
                       </div>
                       <div>
                         <AssetDropdown assetSymbol="GMX" />
@@ -819,7 +819,7 @@ export default function DashboardV2() {
                       <div className="label">
                         <Trans>Supply</Trans>
                       </div>
-                      <div>{formatAmount(totalGmxSupply, GMX_DECIMALS, 0, true)} BLU</div>
+                      <div>{formatAmount(totalGmxSupply, GMX_DECIMALS, 0, true)} POOPE</div>
                     </div>
                     <div className="App-card-row">
                       <div className="label">
@@ -906,8 +906,8 @@ export default function DashboardV2() {
                         )}
                       </div>
                       <div className="App-card-title-mark-info">
-                        <div className="App-card-title-mark-title">BLP</div>
-                        <div className="App-card-title-mark-subtitle">BLP</div>
+                        <div className="App-card-title-mark-title">PLP</div>
+                        <div className="App-card-title-mark-subtitle">PLP</div>
                       </div>
                       <div>
                         <AssetDropdown assetSymbol="GLP" />
@@ -926,7 +926,7 @@ export default function DashboardV2() {
                       <div className="label">
                         <Trans>Supply</Trans>
                       </div>
-                      <div>{formatAmount(glpSupply, GLP_DECIMALS, 0, true)} BLP</div>
+                      <div>{formatAmount(glpSupply, GLP_DECIMALS, 0, true)} PLP</div>
                     </div>
                     <div className="App-card-row">
                       <div className="label">
@@ -983,7 +983,7 @@ export default function DashboardV2() {
                         ))}
                       </Pie>
                       <text x={"50%"} y={"50%"} fill="white" textAnchor="middle" dominantBaseline="middle">
-                        BLP Pool
+                        PLP Pool
                       </text>
                       <Tooltip content={<CustomTooltip />} />
                     </PieChart>
@@ -993,7 +993,7 @@ export default function DashboardV2() {
             </div>
             <div className="token-table-wrapper App-card">
               <div className="App-card-title">
-                <Trans>BLP Index Composition</Trans>{" "}
+                <Trans>PLP Index Composition</Trans>{" "}
                 {chainId === AVALANCHE && <img src={avalanche16Icon} alt={t`Avalanche Icon`} />}
                 {chainId === ARBITRUM && <img src={arbitrum16Icon} alt={t`Arbitrum Icon`} />}
                 {chainId === GOERLI_TESTNET && <img src={goerli16Icon} alt={t`Goerli Icon`} />}

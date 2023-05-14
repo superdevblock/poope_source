@@ -447,7 +447,7 @@ function VesterDepositModal(props) {
                   onChange={(e) => setValue(e.target.value)}
                 />
               </div>
-              <div className="PositionEditor-token-symbol">esBLU</div>
+              <div className="PositionEditor-token-symbol">esPOOPE</div>
             </div>
           </div>
           <div className="VesterDepositModal-info-rows">
@@ -455,7 +455,7 @@ function VesterDepositModal(props) {
               <div className="Exchange-info-label">
                 <Trans>Wallet</Trans>
               </div>
-              <div className="align-right">{formatAmount(balance, 18, 2, true)} esBLU</div>
+              <div className="align-right">{formatAmount(balance, 18, 2, true)} esPOOPE</div>
             </div>
             <div className="Exchange-info-row">
               <div className="Exchange-info-label">
@@ -479,12 +479,12 @@ function VesterDepositModal(props) {
                         <StatsTooltipRow
                           showDollar={false}
                           label={t`Deposited`}
-                          value={`${formatAmount(vestedAmount, 18, 2, true)} esBLU`}
+                          value={`${formatAmount(vestedAmount, 18, 2, true)} esPOOPE`}
                         />
                         <StatsTooltipRow
                           showDollar={false}
                           label={t`Max Capacity`}
-                          value={`${formatAmount(maxVestableAmount, 18, 2, true)} esBLU`}
+                          value={`${formatAmount(maxVestableAmount, 18, 2, true)} esPOOPE`}
                         />
                       </div>
                     );
@@ -525,7 +525,7 @@ function VesterDepositModal(props) {
                             <br />
                             <Trans>
                               You need a total of at least {formatAmount(nextReserveAmount, 18, 2, true)}{" "}
-                              {stakeTokenLabel} to vest {formatAmount(amount, 18, 2, true)} esBLU.
+                              {stakeTokenLabel} to vest {formatAmount(amount, 18, 2, true)} esPOOPE.
                             </Trans>
                           </>
                         )}
@@ -577,10 +577,10 @@ function VesterWithdrawModal(props) {
             This will withdraw and unreserve all tokens as well as pause vesting.
             <br />
             <br />
-            esBLU tokens that have been converted to BLU will remain as BLU tokens.
+            esPOOPE tokens that have been converted to POOPE will remain as POOPE tokens.
             <br />
             <br />
-            To claim BLU tokens without withdrawing, use the "Claim" button under the Total Rewards section.
+            To claim POOPE tokens without withdrawing, use the "Claim" button under the Total Rewards section.
             <br />
             <br />
           </div>
@@ -657,10 +657,10 @@ function CompoundModal(props) {
 
   const getPrimaryText = () => {
     if (isApproving) {
-      return t`Approving BLU...`;
+      return t`Approving POOPE...`;
     }
     if (needApproval) {
-      return t`Approve BLU`;
+      return t`Approve POOPE`;
     }
     if (isCompounding) {
       return t`Compounding...`;
@@ -747,22 +747,22 @@ function CompoundModal(props) {
           </div>
           <div>
             <Checkbox isChecked={shouldClaimGmx} setIsChecked={setShouldClaimGmx} disabled={shouldStakeGmx}>
-              <Trans>Claim BLU Rewards</Trans>
+              <Trans>Claim POOPE Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldStakeGmx} setIsChecked={toggleShouldStakeGmx}>
-              <Trans>Stake BLU Rewards</Trans>
+              <Trans>Stake POOPE Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldClaimEsGmx} setIsChecked={setShouldClaimEsGmx} disabled={shouldStakeEsGmx}>
-              <Trans>Claim esBLU Rewards</Trans>
+              <Trans>Claim esPOOPE Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldStakeEsGmx} setIsChecked={toggleShouldStakeEsGmx}>
-              <Trans>Stake esBLU Rewards</Trans>
+              <Trans>Stake esPOOPE Rewards</Trans>
             </Checkbox>
           </div>
           <div>
@@ -873,12 +873,12 @@ function ClaimModal(props) {
         <div className="CompoundModal-menu">
           <div>
             <Checkbox isChecked={shouldClaimGmx} setIsChecked={setShouldClaimGmx}>
-              <Trans>Claim BLU Rewards</Trans>
+              <Trans>Claim POOPE Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldClaimEsGmx} setIsChecked={setShouldClaimEsGmx}>
-              <Trans>Claim esBLU Rewards</Trans>
+              <Trans>Claim esPOOPE Rewards</Trans>
             </Checkbox>
           </div>
           <div>
@@ -1171,29 +1171,29 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
 
   const showStakeGmxModal = () => {
     if (!isGmxTransferEnabled) {
-      helperToast.error(t`BLU transfers not yet enabled`);
+      helperToast.error(t`POOPE transfers not yet enabled`);
       return;
     }
 
     setIsStakeModalVisible(true);
-    setStakeModalTitle(t`Stake BLU`);
+    setStakeModalTitle(t`Stake POOPE`);
     setStakeModalMaxAmount(processedData.gmxBalance);
     setStakeValue("");
-    setStakingTokenSymbol("BLU");
+    setStakingTokenSymbol("POOPE");
     setStakingTokenAddress(gmxAddress);
     setStakingFarmAddress(stakedGmxTrackerAddress);
-    setStakeMethodName("stakeBlu");
+    setStakeMethodName("stakePoope");
   };
 
   const showStakeEsGmxModal = () => {
     setIsStakeModalVisible(true);
-    setStakeModalTitle(t`Stake esBLU`);
+    setStakeModalTitle(t`Stake esPOOPE`);
     setStakeModalMaxAmount(processedData.esGmxBalance);
     setStakeValue("");
-    setStakingTokenSymbol("esBLU");
+    setStakingTokenSymbol("esPOOPE");
     setStakingTokenAddress(esGmxAddress);
     setStakingFarmAddress(AddressZero);
-    setStakeMethodName("stakeEsBlu");
+    setStakeMethodName("stakeEsPoope");
   };
 
   const showGmxVesterDepositModal = () => {
@@ -1203,8 +1203,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterDepositModalVisible(true);
-    setVesterDepositTitle(t`BLU Vault`);
-    setVesterDepositStakeTokenLabel("staked BLU + esBLU + Multiplier Points");
+    setVesterDepositTitle(t`POOPE Vault`);
+    setVesterDepositStakeTokenLabel("staked POOPE + esPOOPE + Multiplier Points");
     setVesterDepositMaxAmount(remainingVestableAmount);
     setVesterDepositBalance(processedData.esGmxBalance);
     setVesterDepositEscrowedBalance(vestingData.gmxVester.escrowedBalance);
@@ -1224,8 +1224,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterDepositModalVisible(true);
-    setVesterDepositTitle(t`BLP Vault`);
-    setVesterDepositStakeTokenLabel("staked BLP");
+    setVesterDepositTitle(t`PLP Vault`);
+    setVesterDepositStakeTokenLabel("staked PLP");
     setVesterDepositMaxAmount(remainingVestableAmount);
     setVesterDepositBalance(processedData.esGmxBalance);
     setVesterDepositEscrowedBalance(vestingData.glpVester.escrowedBalance);
@@ -1245,7 +1245,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterWithdrawModalVisible(true);
-    setVesterWithdrawTitle(t`Withdraw from BLU Vault`);
+    setVesterWithdrawTitle(t`Withdraw from POOPE Vault`);
     setVesterWithdrawAddress(gmxVesterAddress);
   };
 
@@ -1256,17 +1256,17 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterWithdrawModalVisible(true);
-    setVesterWithdrawTitle(t`Withdraw from BLP Vault`);
+    setVesterWithdrawTitle(t`Withdraw from PLP Vault`);
     setVesterWithdrawAddress(glpVesterAddress);
   };
 
   const showUnstakeGmxModal = () => {
     if (!isGmxTransferEnabled) {
-      helperToast.error(t`BLU transfers not yet enabled`);
+      helperToast.error(t`POOPE transfers not yet enabled`);
       return;
     }
     setIsUnstakeModalVisible(true);
-    setUnstakeModalTitle(t`Unstake BLU`);
+    setUnstakeModalTitle(t`Unstake POOPE`);
     let maxAmount = processedData.gmxInStakedGmx;
     if (
       processedData.gmxInStakedGmx &&
@@ -1280,13 +1280,13 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     setUnstakeModalMaxAmount(maxAmount);
     setUnstakeModalReservedAmount(vestingData.gmxVesterPairAmount);
     setUnstakeValue("");
-    setUnstakingTokenSymbol("BLU");
-    setUnstakeMethodName("unstakeBlu");
+    setUnstakingTokenSymbol("POOPE");
+    setUnstakeMethodName("unstakePoope");
   };
 
   const showUnstakeEsGmxModal = () => {
     setIsUnstakeModalVisible(true);
-    setUnstakeModalTitle(t`Unstake esBLU`);
+    setUnstakeModalTitle(t`Unstake esPOOPE`);
     let maxAmount = processedData.esGmxInStakedGmx;
     if (
       processedData.esGmxInStakedGmx &&
@@ -1300,8 +1300,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     setUnstakeModalMaxAmount(maxAmount);
     setUnstakeModalReservedAmount(vestingData.gmxVesterPairAmount);
     setUnstakeValue("");
-    setUnstakingTokenSymbol("esBLU");
-    setUnstakeMethodName("unstakeEsBlu");
+    setUnstakingTokenSymbol("esPOOPE");
+    setUnstakeMethodName("unstakeEsPoope");
   };
 
   const renderMultiplierPointsLabel = useCallback(() => {
@@ -1332,11 +1332,11 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
   if (totalRewardTokensAndGlp && totalRewardTokensAndGlp.gt(0)) {
     let gmxAmountStr;
     if (processedData.gmxInStakedGmx && processedData.gmxInStakedGmx.gt(0)) {
-      gmxAmountStr = formatAmount(processedData.gmxInStakedGmx, 18, 2, true) + " BLU";
+      gmxAmountStr = formatAmount(processedData.gmxInStakedGmx, 18, 2, true) + " POOPE";
     }
     let esGmxAmountStr;
     if (processedData.esGmxInStakedGmx && processedData.esGmxInStakedGmx.gt(0)) {
-      esGmxAmountStr = formatAmount(processedData.esGmxInStakedGmx, 18, 2, true) + " esBLU";
+      esGmxAmountStr = formatAmount(processedData.esGmxInStakedGmx, 18, 2, true) + " esPOOPE";
     }
     let mpAmountStr;
     if (processedData.bonusGmxInFeeGmx && processedData.bnGmxInFeeGmx.gt(0)) {
@@ -1344,7 +1344,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
     let glpStr;
     if (processedData.glpBalance && processedData.glpBalance.gt(0)) {
-      glpStr = formatAmount(processedData.glpBalance, 18, 2, true) + " BLP";
+      glpStr = formatAmount(processedData.glpBalance, 18, 2, true) + " PLP";
     }
     const amountStr = [gmxAmountStr, esGmxAmountStr, mpAmountStr, glpStr].filter((s) => s).join(", ");
     earnMsg = (
@@ -1461,7 +1461,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           </div>
           <div className="Page-description">
             <Trans>
-              Stake BLU and BLP to earn rewards.
+              Stake POOPE and PLP to earn rewards.
             </Trans>
           </div>
           {earnMsg && <div className="Page-description">{earnMsg}</div>}
@@ -1470,7 +1470,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
       <div className="StakeV2-content">
         <div className="StakeV2-cards">
           <div className="App-card StakeV2-gmx-card">
-            <div className="App-card-title">BLU</div>
+            <div className="App-card-title">POOPE</div>
             <div className="App-card-divider"></div>
             <div className="App-card-content">
               <div className="App-card-row">
@@ -1505,7 +1505,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Wallet</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "gmxBalance", 18, 2, true)} BLU ($
+                  {formatKeyAmount(processedData, "gmxBalance", 18, 2, true)} POOPE ($
                   {formatKeyAmount(processedData, "gmxBalanceUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
@@ -1514,7 +1514,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "gmxInStakedGmx", 18, 2, true)} BLU ($
+                  {formatKeyAmount(processedData, "gmxInStakedGmx", 18, 2, true)} POOPE ($
                   {formatKeyAmount(processedData, "gmxInStakedGmxUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
@@ -1531,7 +1531,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                       return (
                         <>
                           <StatsTooltipRow
-                            label="Escrowed BLU APR"
+                            label="Escrowed POOPE APR"
                             showDollar={false}
                             value={`${formatKeyAmount(processedData, "gmxAprForEsGmx", 2, 2, true)}%`}
                           />
@@ -1609,7 +1609,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                             showDollar={false}
                           />
                           <StatsTooltipRow
-                            label="Escrowed BLU"
+                            label="Escrowed POOPE"
                             value={`${formatKeyAmount(
                               processedData,
                               "stakedGmxTrackerRewards",
@@ -1673,7 +1673,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                       className="nowrap"
                       handle={
                         formatAmount(totalGmxStaked, 18, 0, true) +
-                        " BLU" +
+                        " POOPE" +
                         ` ($${formatAmount(stakedGmxSupplyUsd, USD_DECIMALS, 0, true)})`
                       }
                       renderContent={() => (
@@ -1684,13 +1684,13 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                           arbitrumValue={arbitrumGmxStaked}
                           total={totalGmxStaked}
                           decimalsForConversion={18}
-                          symbol="BLU"
+                          symbol="POOPE"
                         />
                       )}
                     />
                   )} */}
                   { formatAmount(totalGmxStaked, 18, 0, true) +
-                        " BLU" +
+                        " POOPE" +
                         ` ($${formatAmount(stakedGmxSupplyUsd, USD_DECIMALS, 2/* 0 */, true)})` }
                 </div>
               </div>
@@ -1701,18 +1701,18 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 {!totalGmxSupply && "..."}
                 {totalGmxSupply && (
                   <div>
-                    {formatAmount(totalGmxSupply, 18, 0, true)} BLU ($
+                    {formatAmount(totalGmxSupply, 18, 0, true)} POOPE ($
                     {formatAmount(totalSupplyUsd, USD_DECIMALS, 2/* 0 */, true)})
                   </div>
                 )}
               </div>
               <div className="App-card-divider" />
               <div className="App-card-options">
-                {/* <Link className="App-button-option App-card-option" to="/buy_blu">
-                  <Trans>Buy BLU</Trans>
+                {/* <Link className="App-button-option App-card-option" to="/buy_poope">
+                  <Trans>Buy POOPE</Trans>
                 </Link> */}
                 <ExternalLink href="https://bluespadexyz.gitbook.io/bluespade/usdblu" className="App-button-option App-card-option">
-                  <Trans>Buy BLU</Trans>
+                  <Trans>Buy POOPE</Trans>
                 </ExternalLink>
                 {active && (
                   <button className="App-button-option App-card-option" onClick={() => showStakeGmxModal()}>
@@ -1748,7 +1748,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 </div>
               </div>
               <div className="App-card-row">
-                <div className="label">BLU</div>
+                <div className="label">POOPE</div>
                 <div>
                   {formatKeyAmount(processedData, "totalVesterRewards", 18, 4, true)} ($
                   {formatKeyAmount(processedData, "totalVesterRewardsUsd", USD_DECIMALS, 2, true)})
@@ -1756,7 +1756,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
               </div>
               <div className="App-card-row">
                 <div className="label">
-                  <Trans>Escrowed BLU</Trans>
+                  <Trans>Escrowed POOPE</Trans>
                 </div>
                 <div>
                   {formatKeyAmount(processedData, "totalEsGmxRewards", 18, 4, true)} ($
@@ -1827,7 +1827,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
             </div>
           </div>
           <div className="App-card">
-            <div className="App-card-title">BLP ({chainName})</div>
+            <div className="App-card-title">PLP ({chainName})</div>
             <div className="App-card-divider"></div>
             <div className="App-card-content">
               <div className="App-card-row">
@@ -1841,7 +1841,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Wallet</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "glpBalance", GLP_DECIMALS, 2, true)} BLP ($
+                  {formatKeyAmount(processedData, "glpBalance", GLP_DECIMALS, 2, true)} PLP ($
                   {formatKeyAmount(processedData, "glpBalanceUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
@@ -1850,7 +1850,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "glpBalance", GLP_DECIMALS, 2, true)} BLP ($
+                  {formatKeyAmount(processedData, "glpBalance", GLP_DECIMALS, 2, true)} PLP ($
                   {formatKeyAmount(processedData, "glpBalanceUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
@@ -1872,7 +1872,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                             showDollar={false}
                           />
                           <StatsTooltipRow
-                            label="Escrowed BLU APR"
+                            label="Escrowed POOPE APR"
                             value={`${formatKeyAmount(processedData, "glpAprForEsGmx", 2, 2, true)}%`}
                             showDollar={false}
                           />
@@ -1909,7 +1909,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                             showDollar={false}
                           />
                           <StatsTooltipRow
-                            label="Escrowed BLU"
+                            label="Escrowed POOPE"
                             value={`${formatKeyAmount(
                               processedData,
                               "stakedGlpTrackerRewards",
@@ -1936,7 +1936,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Total Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "glpSupply", 18, 2, true)} BLP ($
+                  {formatKeyAmount(processedData, "glpSupply", 18, 2, true)} PLP ($
                   {formatKeyAmount(processedData, "glpSupplyUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
@@ -1945,17 +1945,17 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Total Supply</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "glpSupply", 18, 2, true)} BLP ($
+                  {formatKeyAmount(processedData, "glpSupply", 18, 2, true)} PLP ($
                   {formatKeyAmount(processedData, "glpSupplyUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-divider"></div>
               <div className="App-card-options">
-                <Link className="App-button-option App-card-option" to="/buy_blp">
-                  <Trans>Buy BLP</Trans>
+                <Link className="App-button-option App-card-option" to="/buy_plp">
+                  <Trans>Buy PLP</Trans>
                 </Link>
-                <Link className="App-button-option App-card-option" to="/buy_blp#redeem">
-                  <Trans>Sell BLP</Trans>
+                <Link className="App-button-option App-card-option" to="/buy_plp#redeem">
+                  <Trans>Sell PLP</Trans>
                 </Link>
                 {/* {hasInsurance && (
                   <a
@@ -1972,7 +1972,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           </div>
           <div className="App-card">
             <div className="App-card-title">
-              <Trans>Escrowed BLU</Trans>
+              <Trans>Escrowed POOPE</Trans>
             </div>
             <div className="App-card-divider"></div>
             <div className="App-card-content">
@@ -1987,7 +1987,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Wallet</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "esGmxBalance", 18, 2, true)} esBLU ($
+                  {formatKeyAmount(processedData, "esGmxBalance", 18, 2, true)} esPOOPE ($
                   {formatKeyAmount(processedData, "esGmxBalanceUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
@@ -1996,7 +1996,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "esGmxInStakedGmx", 18, 2, true)} esBLU ($
+                  {formatKeyAmount(processedData, "esGmxInStakedGmx", 18, 2, true)} esPOOPE ($
                   {formatKeyAmount(processedData, "esGmxInStakedGmxUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
@@ -2026,7 +2026,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                               />
                             )}
                             <StatsTooltipRow
-                              label="Escrowed BLU APR"
+                              label="Escrowed POOPE APR"
                               value={`${formatKeyAmount(processedData, "gmxAprForEsGmx", 2, 2, true)}%`}
                               showDollar={false}
                             />
@@ -2047,7 +2047,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Total Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "stakedEsGmxSupply", 18, 0, true)} esBLU ($
+                  {formatKeyAmount(processedData, "stakedEsGmxSupply", 18, 0, true)} esPOOPE ($
                   {formatKeyAmount(processedData, "stakedEsGmxSupplyUsd", USD_DECIMALS, 0, true)})
                 </div>
               </div>
@@ -2056,7 +2056,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Total Supply</Trans>
                 </div>
                 <div>
-                  {formatAmount(esGmxSupply, 18, 0, true)} esBLU (${formatAmount(esGmxSupplyUsd, USD_DECIMALS, 0, true)}
+                  {formatAmount(esGmxSupply, 18, 0, true)} esPOOPE (${formatAmount(esGmxSupplyUsd, USD_DECIMALS, 0, true)}
                   )
                 </div>
               </div>
@@ -2090,7 +2090,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           </div>
           <div className="Page-description">
             <Trans>
-              Convert esBLU tokens to BLU tokens.
+              Convert esPOOPE tokens to POOPE tokens.
               <br />
               Please read the{" "}
               <a href="https://bluespadexyz.gitbook.io/bluespade/rewards" target="_blank" rel="noopener noreferrer">
@@ -2104,7 +2104,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           <div className="StakeV2-cards">
             <div className="App-card StakeV2-gmx-card">
               <div className="App-card-title">
-                <Trans>BLU Vault</Trans>
+                <Trans>POOPE Vault</Trans>
               </div>
               <div className="App-card-divider"></div>
               <div className="App-card-content">
@@ -2121,13 +2121,13 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                           <>
                             <StatsTooltipRow
                               showDollar={false}
-                              label="BLU"
+                              label="POOPE"
                               value={formatAmount(processedData.gmxInStakedGmx, 18, 2, true)}
                             />
 
                             <StatsTooltipRow
                               showDollar={false}
-                              label="esBLU"
+                              label="esPOOPE"
                               value={formatAmount(processedData.esGmxInStakedGmx, 18, 2, true)}
                             />
                             <StatsTooltipRow
@@ -2169,8 +2169,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                           <div>
                             <Trans>
                               {formatKeyAmount(vestingData, "gmxVesterClaimSum", 18, 4, true)} tokens have been
-                              converted to BLU from the{" "}
-                              {formatKeyAmount(vestingData, "gmxVesterVestedAmount", 18, 4, true)} esBLU deposited for
+                              converted to POOPE from the{" "}
+                              {formatKeyAmount(vestingData, "gmxVesterVestedAmount", 18, 4, true)} esPOOPE deposited for
                               vesting.
                             </Trans>
                           </div>
@@ -2185,11 +2185,11 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   </div>
                   <div>
                     <Tooltip
-                      handle={`${formatKeyAmount(vestingData, "gmxVesterClaimable", 18, 4, true)} BLU`}
+                      handle={`${formatKeyAmount(vestingData, "gmxVesterClaimable", 18, 4, true)} POOPE`}
                       position="right-bottom"
                       renderContent={() => (
                         <Trans>
-                          {formatKeyAmount(vestingData, "gmxVesterClaimable", 18, 4, true)} BLU tokens can be claimed,
+                          {formatKeyAmount(vestingData, "gmxVesterClaimable", 18, 4, true)} POOPE tokens can be claimed,
                           use the options under the Total Rewards section to claim them.
                         </Trans>
                       )}
@@ -2218,7 +2218,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
             </div>
             <div className="App-card StakeV2-gmx-card">
               <div className="App-card-title">
-                <Trans>BLP Vault</Trans>
+                <Trans>PLP Vault</Trans>
               </div>
               <div className="App-card-divider"></div>
               <div className="App-card-content">
@@ -2226,7 +2226,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <div className="label">
                     <Trans>Staked Tokens</Trans>
                   </div>
-                  <div>{formatAmount(processedData.glpBalance, 18, 2, true)} BLP</div>
+                  <div>{formatAmount(processedData.glpBalance, 18, 2, true)} PLP</div>
                 </div>
                 <div className="App-card-row">
                   <div className="label">
@@ -2256,8 +2256,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                           <div>
                             <Trans>
                               {formatKeyAmount(vestingData, "glpVesterClaimSum", 18, 4, true)} tokens have been
-                              converted to BLU from the{" "}
-                              {formatKeyAmount(vestingData, "glpVesterVestedAmount", 18, 4, true)} esBLU deposited for
+                              converted to POOPE from the{" "}
+                              {formatKeyAmount(vestingData, "glpVesterVestedAmount", 18, 4, true)} esPOOPE deposited for
                               vesting.
                             </Trans>
                           </div>
@@ -2272,11 +2272,11 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   </div>
                   <div>
                     <Tooltip
-                      handle={`${formatKeyAmount(vestingData, "glpVesterClaimable", 18, 4, true)} BLU`}
+                      handle={`${formatKeyAmount(vestingData, "glpVesterClaimable", 18, 4, true)} POOPE`}
                       position="right-bottom"
                       renderContent={() => (
                         <Trans>
-                          {formatKeyAmount(vestingData, "glpVesterClaimable", 18, 4, true)} BLU tokens can be claimed,
+                          {formatKeyAmount(vestingData, "glpVesterClaimable", 18, 4, true)} POOPE tokens can be claimed,
                           use the options under the Total Rewards section to claim them.
                         </Trans>
                       )}

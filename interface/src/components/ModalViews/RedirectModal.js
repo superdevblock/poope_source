@@ -26,12 +26,12 @@ export function RedirectPopupModal({
       setIsVisible={setRedirectModalVisible}
       label={t`Launch App`}
     >
-      <Trans>You are leaving BLU.io and will be redirected to a third party, independent website.</Trans>
+      <Trans>You are leaving POOPE.io and will be redirected to a third party, independent website.</Trans>
       <br />
       <br />
       <Trans>
         The website is a community deployed and maintained instance of the open source{" "}
-        <ExternalLink href="https://github.com/BlueSpade-Dex/bluespade-interface">BLU front end</ExternalLink>, hosted and served on
+        <ExternalLink href="https://github.com/BlueSpade-Dex/bluespade-interface">POOPE front end</ExternalLink>, hosted and served on
         the distributed, peer-to-peer <ExternalLink href="https://ipfs.io/">IPFS network</ExternalLink>.
       </Trans>
       <br />

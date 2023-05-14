@@ -217,12 +217,12 @@ function FullApp() {
           <br />
           {userOnMobileDevice ? (
             <Trans>
-              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink>, and use BLU with its built-in
+              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink>, and use POOPE with its built-in
               browser
             </Trans>
           ) : (
             <Trans>
-              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink> to start using BLU
+              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink> to start using POOPE
             </Trans>
           )}
         </div>
@@ -240,13 +240,13 @@ function FullApp() {
           <br />
           {userOnMobileDevice ? (
             <Trans>
-              <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink>, and use BLU
+              <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink>, and use POOPE
               with its built-in browser
             </Trans>
           ) : (
             <Trans>
               <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink> to start using
-              BLU
+              POOPE
             </Trans>
           )}
         </div>
@@ -501,7 +501,7 @@ function FullApp() {
                   connectWallet={connectWallet}
                 />
               </Route>
-              <Route exact path="/buy_blp">
+              <Route exact path="/buy_plp">
                 <BuyGlp
                   savedSlippageAmount={savedSlippageAmount}
                   setPendingTxns={setPendingTxns}
@@ -512,7 +512,7 @@ function FullApp() {
               <Route exact path="/jobs">
                 <Jobs />
               </Route>
-              <Route exact path="/buy_blu">
+              <Route exact path="/buy_poope">
                 <BuyGMX />
               </Route>
               {/* <Route exact path="/ecosystem">

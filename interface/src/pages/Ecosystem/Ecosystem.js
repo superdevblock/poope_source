@@ -32,59 +32,59 @@ const NETWORK_ICON_ALTS = {
 export default function Ecosystem() {
   const gmxPages = [
     // {
-    //   title: "BLU Governance",
+    //   title: "POOPE Governance",
     //   link: "https://gov.bluespade.exchange/",
     //   linkLabel: "gov.bluespade.exchange",
-    //   about: t`BLU Governance Page`,
+    //   about: t`POOPE Governance Page`,
     //   chainIds: [AVALANCHE],
     // },
     {
-      title: "BLU Stats",
+      title: "POOPE Stats",
       link: "https://stats.bluespade.exchange/",
       linkLabel: "stats.bluespade.exchange",
-      about: t`BLU Stats Page`,
+      about: t`POOPE Stats Page`,
       chainIds: [/* GOERLI_TESTNET, */CRONOS],
     },
     // {
-    //   title: "BLU Proposals",
+    //   title: "POOPE Proposals",
     //   link: "https://snapshot.org/#/bluespade.eth",
     //   linkLabel: "snapshot.org",
-    //   about: t`BLU Proposals Voting page`,
+    //   about: t`POOPE Proposals Voting page`,
     //   chainIds: [AVALANCHE],
     // },
     {
-      title: "BLU Announcements",
+      title: "POOPE Announcements",
       link: "https://t.me/BlueSpadexyz",
       linkLabel: "t.me",
-      about: t`BLU Announcements and Updates`,
+      about: t`POOPE Announcements and Updates`,
       chainIds: [/* GOERLI_TESTNET, */CRONOS],
     },
   ];
 
   const communityProjects = [
     // {
-    //   title: "BLU Blueberry Club",
+    //   title: "POOPE Blueberry Club",
     //   link: "https://www.blueberry.club/",
     //   linkLabel: "blueberry.club",
-    //   about: t`BLU Blueberry NFTs`,
+    //   about: t`POOPE Blueberry NFTs`,
     //   creatorLabel: "@xm92boi",
     //   creatorLink: "https://t.me/xm92boi",
     //   chainIds: [AVALANCHE],
     // },
     // {
-    //   title: "BLU Leaderboard",
+    //   title: "POOPE Leaderboard",
     //   link: "https://www.bluespade.house/",
     //   linkLabel: "bluespade.house",
-    //   about: t`Leaderboard for BLU traders`,
+    //   about: t`Leaderboard for POOPE traders`,
     //   creatorLabel: "@Itburnz",
     //   creatorLink: "https://t.me/Itburnz",
     //   chainIds: [AVALANCHE],
     // },
     // {
-    //   title: "BLU Positions Bot",
+    //   title: "POOPE Positions Bot",
     //   link: "https://t.me/BlueSpadexyz",
     //   linkLabel: "t.me",
-    //   about: t`Telegram bot for BLU position updates`,
+    //   about: t`Telegram bot for POOPE position updates`,
     //   creatorLabel: "@zhongfu",
     //   creatorLink: "https://t.me/BlueSpadexyz",
     //   chainIds: [AVALANCHE],
@@ -93,7 +93,7 @@ export default function Ecosystem() {
     //   title: "Blueberry Pulse",
     //   link: "https://blueberrypulse.substack.com/",
     //   linkLabel: "substack.com",
-    //   about: t`BLU Weekly Updates`,
+    //   about: t`POOPE Weekly Updates`,
     //   creatorLabel: "@puroscohiba",
     //   creatorLink: "https://t.me/puroscohiba",
     //   chainIds: [AVALANCHE],
@@ -108,25 +108,25 @@ export default function Ecosystem() {
     //   chainIds: [AVALANCHE],
     // },
     // {
-    //   title: "BLU Yield Simulator",
-    //   link: "https://blu.defisims.com/",
+    //   title: "POOPE Yield Simulator",
+    //   link: "https://poope.defisims.com/",
     //   linkLabel: "defisims.com",
-    //   about: t`Yield simulator for BLU`,
+    //   about: t`Yield simulator for POOPE`,
     //   creatorLabel: "@kyzoeth",
     //   creatorLink: "https://twitter.com/kyzoeth",
     //   chainIds: [AVALANCHE],
     // },
     // {
-    //   title: "BLU Returns Calculator",
+    //   title: "POOPE Returns Calculator",
     //   link: "https://docs.google.com/spreadsheets/u/4/d/1mQZlztz_NpTg5qQiYIzc_Ls1OTLfMOUtmEQN-WW8jj4/copy",
     //   linkLabel: "docs.google.com",
-    //   about: t`Returns calculator for BLU and BLP`,
+    //   about: t`Returns calculator for POOPE and PLP`,
     //   creatorLabel: "@bluespade",
     //   creatorLink: "https://twitter.com/Blue__Spade",
     //   chainIds: [AVALANCHE],
     // },
     // {
-    //   title: "BLU Compound Calculator",
+    //   title: "POOPE Compound Calculator",
     //   link: "https://docs.google.com/spreadsheets/d/14DiIE1wZkK9-Y5xSx1PzIgmpcj4ccz1YVw5nwzIWLgI/edit#gid=0",
     //   linkLabel: "docs.google.com",
     //   about: t`Optimal compound interval calculator`,
@@ -135,28 +135,28 @@ export default function Ecosystem() {
     //   chainIds: [AVALANCHE],
     // },
     // {
-    //   title: "BLU Trading Stats",
+    //   title: "POOPE Trading Stats",
     //   link: "https://t.me/BlueSpadexyz",
     //   linkLabel: "t.me",
-    //   about: t`Telegram bot for Open Interest on BLU`,
+    //   about: t`Telegram bot for Open Interest on POOPE`,
     //   creatorLabel: "@bluespade",
     //   creatorLink: "https://twitter.com/Blue__Spade",
     //   chainIds: [AVALANCHE],
     // },
     // {
-    //   title: "BLU Staking Bot",
+    //   title: "POOPE Staking Bot",
     //   link: "https://t.me/BlueSpadexyz",
     //   linkLabel: "t.me",
-    //   about: t`BLU staking rewards updates and insights`,
+    //   about: t`POOPE staking rewards updates and insights`,
     //   creatorLabel: "@bluespade",
     //   creatorLink: "https://twitter.com/Blue__Spade",
     //   chainIds: [AVALANCHE],
     // },
     // {
-    //   title: "BLU Staking Calculator",
+    //   title: "POOPE Staking Calculator",
     //   link: "",
     //   linkLabel: "",
-    //   about: t`BLU staking calculator`,
+    //   about: t`POOPE staking calculator`,
     //   creatorLabel: "@bluespade",
     //   creatorLink: "https://t.me/BlueSpadexyz",
     //   chainIds: [AVALANCHE],
@@ -165,25 +165,25 @@ export default function Ecosystem() {
 
   const dashboardProjects = [
     // {
-    //   title: "BLU Referrals Dashboard",
+    //   title: "POOPE Referrals Dashboard",
     //   link: "",
     //   linkLabel: "",
-    //   about: t`Dashboard for BLU referral stats`,
+    //   about: t`Dashboard for POOPE referral stats`,
     //   creatorLabel: "@bluespade",
     //   creatorLink: "https://twitter.com/Blue__Spade",
     //   chainIds: [AVALANCHE],
     // },
     // {
-    //   title: "BLU Terminal",
+    //   title: "POOPE Terminal",
     //   link: "",
     //   linkLabel: "",
-    //   about: t`BLU explorer for stats and traders`,
+    //   about: t`POOPE explorer for stats and traders`,
     //   creatorLabel: "@bluespade",
     //   creatorLink: "https://t.me/BlueSpadexyz",
     //   chainIds: [AVALANCHE],
     // },
     // {
-    //   title: "BLU Analytics",
+    //   title: "POOPE Analytics",
     //   link: "",
     //   linkLabel: "",
     //   about: t`Financial reports and protocol analytics`,
@@ -195,7 +195,7 @@ export default function Ecosystem() {
     //   title: "TokenTerminal",
     //   link: "",
     //   linkLabel: "",
-    //   about: t`BLU fundamentals`,
+    //   about: t`POOPE fundamentals`,
     //   creatorLabel: "@bluespade",
     //   creatorLink: "https://twitter.com/Blue__Spade",
     //   chainIds: [AVALANCHE],
@@ -204,7 +204,7 @@ export default function Ecosystem() {
     //   title: "CryptoFees",
     //   link: "",
     //   linkLabel: "",
-    //   about: t`Fees generated by BLU`,
+    //   about: t`Fees generated by POOPE`,
     //   creatorLabel: "@bluespade",
     //   creatorLink: "https://twitter.com/Blue__Spade",
     //   chainIds: [AVALANCHE],
@@ -228,16 +228,16 @@ export default function Ecosystem() {
     //   chainIds: [AVALANCHE],
     // },
     // {
-    //   title: "BLU Perpetuals Data",
+    //   title: "POOPE Perpetuals Data",
     //   link: "https://app.laevitas.ch/altsderivs/GMX/perpetualswaps",
     //   linkLabel: "laevitas.ch",
-    //   about: t`BLU Perpetuals Data`,
+    //   about: t`POOPE Perpetuals Data`,
     //   creatorLabel: "@laevitas1",
     //   creatorLink: "https://twitter.com/laevitas1",
     //   chainIds: [AVALANCHE],
     // },
     // {
-    //   title: "BLU Blueberry Leaderboard",
+    //   title: "POOPE Blueberry Leaderboard",
     //   link: "https://www.blueberryboard.com",
     //   linkLabel: "blueberryboard.com",
     //   about: t`GBC NFTs APR tracker and rewards`,
@@ -378,28 +378,28 @@ export default function Ecosystem() {
 
   const telegramGroups = [
     {
-      title: "BLU",
+      title: "POOPE",
       link: "https://t.me/BlueSpadexyz",
       linkLabel: "t.me",
       about: t`Telegram Group`,
     },
     {
-      title: "BLU (Chinese)",
+      title: "POOPE (Chinese)",
       link: "https://t.me/BlueSpadexyz",
       linkLabel: "t.me",
       about: t`Telegram Group (Chinese)`,
     },
     {
-      title: "BLU (Portuguese)",
+      title: "POOPE (Portuguese)",
       link: "https://t.me/BlueSpadexyz",
       linkLabel: "t.me",
       about: t`Telegram Group (Portuguese)`,
     },
     {
-      title: "BLU Trading Chat",
+      title: "POOPE Trading Chat",
       link: "https://t.me/BlueSpadexyz",
       linkLabel: "t.me",
-      about: t`BLU community discussion`,
+      about: t`POOPE community discussion`,
     },
   ];
 
@@ -411,10 +411,10 @@ export default function Ecosystem() {
             <div className="section-title-icon" />
             <div className="section-title-content">
               <div className="Page-title">
-                <Trans>BLU Pages</Trans>
+                <Trans>POOPE Pages</Trans>
               </div>
               <div className="Page-description">
-                <Trans>BLU ecosystem pages.</Trans>
+                <Trans>POOPE ecosystem pages.</Trans>
               </div>
             </div>
           </div>
@@ -457,7 +457,7 @@ export default function Ecosystem() {
               <Trans>Community Projects</Trans>
             </div>
             <div className="Page-description">
-              <Trans>Projects developed by the BLU community.</Trans>
+              <Trans>Projects developed by the POOPE community.</Trans>
             </div>
           </div>
           <div className="DashboardV2-projects">
@@ -507,7 +507,7 @@ export default function Ecosystem() {
               <Trans>Dashboards</Trans>
             </div>
             <div className="Page-description">
-              <Trans>BLU dashboards and analytics.</Trans>
+              <Trans>POOPE dashboards and analytics.</Trans>
             </div>
           </div>
           <div className="DashboardV2-projects">
@@ -558,7 +558,7 @@ export default function Ecosystem() {
               <Trans>Partnerships and Integrations</Trans>
             </div>
             <div className="Page-description">
-              <Trans>Projects integrated with BLU.</Trans>
+              <Trans>Projects integrated with POOPE.</Trans>
             </div>
           </div>
           <div className="DashboardV2-projects">

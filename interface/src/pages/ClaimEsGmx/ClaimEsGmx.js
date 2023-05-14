@@ -233,7 +233,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
   let initialStakingAmount;
   let nextStakingAmount;
 
-  let stakingToken = "staked BLU";
+  let stakingToken = "staked POOPE";
 
   const shouldShowStakingAmounts = false;
 
@@ -262,7 +262,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
         result);
     }
 
-    stakingToken = "BLP";
+    stakingToken = "PLP";
   }
 
   if (selectedOption === VEST_WITH_GMX_AVAX && avaxVestingData) {
@@ -290,7 +290,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
         result);
     }
 
-    stakingToken = "BLP";
+    stakingToken = "PLP";
   }
 
   if (selectedOption === VEST_WITH_GLP_GOERLI && goerliVestingData) {
@@ -305,7 +305,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
         result);
     }
 
-    stakingToken = "BLP";
+    stakingToken = "PLP";
   } else if (selectedOption === VEST_WITH_GLP_CRONOS && cronosVestingData) {
     const result = getVestingValues({
       minRatio: bigNumberify(320),
@@ -318,7 +318,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
         result);
     }
 
-    stakingToken = "BLP";
+    stakingToken = "PLP";
   }
 
   const getError = () => {
@@ -327,7 +327,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
     }
 
     if (esGmxIouBalance && esGmxIouBalance.eq(0)) {
-      return t`No esBLU to claim`;
+      return t`No esPOOPE to claim`;
     }
 
     if (!amount || amount.eq(0)) {
@@ -413,7 +413,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
     <div className="ClaimEsGmx Page page-layout">
       <div className="Page-title-section mt-0">
         <div className="Page-title">
-          <Trans>Claim esBLU</Trans>
+          <Trans>Claim esPOOPE</Trans>
         </div>
         {!isCronos && (
           <div className="Page-description">
@@ -425,13 +425,13 @@ export default function ClaimEsGmx({ setPendingTxns }) {
           <div>
             <div className="Page-description">
               <br />
-              <Trans>You have {formatAmount(esGmxIouBalance, 18, 2, true)} esBLU (IOU) tokens.</Trans>
+              <Trans>You have {formatAmount(esGmxIouBalance, 18, 2, true)} esPOOPE (IOU) tokens.</Trans>
               <br />
               <br />
-              <Trans>The address of the esBLU (IOU) token is {esGmxIouAddress}.</Trans>
+              <Trans>The address of the esPOOPE (IOU) token is {esGmxIouAddress}.</Trans>
               <br />
               <Trans>
-                The esBLU (IOU) token is transferrable. You can add the token to your wallet and send it to another
+                The esPOOPE (IOU) token is transferrable. You can add the token to your wallet and send it to another
                 address to claim if you'd like.
               </Trans>
               <br />
@@ -439,14 +439,14 @@ export default function ClaimEsGmx({ setPendingTxns }) {
               <Trans>Select your vesting option below then click "Claim".</Trans>
               <br />
               <Trans>
-                After claiming, the esBLU tokens will be airdropped to your account on the selected network within 7
+                After claiming, the esPOOPE tokens will be airdropped to your account on the selected network within 7
                 days.
               </Trans>
               <br />
-              <Trans>The esBLU tokens can be staked or vested at any time.</Trans>
+              <Trans>The esPOOPE tokens can be staked or vested at any time.</Trans>
               <br />
               <Trans>
-                Your esBLU (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour.
+                Your esPOOPE (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour.
               </Trans>
               <br />
               <Trans>
@@ -462,7 +462,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
                 setIsChecked={() => setSelectedOption(VEST_WITH_GMX_ARB)}
               >
                 <div className="ClaimEsGmx-option-label">
-                  <Trans>Vest with BLU on Cronos</Trans>
+                  <Trans>Vest with POOPE on Cronos</Trans>
                 </div>
                 <img src={cronosIcon} alt="Cronos" />
               </Checkbox>
@@ -472,7 +472,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
                 setIsChecked={() => setSelectedOption(VEST_WITH_GLP_ARB)}
               >
                 <div className="ClaimEsGmx-option-label">
-                  <Trans>Vest with BLP on Cronos</Trans>
+                  <Trans>Vest with PLP on Cronos</Trans>
                 </div>
                 <img src={cronosIcon} alt="Cronos" />
               </Checkbox>
@@ -482,7 +482,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
                 setIsChecked={() => setSelectedOption(VEST_WITH_GMX_GOERLI)}
               >
                 <div className="ClaimEsGmx-option-label">
-                  <Trans>Vest with BLU on Goerli</Trans>
+                  <Trans>Vest with POOPE on Goerli</Trans>
                 </div>
                 <img src={goerliIcon} alt="Goerli" />
               </Checkbox>
@@ -492,7 +492,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
                 setIsChecked={() => setSelectedOption(VEST_WITH_GLP_GOERLI)}
               >
                 <div className="ClaimEsGmx-option-label goerli">
-                  <Trans>Vest with BLP on Goerli</Trans>
+                  <Trans>Vest with PLP on Goerli</Trans>
                 </div>
                 <img src={goerliIcon} alt="Goerli" />
               </Checkbox> */}
@@ -501,14 +501,14 @@ export default function ClaimEsGmx({ setPendingTxns }) {
             {!error && (
               <div className="muted">
                 <Trans>
-                  You can currently vest a maximum of {formatAmount(maxVestableAmount, 18, 2, true)} esBLU tokens at a
-                  ratio of {formatAmount(currentRatio, 4, 2, true)} {stakingToken} to 1 esBLU.
+                  You can currently vest a maximum of {formatAmount(maxVestableAmount, 18, 2, true)} esPOOPE tokens at a
+                  ratio of {formatAmount(currentRatio, 4, 2, true)} {stakingToken} to 1 esPOOPE.
                 </Trans>
                 {shouldShowStakingAmounts && `${formatAmount(initialStakingAmount, 18, 2, true)}.`}
                 <br />
                 <Trans>
                   After claiming you will be able to vest a maximum of {formatAmount(nextMaxVestableEsGmx, 18, 2, true)}{" "}
-                  esBLU at a ratio of {formatAmount(nextRatio, 4, 2, true)} {stakingToken} to 1 esBLU.
+                  esPOOPE at a ratio of {formatAmount(nextRatio, 4, 2, true)} {stakingToken} to 1 esPOOPE.
                 </Trans>
                 {shouldShowStakingAmounts && `${formatAmount(nextStakingAmount, 18, 2, true)}.`}
                 <br />

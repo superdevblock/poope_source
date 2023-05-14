@@ -63,11 +63,11 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
     <div className="Home-token-card-options">
       <div className="Home-token-card-option">
         <div className="Home-token-card-option-icon">
-          <img src={gmxBigIcon} alt="bluBigIcon" /> BLU
+          <img src={gmxBigIcon} alt="bluBigIcon" /> POOPE
         </div>
         <div className="Home-token-card-option-info">
           <div className="Home-token-card-option-title">
-            <Trans>BLU is the utility and governance token. Accrues 30% of the platform's generated fees.</Trans>
+            <Trans>POOPE is the utility and governance token. Accrues 30% of the platform's generated fees.</Trans>
           </div>
           <div className="Home-token-card-option-apr">
             <Trans>Cronos APR:</Trans> <APRLabel chainId={CRONOS} label="gmxAprTotal" key="CRONOS" />{" "}
@@ -78,10 +78,10 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
               <ExternalLink href="https://bluespadexyz.gitbook.io/bluespade/usdblu" className="default-btn">
                 <Trans>Buy on Cronos</Trans>
               </ExternalLink>
-              {/* <BuyLink to="/buy_blu" className="default-btn" network={CRONOS}>
+              {/* <BuyLink to="/buy_poope" className="default-btn" network={CRONOS}>
                 <Trans>Buy on Cronos</Trans>
               </BuyLink>
-               <BuyLink to="/buy_blu" className="default-btn" network={GOERLI_TESTNET}>
+               <BuyLink to="/buy_poope" className="default-btn" network={GOERLI_TESTNET}>
                 <Trans>Buy on Goerli</Trans>
               </BuyLink> */}
             </div>
@@ -93,11 +93,11 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
       </div>
       <div className="Home-token-card-option">
         <div className="Home-token-card-option-icon">
-          <img src={glpBigIcon} alt="blpBigIcon" /> BLP
+          <img src={glpBigIcon} alt="plpBigIcon" /> PLP
         </div>
         <div className="Home-token-card-option-info">
           <div className="Home-token-card-option-title">
-            <Trans>BLP is the liquidity provider token. Accrues 70% of the platform's generated fees.</Trans>
+            <Trans>PLP is the liquidity provider token. Accrues 70% of the platform's generated fees.</Trans>
           </div>
           <div className="Home-token-card-option-apr">
             <Trans>Cronos APR:</Trans> <APRLabel chainId={CRONOS} label="glpAprTotal" key="CRONOS" />{" "}
@@ -105,15 +105,15 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </div>
           <div className="Home-token-card-option-action">
             <div className="buy">
-              <BuyLink to="/buy_blp" className="default-btn" network={CRONOS}>
+              <BuyLink to="/buy_plp" className="default-btn" network={CRONOS}>
                 <Trans>Buy on Cronos</Trans>
               </BuyLink>
-              {/* <BuyLink to="/buy_blp" className="default-btn" network={GOERLI_TESTNET}>
+              {/* <BuyLink to="/buy_plp" className="default-btn" network={GOERLI_TESTNET}>
                 <Trans>Buy on Goerli</Trans>
               </BuyLink> */}
             </div>
             <a
-              href="https://bluespadexyz.gitbook.io/bluespade/usdblp"
+              href="https://bluespadexyz.gitbook.io/bluespade/usdplp"
               target="_blank"
               rel="noreferrer"
               className="default-btn read-more"

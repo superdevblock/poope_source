@@ -1363,7 +1363,7 @@ export function getProcessedData(
 
 export function getPageTitle(data) {
   return `${data} | Decentralized
-  Perpetual Exchange | BLU`;
+  Perpetual Exchange | POOPE`;
 }
 
 export function isHashZero(value) {
