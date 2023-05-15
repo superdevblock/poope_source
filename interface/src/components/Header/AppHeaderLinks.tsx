@@ -67,11 +67,11 @@ export function AppHeaderLinks({
           <Trans>Referrals</Trans>
         </HeaderLink>
       </div>
-      <div className="App-header-link-container">
+      {/* <div className="App-header-link-container">
         <ExternalLink href="https://stats.bluespade.xyz">
           <Trans>Analytics</Trans>
         </ExternalLink>
-      </div>
+      </div> */}
       {/* <div className="App-header-link-container">
         <HeaderLink
           to="/ecosystem"
@@ -82,7 +82,7 @@ export function AppHeaderLinks({
         </HeaderLink>
       </div> */}
       <div className="App-header-link-container">
-        <ExternalLink href="https://bluespadexyz.gitbook.io/bluespade/">
+        <ExternalLink href="#">
           <Trans>About</Trans>
         </ExternalLink>
       </div>

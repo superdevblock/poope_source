@@ -26,8 +26,12 @@
   transform-origin: top right;
   border-radius: 2rem;
   /* opacity: 0.9; */
-  background: #14141C;
-  border: 1px solid #32344c;
+  /* background: #14141C; */
+  /* border: 1px solid #32344c; */
+  /* arsinoe */
+  background: #ebebe3;
+  border: 1px solid #cdcbb3;
+  /* end arsinoe */
   list-style: none;
   cursor: pointer;
   outline: none;
@@ -37,14 +41,18 @@
   display: flex !important;
   align-items: center;
   font-size: 1.5rem;
-  color: #a0a3c4;
+  /* color: #a0a3c4; */
+  /* arsinoe */
+  color: #5f5c3b;
   padding-bottom: 1.5rem;
   font-size: 1.4rem;
   padding: 0.85rem 0.8rem;
   border-radius: 0.4rem;
 }
 .menu-item:hover {
-  background: #808aff14 !important;
+  /* background: #808aff14 !important; */
+  /* arsinoe */
+  background: #808aff !important;
   border-radius: 0.4rem;
   opacity: 1;
   color: #eee;

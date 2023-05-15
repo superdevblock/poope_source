@@ -1,8 +1,12 @@
 .asset-menu-items {
   position: absolute;
-  border: 1px solid #32344c;
+  /* border: 1px solid #32344c; */
+  /* arsinoe */
+  border: 1px solid #cdcbb3;
   border-radius: 0.4rem;
-  background: var(--dark-blue);
+  /* background: var(--dark-blue); */
+  /* arsinoe */
+  background: #e8e7d3;
   outline: none;
   z-index: 100;
 }
@@ -16,7 +20,9 @@
 .dropdown-arrow {
   margin-left: 0.8rem;
   cursor: pointer;
-  color: white;
+  /* color: white; */
+  /* arsinoe */
+  color: black;
   opacity: 0.8;
 }
 .dropdown-arrow:hover {
@@ -27,13 +33,19 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: #a0a3c4;
+  /* color: #a0a3c4; */
+  /* arsinoe */
+  color: #5f5c3b;
   text-decoration: none;
   padding: 0.85rem 0.8rem;
 }
 .asset-item:hover {
-  background: var(--dark-blue-hover);
-  color: white;
+  /* background: var(--dark-blue-hover); */
+  /* arsinoe */
+  background: #ebebe3;
+  /* color: white; */
+  /* arsinoe */
+  color: black;
   border-radius: 0.4rem;
 }
 .asset-item p {

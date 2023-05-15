@@ -4,9 +4,13 @@
   font-size: 1.4rem;
   border-radius: 3px;
   overflow: hidden;
-  color: rgba(255, 255, 255, 0.7);
-  background: #313547;
-  box-shadow: inset 0px 0px 30px 5px rgba(255, 255, 255, 0.01);
+  /* color: rgba(255, 255, 255, 0.7); */
+  /* background: #313547; */
+  /* box-shadow: inset 0px 0px 30px 5px rgba(255, 255, 255, 0.01); */
+  /* arsinoe */
+  color: rgba(0, 0, 0, 0.7);
+  background: #cecab8;
+  box-shadow: inset 0px 0px 30px 5px rgba(0, 0, 0, 0.01);
 }
 
 .Tab-option-icon {
@@ -33,8 +37,12 @@
   opacity: 1;
   pointer-events: none;
   /* background: linear-gradient(90deg, rgba(45, 66, 252, 1) 0%, rgba(46, 61, 205, 1) 100%); */
-  background: #29316c;
-  color: rgba(255, 255, 255, 1);
+  /* background: #29316c; */
+  /* color: rgba(255, 255, 255, 1);  */
+
+  /* arsinoe */
+  background: #817831;
+  color: rgba(0, 0, 0, 1);   
 }
 
 .Tab.block .Tab-option.active .Tab-option-icon {

@@ -377,7 +377,7 @@ export default function DashboardV2() {
               />
               <br />
               {currentWeightBps.lt(targetWeightBps) && (
-                <div className="text-white">
+                <div className="text-black">
                   <Trans>
                     {tokenInfo.symbol} is below its target weight.
                     <br />
@@ -885,7 +885,7 @@ export default function DashboardV2() {
                           />
                         ))}
                       </Pie>
-                      <text x={"50%"} y={"50%"} fill="white" textAnchor="middle" dominantBaseline="middle">
+                      <text x={"50%"} y={"50%"} fill="black" textAnchor="middle" dominantBaseline="middle">
                         <Trans>Distribution</Trans>
                       </text>
                       <Tooltip content={<CustomTooltip />} />
@@ -982,7 +982,7 @@ export default function DashboardV2() {
                           />
                         ))}
                       </Pie>
-                      <text x={"50%"} y={"50%"} fill="white" textAnchor="middle" dominantBaseline="middle">
+                      <text x={"50%"} y={"50%"} fill="black" textAnchor="middle" dominantBaseline="middle">
                         PLP Pool
                       </text>
                       <Tooltip content={<CustomTooltip />} />

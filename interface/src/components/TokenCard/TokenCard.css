@@ -1,9 +1,15 @@
 
 .default-btn.read-more {
   background: transparent;
-  border: 1px solid #A0A3C4;
+  /* border: 1px solid #A0A3C4; */
+  /* arsinoe */
+  color: black !important;
+  border: 1px solid #5f5c3b;
 }
 
 .default-btn.read-more:hover {
-    background: #6f7386;
+  /* background: #6f7386; */
+  /* arsinoe */
+  border: 1px solid #908c79;
+  color: white !important;
 }

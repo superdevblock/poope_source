@@ -9,11 +9,13 @@ import {
   GOERLI_RPC_PROVIDERS,
   CRONOS,
   CRONOS_RPC_PROVIDERS,
+  ETHER_RPC_PROVIDERS,
   DEFAULT_CHAIN_ID,
   getChainName,
   MAINNET,
   NETWORK_METADATA,
   SUPPORTED_CHAIN_IDS,
+  ETHER_MAIN,
 } from "config/chains";
 import { UnsupportedChainIdError, useWeb3React } from "@web3-react/core";
 import React, { useEffect, useState } from "react";
@@ -87,6 +89,7 @@ export const getWalletConnectConnector = () => {
       [ARBITRUM_TESTNET]: "https://rinkeby.arbitrum.io/rpc",
       [GOERLI_TESTNET]: GOERLI_RPC_PROVIDERS[0],
       [CRONOS]: CRONOS_RPC_PROVIDERS[0],
+      [ETHER_MAIN]: ETHER_RPC_PROVIDERS[0]
     },
     qrcode: true,
     chainId,

@@ -75,7 +75,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </div>
           <div className="Home-token-card-option-action">
             <div className="buy">
-              <ExternalLink href="https://bluespadexyz.gitbook.io/bluespade/usdblu" className="default-btn">
+              <ExternalLink href="#" className="default-btn">
                 <Trans>Buy on Cronos</Trans>
               </ExternalLink>
               {/* <BuyLink to="/buy_poope" className="default-btn" network={CRONOS}>
@@ -85,7 +85,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
                 <Trans>Buy on Goerli</Trans>
               </BuyLink> */}
             </div>
-            <ExternalLink href="https://bluespadexyz.gitbook.io/bluespade/usdblu" className="default-btn read-more">
+            <ExternalLink href="#" className="default-btn read-more">
               <Trans>Read more</Trans>
             </ExternalLink>
           </div>

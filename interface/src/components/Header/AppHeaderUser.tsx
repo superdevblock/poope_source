@@ -12,7 +12,7 @@ import cx from "classnames";
 import { Trans } from "@lingui/macro";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
 import LanguagePopupHome from "../NetworkDropdown/LanguagePopupHome";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, GOERLI_TESTNET, CRONOS, getChainName } from "config/chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, GOERLI_TESTNET, CRONOS, ETHER_MAIN, getChainName } from "config/chains";
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
 
@@ -51,8 +51,8 @@ export function AppHeaderUser({
     //   color: "#E841424D",
     // },
     {
-      label: getChainName(CRONOS),
-      value: CRONOS,
+      label: getChainName(ETHER_MAIN),
+      value: ETHER_MAIN,
       icon: "ic_cronos_24.svg",
       color: "#E841424D",
     },

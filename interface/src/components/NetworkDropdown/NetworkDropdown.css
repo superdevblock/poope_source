@@ -1,8 +1,12 @@
 .App-header-network {
   position: relative;
   margin-left: 2.4rem;
-  border: 1px solid var(--dark-blue-border);
-  border-radius: var(--border-radius-sm);
+  /* border: 1px solid var(--dark-blue-border);
+  border-radius: var(--border-radius-sm); */
+  /* arsinoe */
+  border: 1px solid #00000029;
+  border-radius: 0.4rem;
+  /* end arsinoe */
   height: 3.6rem;
   display: inline-flex;
   align-items: center;
@@ -56,7 +60,9 @@
 
 .network-dropdown-seperator {
   width: 1px;
-  background: var(--dark-blue-border);
+  /* background: var(--dark-blue-border); */
+  /* arsinoe */
+  background: #00000029;
   margin: 0.8rem 0;
 }
 
@@ -79,7 +85,8 @@
   max-width: 29.6rem;
   margin: auto;
 }
-.network-option {
+
+/* .network-option {
   cursor: pointer;
   background: var(--dark-blue);
   border: 1px solid var(--dark-blue-border);
@@ -90,6 +97,29 @@
   position: relative;
   justify-content: space-between;
   margin-bottom: 0.8rem;
+} */
+
+.network-option {
+  display: block;
+  box-shadow: inset 0px 0px 1rem 0.5rem rgba(27, 30, 46, 0.2);
+  /* background: var(--dark-blue); */
+  height: 5.1rem;
+  width: 26.35rem;
+  /* border: 1px solid var(--dark-blue-border); */
+  border-radius: 0.3rem;
+  position: relative;
+  /* color: white; */
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  text-align: left;
+  padding-left: 1.85rem;
+  /* arsinoe */
+  border: 1px solid #00000029;
+  background: #e8e7d3;
+  color: black;
+  margin-bottom: 0.85rem;
+  /* end arsinoe */
 }
 .network-option:last-child {
   margin-bottom: 0;
@@ -103,7 +133,8 @@
 .network-option span {
   font-size: 1.5rem;
   letter-spacing: 0.29px;
-  color: #fff;
+  /* color: #fff; */
+  color: #000;
 }
 
 .network-option-img-label {
@@ -114,7 +145,9 @@
 }
 
 .dropdown-label {
-  color: #a0a3c4;
+  /* color: #a0a3c4; */
+  /* arsinoe */
+  color: #5f5c3b;
   padding: 0.8rem;
   font-size: 1.25rem;
 }

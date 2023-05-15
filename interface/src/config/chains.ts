@@ -10,6 +10,7 @@ export const ARBITRUM_TESTNET = 421611;
 export const ARBITRUM = 42161;
 export const GOERLI_TESTNET = 5;
 export const CRONOS = 25;
+export const ETHER_MAIN = 1;
 
 // TODO take it from web3
 export const DEFAULT_CHAIN_ID = CRONOS;
@@ -28,7 +29,8 @@ export const IS_NETWORK_DISABLED = {
   [TESTNET]: true,
   [AVALANCHE]: true,
   [GOERLI_TESTNET]: true,
-  [CRONOS]: false,
+  [CRONOS]: true,
+  [ETHER_MAIN]: false
 };
 
 export const CHAIN_NAMES_MAP = {
@@ -39,6 +41,7 @@ export const CHAIN_NAMES_MAP = {
   [AVALANCHE]: "Avalanche",
   [GOERLI_TESTNET]: "Goerli",
   [CRONOS]: "Cronos",
+  [ETHER_MAIN]: "Ethereum"
 };
 
 export const GAS_PRICE_ADJUSTMENT_MAP = {
@@ -46,12 +49,14 @@ export const GAS_PRICE_ADJUSTMENT_MAP = {
   [AVALANCHE]: "3000000000", // 3 gwei
   [GOERLI_TESTNET]: "3000000000", // 3 gwei
   [CRONOS]: "3000000000", // 3 gwei
+  [ETHER_MAIN]: "3000000000"
 };
 
 export const MAX_GAS_PRICE_MAP = {
   [AVALANCHE]: "200000000000", // 200 gwei
   [GOERLI_TESTNET]: "200000000000", // 200 gwei
   [CRONOS]: "5000000000000", // 5000 gwei
+  [ETHER_MAIN]: "200000000000"
 };
 
 export const HIGH_EXECUTION_FEES_MAP = {
@@ -59,6 +64,7 @@ export const HIGH_EXECUTION_FEES_MAP = {
   [AVALANCHE]: 3, // 3 USD
   [GOERLI_TESTNET]: 3, // 3 USD
   [CRONOS]: 3, // 3 USD
+  [ETHER_MAIN]: 3, // 3 USD
 };
 
 const constants = {
@@ -146,6 +152,20 @@ const constants = {
     // contract requires that execution fee be strictly greater than instead of gte
     DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0100001"),
   },
+
+  [ETHER_MAIN]: {
+    nativeTokenSymbol: "ETH",
+    wrappedTokenSymbol: "WETH",
+    defaultCollateralSymbol: "USDC",
+    defaultFlagOrdersEnabled: true,
+    positionReaderPropsLength: 9,
+    v2: true,
+
+    SWAP_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
+    INCREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
+    // contract requires that execution fee be strictly greater than instead of gte
+    DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0100001"),
+  },
 };
 
 const ALCHEMY_WHITELISTED_DOMAINS = ["gmx.io", "app.gmx.io"];
@@ -154,6 +174,7 @@ export const ARBITRUM_RPC_PROVIDERS = [getDefaultArbitrumRpcUrl()];
 export const AVALANCHE_RPC_PROVIDERS = ["https://api.avax.network/ext/bc/C/rpc"]; // Avalanche MAINNET
 export const GOERLI_RPC_PROVIDERS = ["https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"]; // Goerli Test Network
 export const CRONOS_RPC_PROVIDERS = ["https://cronos-evm.publicnode.com"]; //Cronos MAINNET
+export const ETHER_RPC_PROVIDERS = ["https://mainnet.infura.io/v3/"]; //Ether MAINNET
 // BSC TESTNET
 // const RPC_PROVIDERS = [
 //   "https://data-seed-prebsc-1-s1.binance.org:8545",
@@ -186,6 +207,7 @@ export const RPC_PROVIDERS = {
   [AVALANCHE]: AVALANCHE_RPC_PROVIDERS,
   [GOERLI_TESTNET]: GOERLI_RPC_PROVIDERS,
   [CRONOS]: CRONOS_RPC_PROVIDERS,
+  [ETHER_MAIN]: ETHER_RPC_PROVIDERS
 };
 
 export const FALLBACK_PROVIDERS = {
@@ -273,6 +295,17 @@ export const NETWORK_METADATA = {
     rpcUrls: CRONOS_RPC_PROVIDERS,
     blockExplorerUrls: [getExplorerUrl(CRONOS)],
   },
+  [ETHER_MAIN]: {
+    chainId: "0x" + ETHER_MAIN.toString(16),
+    chainName: "Cronos",
+    nativeCurrency: {
+      name: "CRO",
+      symbol: "CRO",
+      decimals: 18,
+    },
+    rpcUrls: ETHER_RPC_PROVIDERS,
+    blockExplorerUrls: [getExplorerUrl(ETHER_MAIN)],
+  },
 };
 
 export const getConstant = (chainId: number, key: string) => {
@@ -328,6 +361,8 @@ export function getExplorerUrl(chainId) {
     return "https://goerli.etherscan.io/";
   } else if (chainId === CRONOS) {
     return "https://cronoscan.com/";
+  } else if (chainId === ETHER_MAIN) {
+    return "https://etherscan.io/";
   }
   return "https://etherscan.io/";
 }

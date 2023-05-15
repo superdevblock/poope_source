@@ -25,7 +25,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.9);
+  /* background: rgba(0, 0, 0, 0.9); */
+  /* arsinoe */
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .Modal-content {
@@ -34,12 +36,16 @@
   max-width: 100%;
   max-height: 90vh;
   overflow: auto;
-  background: #14141C;
+  /* background: #14141C; */
+  /* arsinoe */
+  background: #FFFFFF;
   border-radius: 2rem;
 }
 
 .divider {
-  border-bottom: 1px solid #ffffff29;
+  /* border-bottom: 1px solid #ffffff29; */
+  /* arsinoe */
+  border-bottom: 1px solid #00000029;
   margin-bottom: 1.5rem;
 }
 

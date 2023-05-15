@@ -1,14 +1,18 @@
 .Footer-wrapper {
   text-align: center;
   padding-top: 4rem;
-  background: #14141C;
+  /* background: #14141C; */
+  /* arsinoe */
+  background: #ebebe3;
   width: 100vw;
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
   height: 20rem;
   bottom: 0;
-  border-top: 1px solid #282b4c;
+  /* border-top: 1px solid #282b4c; */
+  /* arsinoe */
+  border-top: 1px solid #d7d4b3;
 }
 
 .Footer-logo {
@@ -29,7 +33,9 @@
   margin-bottom: 2.4rem;
 }
 .Footer-link {
-  color: #a0a3c4;
+  /* color: #a0a3c4; */
+  /* arsinoe */
+  color: #5f5c3b;
   font-size: 1.5rem;
   line-height: 1.85rem;
   font-weight: normal;
@@ -37,7 +43,9 @@
   cursor: pointer;
 }
 .Footer-link:hover {
-  color: white;
+  /* color: white; */
+  /* arsinoe */
+  color: black;
 }
 
 .Footer-social-link-block .App-social-link {

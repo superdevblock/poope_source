@@ -311,6 +311,7 @@
   right: 0;
   top: 6.975rem;
   z-index: 1;
+  background: #0a0b11;
 }
 .ExchangeChart-bottom-controls {
   display: inline-block;
@@ -336,6 +337,8 @@
 }
 .ExchangeChart-bottom-stats-label {
   color: rgba(255, 255, 255, 0.7);
+  /* arsinoe */
+  /* color: rgba(0, 0, 255, 0.7); */
   font-weight: bold;
 }
 .ExchangeChart-bottom-stats-value {
@@ -497,7 +500,9 @@ table.Exchange-list.Orders td {
 }
 
 table.Exchange-list tr {
-  border-bottom: 1px solid #23263b;
+  /* border-bottom: 1px solid #23263b; */
+  /* arsinoe */
+  border-bottom: 1px solid #e1dec9;
 }
 
 table.Exchange-list tr:last-child {
@@ -506,8 +511,11 @@ table.Exchange-list tr:last-child {
 
 table.Exchange-list tr:hover {
   /* background: linear-gradient(90deg, rgba(30, 34, 61, 1) 0%, rgba(38, 43, 71, 1) 100%); */
-  background: #313547;
-  box-shadow: inset 0px 0px 3rem 0.5rem rgba(255, 255, 255, 0.01);
+  /* background: #313547; */
+  /* box-shadow: inset 0px 0px 3rem 0.5rem rgba(255, 255, 255, 0.01); */
+  /* arsinoe */
+  background: #e1dec9;
+  box-shadow: inset 0px 0px 3rem 0.5rem rgba(0, 0, 0, 0.01);  
 }
 
 table.Exchange-list tr.Exchange-list-header {
@@ -666,8 +674,11 @@ table.Exchange-list th {
   padding: 1.5rem;
   margin-bottom: 1.05rem;
   border-radius: 0.3rem;
-  background: #313547;
-  box-shadow: inset 0px 0px 3rem 0.5rem rgba(255, 255, 255, 0.01);
+  /* background: #313547; */
+  /* box-shadow: inset 0px 0px 3rem 0.5rem rgba(255, 255, 255, 0.01); */
+  /* arsinoe */
+  background: #cecab8;
+  box-shadow: inset 0px 0px 3rem 0.5rem rgba(0, 0, 0, 0.01);  
 }
 
 .Exchange-swap-option-tabs.Tab.block .Tab-option {
@@ -785,15 +796,21 @@ input.Exchange-swap-input.small {
   user-select: none;
   /* background: linear-gradient(90deg, rgba(45, 66, 252, 1) 0%, rgba(46, 61, 205, 1) 100%); */
   /* background: linear-gradient(90deg, rgba(45, 66, 252, 1) 0%, rgba(46, 61, 205, 1) 100%); */
-  background: #29316c;
+  /* background: #29316c; */
   display: flex;
   justify-content: center;
   align-items: center;
+  /* arsinoe */
+  background: #cecab8;
+  border: 1px solid #29316c;
 }
 
 .Exchange-swap-ball:hover {
   /* background: linear-gradient(90deg, rgba(58, 78, 252, 1) 0%, rgba(51, 68, 222, 1) 100%); */
-  background: #29316c;
+  /* background: #29316c; */
+  /* arsinoe */
+  background: #cecab8;
+  border: 1px solid #29316c;
 }
 
 .Exchange-swap-ball:hover .Exchange-swap-ball-icon {

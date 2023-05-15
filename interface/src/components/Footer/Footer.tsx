@@ -15,25 +15,25 @@ import { isHomeSite, getAppBaseUrl, shouldShowRedirectModal } from "lib/legacy";
 const footerLinks = {
   home: [
     { text: t`Terms and Conditions`, link: "/terms-and-conditions" },
-    { text: t`Referral Terms`, link: "https://bluespadexyz.gitbook.io/bluespade/referrals", external: true },
-    { text: t`Media Kit`, link: "https://bluespadexyz.gitbook.io/bluespade/", external: true },
+    { text: t`Referral Terms`, link: "", external: true },
+    { text: t`Media Kit`, link: "", external: true },
     // { text: "Jobs", link: "/jobs", isAppLink: true },
   ],
   app: [
-    { text: t`Terms and Conditions`, link: "/terms-and-conditions" },
-    { text: t`Referral Terms`, link: "/referral-terms" },
-    { text: t`Media Kit`, link: "https://bluespadexyz.gitbook.io/bluespade/", external: true },
+    { text: t`Terms and Conditions`, link: "" },
+    { text: t`Referral Terms`, link: "" },
+    { text: t`Media Kit`, link: "", external: true },
     // { text: "Jobs", link: "/jobs" },
   ],
 };
 
 const socialLinks = [
-  { link: "https://twitter.com/Blue__Spade", name: "Twitter", icon: twitterIcon },
-  { link: "https://medium.com/@bluespadexyz", name: "Medium", icon: mediumIcon },
-  { link: "https://bluespadexyz.gitbook.io/bluespade", name: "Gitbook", icon: gitbookIcon },
+  { link: "", name: "Twitter", icon: twitterIcon },
+  { link: "", name: "Medium", icon: mediumIcon },
+  { link: "", name: "Gitbook", icon: gitbookIcon },
   // { link: "https://github.com/Bluespadexyz", name: "Github", icon: githubIcon },
-  { link: "https://t.me/BlueSpadexyz", name: "Telegram", icon: telegramIcon },
-  { link: "https://discord.gg/bluespade", name: "Discord", icon: discordIcon },
+  { link: "", name: "Telegram", icon: telegramIcon },
+  { link: "", name: "Discord", icon: discordIcon },
 ];
 
 type Props = { showRedirectModal?: (to: string) => void; redirectPopupTimestamp?: () => void };

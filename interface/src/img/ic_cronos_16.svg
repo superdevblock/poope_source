@@ -1,9 +1,22 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-	<title>download</title>
-	<defs>
-		<image  width="14" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAMAAAARSr4IAAAAAXNSR0IB2cksfwAAAadQTFRFAAAAWGibFTh8CjJ4CTJ3Ejd7MUmIGDt+DjR6BC91AS10AC10BC91CTF3Fzp+5ujucH2iGDp9DTR5BC91Fz+AWHSjb4ewJEqHAS10Ay51CzN5FDh8SViTGjt+CDF3AS10JUqIo7LM9fb5/f3+vMbaP1+VBzF3Fjl8Ay51GkKCorDL7O/0manGfpO43eLs////vcfaLVCMAy91Ejt+kKLC9/j6vsjbUW6fHUSDPl+VqrfQ9PX5vcbaGECBsL3UytHhDDZ6WnWkv8nb0Nfle5C2boWv8PL24OLtMFOOwMjcCDN4x9Dg/v7+GEGBx9HhyM/gZ4Cry9Pi2+HrjJ/AfJG28fP3Ezx+lqjF9/f6sr/VRmWZHkSEIkiGNliRnKzJ8vT4xczeJ0yJAi51JUqHsr7U5OjwiZy+boav0tnmy9LiOluTBjF3FTh8BzF3NFaPs7/U+vv8yNDgTmyeBjB2EjZ7SVmRFTl8DTR5Ay91H0WEfZK3LFCLAi51CzN4ETd7NEuKFzp9DDR5Ay91Ay51CDF3Ezh8c3enT2SZEjd7CTF3BjB2EDZ6LUiGyKCnQgAAAI10Uk5TAAFDrshbBR592/7/6JUuAAAgat3//////+mCLgI3tvv////////MU///////////////////////////////////////////////////////////////////////////////////////////R8P//////9hjASh45P///++SOAMmi+LtozgCA1C81WoIRIT6HQAAANFJREFUeJxjYAACRiZmFlY2Bihg5+Dk4ubh5eMHsgUEhYS5RUTFxCUkpaRlGGTl5LkVFJWUVVS5JdTUGTS4NbWUtXV09fQNDI24GYyMTUzNzC0sLK2sbRSAXFs7ewdHJ2cXVzd3DzDX08tbX9/HRx/M9QVy/fRBAMr19woIDAoOCQVzw8IjIqOiY2Lj4hMSgdyk5BT91LT0DP3MrGxuhpxcLu68/AL9wqIk7uIShtKy8gruyoCq6qSa2rp6kBcaGpu4uZtbWtugXmrv6Ozq7gGxAPFgMHj2GBBjAAAAAElFTkSuQmCC"/>
-	</defs>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 41" width="16" height="16">
+	<title>ic_cronos_16-svg</title>
 	<style>
+		.s0 { fill: none } 
+		.s1 { fill: #ffffff } 
+		.s2 { fill: #343434 } 
+		.s3 { fill: #8c8c8c } 
+		.s4 { fill: #3c3c3b } 
+		.s5 { fill: #141414 } 
+		.s6 { fill: #393939 } 
 	</style>
-	<use id="Background" href="#img1" x="1" y="0"/>
+	<path id="Layer" class="s0" d="m0 0h40v40h-40z"/>
+	<path id="Layer" class="s1" d="m39.4 24.8c-2 7.9-8.4 13.8-16.4 15-8.1 1.2-16-2.6-20.2-9.5-4.1-6.9-3.7-15.7 1.1-22.2 4.8-6.5 13.1-9.5 20.9-7.5 2.6 0.6 5 1.8 7.1 3.3 2.1 1.6 3.9 3.6 5.2 5.8 1.4 2.3 2.3 4.8 2.7 7.3 0.4 2.6 0.2 5.3-0.4 7.8z"/>
+	<g id="Layer">
+		<path id="Layer" class="s2" d="m20 6l-0.2 0.7v18.4l0.2 0.2 8.6-5z"/>
+		<path id="Layer" class="s3" d="m20 6l-8.6 14.3 8.6 5z"/>
+		<path id="Layer" class="s4" d="m20 27l-0.1 0.1v6.6l0.1 0.3 8.6-12.1z"/>
+		<path id="Layer" class="s3" d="m20 34v-7l-8.6-5.1z"/>
+		<path id="Layer" class="s5" d="m20 25.3l8.6-5-8.6-3.9z"/>
+		<path id="Layer" class="s6" d="m11.4 20.3l8.6 5v-8.9z"/>
+	</g>
 </svg>

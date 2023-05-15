@@ -1711,7 +1711,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 {/* <Link className="App-button-option App-card-option" to="/buy_poope">
                   <Trans>Buy POOPE</Trans>
                 </Link> */}
-                <ExternalLink href="https://bluespadexyz.gitbook.io/bluespade/usdblu" className="App-button-option App-card-option">
+                <ExternalLink href="#" className="App-button-option App-card-option">
                   <Trans>Buy POOPE</Trans>
                 </ExternalLink>
                 {active && (

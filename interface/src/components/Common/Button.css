@@ -13,7 +13,9 @@ a.btn {
   display: inline-flex;
   align-items: center;
   border: none;
-  color: white;
+  /* color: white; */
+  /* arsinoe */
+  color: black;
   font-size: 1.4rem;
   border-radius: var(--border-radius-sm);
   cursor: pointer;
@@ -74,8 +76,11 @@ a.btn {
 
 .btn-primary {
   background: transparent;
-  border: 1px solid var(--dark-blue-border);
-  border-radius: var(--border-radius-sm);
+  /* border: 1px solid var(--dark-blue-border); */  
+  /* border-radius: var(--border-radius-sm); */
+  /* arsinoe */
+  border: 1px solid #00000029;
+  border-radius: 0.4rem;
 }
 
 .btn-primary:hover {
