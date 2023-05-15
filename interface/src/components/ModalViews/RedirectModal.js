@@ -31,20 +31,20 @@ export function RedirectPopupModal({
       <br />
       <Trans>
         The website is a community deployed and maintained instance of the open source{" "}
-        <ExternalLink href="https://github.com/BlueSpade-Dex/bluespade-interface">POOPE front end</ExternalLink>, hosted and served on
+        <ExternalLink href="#">POOPE front end</ExternalLink>, hosted and served on
         the distributed, peer-to-peer <ExternalLink href="https://ipfs.io/">IPFS network</ExternalLink>.
       </Trans>
       <br />
       <br />
       <Trans>
         Alternative links can be found in the{" "}
-        <ExternalLink href="https://bluespadexyz.gitbook.io/bluespade/app-links">docs</ExternalLink>.
+        <ExternalLink href="#">docs</ExternalLink>.
         <br />
         <br />
-        By clicking Agree you accept the <ExternalLink href="https://app.bluespade.exchange/#/terms-and-conditions">
+        By clicking Agree you accept the <ExternalLink href="#">
           T&Cs
         </ExternalLink>{" "}
-        and <ExternalLink href="https://app.bluespade.exchange/#/referral-terms">Referral T&Cs</ExternalLink>.
+        and <ExternalLink href="#">Referral T&Cs</ExternalLink>.
         <br />
         <br />
       </Trans>

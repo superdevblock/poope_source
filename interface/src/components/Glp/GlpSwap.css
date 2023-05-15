@@ -112,10 +112,13 @@
 }
 
 .GlpSwap-token-list {
-  border: 1px solid #1e2136;
+  /* border: 1px solid #1e2136; */
+  border: 1px solid #e1dec9;
   border-radius: 2rem;
   /* opacity: 0.9; */
-  background: #16182e;
+  /* background: #16182e; */
+  /* arsinoe */
+  background: #e9e7d1;
   padding: 1.5rem;
   padding-top: 0;
   text-align: left;

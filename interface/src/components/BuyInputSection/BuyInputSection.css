@@ -14,7 +14,9 @@
   align-items: center;
   border-radius: 0.4rem;
   /* padding: 0.5rem 0; */
-  color: #ffffff;
+  /* color: #ffffff; */
+  /* arsinoe */
+  color: #000000;
   min-width: 4.65rem;
   font-size: 1.9rem;
   line-height: 2.5rem;
@@ -68,5 +70,7 @@
 }
 
 .buy-input .Exchange-swap-balance {
-  color: white;
+  /* color: white; */
+  /* arsinoe */
+  color: black;
 }

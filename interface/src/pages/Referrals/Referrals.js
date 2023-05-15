@@ -122,7 +122,7 @@ function Referrals({ connectWallet, setPendingTxns, pendingTxns }) {
             <div className="Page-description">
               <Trans>
                 Get fee discounts and earn rebates through the POOPE referral program. For more information, please read the{" "}
-                <ExternalLink href="https://bluespadexyz.gitbook.io/bluespade/referrals">referral program details</ExternalLink>.
+                <ExternalLink href="#">referral program details</ExternalLink>.
               </Trans>
             </div>
           </div>

@@ -113,7 +113,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
               </BuyLink> */}
             </div>
             <a
-              href="https://bluespadexyz.gitbook.io/bluespade/usdplp"
+              href="#"
               target="_blank"
               rel="noreferrer"
               className="default-btn read-more"

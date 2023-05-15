@@ -36,7 +36,7 @@ export default function BuyGlp(props) {
           </div>
           <div className="Page-description">
             {/* <Trans> */}
-              Purchase <ExternalLink href="https://bluespadexyz.gitbook.io/bluespade/usdplp">PLP tokens</ExternalLink> to earn{" "}
+              Purchase <ExternalLink href="#">PLP tokens</ExternalLink> to earn{" "}
               {nativeTokenSymbol} fees from swaps and leverages trading.
             {/* </Trans> */}
             <br />

@@ -309,7 +309,7 @@ function UnstakeModal(props) {
         {burnAmount && burnAmount.gt(0) && rewardReductionBasisPoints && rewardReductionBasisPoints.gt(0) && (
           <div className="Modal-note">
             Unstaking will burn&nbsp;
-            <a href="https://bluespadexyz.gitbook.io/bluespade/rewards" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               {formatAmount(burnAmount, 18, 4, true)} Multiplier Points
             </a>
             .&nbsp;
@@ -1317,7 +1317,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           return (
             <Trans>
               Boost your rewards with Multiplier Points.&nbsp;
-              <a href="https://bluespadexyz.gitbook.io/bluespade/rewards#multiplier-points" rel="noreferrer" target="_blank">
+              <a href="#" rel="noreferrer" target="_blank">
                 More info
               </a>
               .
@@ -2093,7 +2093,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
               Convert esPOOPE tokens to POOPE tokens.
               <br />
               Please read the{" "}
-              <a href="https://bluespadexyz.gitbook.io/bluespade/rewards" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 vesting details
               </a>{" "}
               before using the vaults.

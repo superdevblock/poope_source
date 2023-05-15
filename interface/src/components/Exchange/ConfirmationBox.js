@@ -666,7 +666,7 @@ export default function ConfirmationBox(props) {
                         <br />
                         <Trans>
                           This is the network cost required to execute the postion.{" "}
-                          <ExternalLink href="https://bluespadexyz.gitbook.io/bluespade/trading#execution-fee">
+                          <ExternalLink href="#">
                             More Info
                           </ExternalLink>
                         </Trans>

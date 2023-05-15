@@ -410,7 +410,7 @@ export default function DashboardV2() {
               )}
               <br />
               <div>
-                <ExternalLink href="https://bluespadexyz.gitbook.io/bluespade/">
+                <ExternalLink href="#">
                   <Trans>More Info</Trans>
                 </ExternalLink>
               </div>

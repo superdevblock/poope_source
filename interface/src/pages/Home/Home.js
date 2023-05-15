@@ -354,7 +354,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           <div className="Home-faqs-introduction">
             <div className="Home-faqs-introduction__title">FAQs</div>
             <div className="Home-faqs-introduction__description">Most asked questions. If you wish to learn more, please head to our Documentation page.</div>
-            <a href="https://bluespadexyz.gitbook.io/bluespade/" className="default-btn Home-faqs-documentation">Documentation</a>
+            <a href="#" className="default-btn Home-faqs-documentation">Documentation</a>
           </div>
           <div className="Home-faqs-content-block">
             {
