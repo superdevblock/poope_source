@@ -62,53 +62,50 @@ async function main() {
     //     "ADA",
     //     "USD"), "PriceFeedExt.initialize")
 
-    const PriceFeedExt = await deployContract("PriceFeedExt", ["DOGE Price by Pyth network", "8"])
+    const PriceFeedExt_pepe = await deployContract("PriceFeedExt", ["PEPE Price by UniSwap V2", "18"]);
+    await sendTxn(PriceFeedExt_pepe.initialize(
+        "0x6982508145454ce325ddbe47a25d4ec3d2311933", 
+        "0xa43fe16908251ee70ef74718545e4fe6c5ccec9f",
 
-    await sendTxn(PriceFeedExt.initialize(
-        false, 
-        "0xe0d0e68297772dd5a1f1d99897c581e2082dba5b",
-        "1000",
-        "0xdcef50dd0a4cd2dcc17e45df1676dcb336a11a61c69df7a0299b0150c672d25c",
-        "0xDA7a001b254CD22e46d3eAB04d937489c93174C3",
-        "DOGE",
-        "USD"), "PriceFeedExt.initialize")
+        "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    ), "PriceFeedExt.initialize");
 
+    const PriceFeedExt_wojak = await deployContract("PriceFeedExt", ["WOJAK Price by UniSwap V2", "18"]);
+    await sendTxn(PriceFeedExt_wojak.initialize(
+        "0x5026f006b85729a8b14553fae6af249ad16c9aab", 
+        "0x0f23d49bc92ec52ff591d091b3e16c937034496e",
 
-    // const PriceFeedExt = await deployContract("PriceFeedExt", ["DAI Price by Band protocol", "8"])
-    // const PriceFeedExt = await contractAt("PriceFeedExt", "0x0F9A22f13f234373099B0D65368947e592bB0978");
+        "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    ), "PriceFeedExt.initialize");
 
-    // await sendTxn(PriceFeedExt.initialize(
-    //     true, 
-    //     "0xe0d0e68297772dd5a1f1d99897c581e2082dba5b",
-    //     "1000",
-    //     "0xb0948a5e5313200c632b51bb5ca32f6de0d36e9950a942d19751e833f70dabfd",
-    //     "0xDA7a001b254CD22e46d3eAB04d937489c93174C3",
-    //     "DAI",
-    //     "USD"), "PriceFeedExt.initialize")
+    const PriceFeedExt_mong = await deployContract("PriceFeedExt", ["MONG Price by UniSwap V2", "18"]);
+    await sendTxn(PriceFeedExt_bob.initialize(
+        "0x1ce270557c1f68cfb577b856766310bf8b47fd9c", 
+        "0x7054b0f980a7eb5b3a6b3446f3c947d80162775c",
 
+        "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    ), "PriceFeedExt.initialize");
 
-    // const PriceFeedExt = await deployContract("PriceFeedExt", ["USDT Price by Pyth network", "8"])
+    const PriceFeedExt_ladys = await deployContract("PriceFeedExt", ["LADYS Price by UniSwap V2", "18"]);
+    await sendTxn(PriceFeedExt_ladys.initialize(
+        "0x12970e6868f88f6557b76120662c1b3e50a646bf", 
+        "0xcbe856765eeec3fdc505ddebf9dc612da995e593",
 
-    // await sendTxn(PriceFeedExt.initialize(
-    //     false, 
-    //     "0xe0d0e68297772dd5a1f1d99897c581e2082dba5b",
-    //     "1000",
-    //     "0x2b89b9dc8fdf9f34709a5b106b472f0f39bb6ca9ce04b0fd7f2e971688e2e53b",
-    //     "0xDA7a001b254CD22e46d3eAB04d937489c93174C3",
-    //     "USDT",
-    //     "USD"), "PriceFeedExt.initialize")
+        "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    ), "PriceFeedExt.initialize");
 
+    const PriceFeedExt_bob = await deployContract("PriceFeedExt", ["BOB Price by UniSwap V2", "18"]);
+    await sendTxn(PriceFeedExt_bob.initialize(
+        "0x7d8146cf21e8d7cbe46054e01588207b51198729", 
+        "0xbe8bc29765e11894f803906ee1055a344fdf2511",
 
-    // const PriceFeedExt = await deployContract("PriceFeedExt", ["USDC Price by Pyth network", "8"])
-
-    // await sendTxn(PriceFeedExt.initialize(
-    //     false, 
-    //     "0xe0d0e68297772dd5a1f1d99897c581e2082dba5b",
-    //     "1000",
-    //     "0xeaa020c61cc479712813461ce153894a96a6c00b21ed0cfc2798d1f9a9e9c94a",
-    //     "0xDA7a001b254CD22e46d3eAB04d937489c93174C3",
-    //     "USDC",
-    //     "USD"), "PriceFeedExt.initialize")
+        "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    ), "PriceFeedExt.initialize");
 }
 
 main()

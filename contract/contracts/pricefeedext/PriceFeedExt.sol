@@ -1,48 +1,32 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "@pythnetwork/pyth-sdk-solidity/IPyth.sol";
-
-interface IBand {
-    function getReferenceData(string memory _base, string memory _quote) external view returns (ReferenceData memory);
-}
-
-struct ReferenceData {
-    uint256 rate; // base/quote exchange rate, multiplied by 1e18.
-    uint256 lastUpdatedBase; // UNIX epoch of the last time when base price gets updated.
-    uint256 lastUpdatedQuote; // UNIX epoch of the last time when quote price gets updated.
-}
+import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 struct PriceInfo {
-    // Price
     uint256 price;
-    // Confidence interval around the price
     uint256 conf;
 }
 
 contract PriceFeedExt {
     address public gov;
+
     uint8 public decimals = 8;
     string public description;
 
-    bool public bBandUse = false; // false: Pyth Usage, true: Band Usage
+    address public tokenAddress;
+    address public pairAddress;
+    address public wethAddress;
 
-    IPyth public pythNetwork;
-    uint public maxPythPriceAge;
-    bytes32 public pythPriceId;
-
-    IBand public bandProtocol;
-    string public bandPriceBase;
-    string public bandPriceQuote;
-
-    int256 answer;
+    AggregatorV3Interface internal ethPriceFeed;
 
     modifier onlyGov() {
         require(msg.sender == gov, "Not Governor");
         _;
     }
 
-    constructor (string memory _description, uint8 _decimals) {
+    constructor(string memory _description, uint8 _decimals) {
         gov = msg.sender;
 
         description = _description;
@@ -50,25 +34,40 @@ contract PriceFeedExt {
     }
 
     function initialize(
-        bool _bBandUse,
-
-        IPyth _pythNetwork,
-        uint _maxPythPriceAge,
-        bytes32 _pythPriceId,
-
-        IBand _bandProtocol,
-        string memory _bandPriceBase,
-        string memory _bandPriceQuote
+        address _token,
+        address _pair,
+        address _ethPriceFeed,
+        address _weth
     ) external onlyGov {
-        bBandUse = _bBandUse;
+        tokenAddress = _token;
+        pairAddress = _pair;
+        wethAddress = _weth;
 
-        pythNetwork = _pythNetwork;
-        maxPythPriceAge = _maxPythPriceAge;
-        pythPriceId = _pythPriceId;
+        ethPriceFeed = AggregatorV3Interface(_ethPriceFeed);
+    }
 
-        bandProtocol = _bandProtocol;
-        bandPriceBase = _bandPriceBase;
-        bandPriceQuote = _bandPriceQuote;
+    function getETHPrice() public view returns (int256) {
+        (, int256 price, , , ) = ethPriceFeed.latestRoundData();
+
+        return price;
+    }
+
+    function latestAnswer() external view returns (PriceInfo memory priceInfo) {
+        int256 _ethPrice = getETHPrice();
+        uint256 ethPrice = uint256(_ethPrice);
+
+        uint256 tokenAmount = ERC20(tokenAddress).balanceOf(pairAddress);
+        uint8 tokenDecimal = ERC20(tokenAddress).decimals();
+        uint256 wethAmount = ERC20(wethAddress).balanceOf(pairAddress);
+
+        uint8 ethDecimal = ethPriceFeed.decimals();
+
+        uint256 price = ((wethAmount / 1e18) *
+            (ethPrice / (10 ** ethDecimal)) *
+            (10 ** decimals)) / (tokenAmount / (10 ** tokenDecimal));
+
+        priceInfo.price = price;
+        priceInfo.conf = price / 5000;
     }
 
     function setGov(address newGov) external onlyGov {
@@ -85,53 +84,19 @@ contract PriceFeedExt {
         decimals = newDecimals;
     }
 
-    function latestAnswer() external view returns (PriceInfo memory priceInfo) {
-        if (!bBandUse) {
-            require(address(pythNetwork) != address(0), "PriceFeedExt: pyth network address is not configured");
-            require(pythPriceId != bytes32(0), "PriceFeedExt: price id not configured for given token");
-            PythStructs.Price memory priceDataByPyth = pythNetwork.getPriceNoOlderThan(pythPriceId, maxPythPriceAge);
-            require(priceDataByPyth.price > 0, "PriceFeedExt: pyth invalid price");
-            uint32 priceExponent = uint32(-priceDataByPyth.expo);
-
-            priceInfo.price = uint256(int256(int64(priceDataByPyth.price))) * (10 ** decimals) / (10 ** priceExponent);
-            priceInfo.conf = uint256(int256(int64(priceDataByPyth.conf))) * (10 ** decimals) / (10 ** priceExponent);
-        } else {
-            require(address(bandProtocol) != address(0), "PriceFeedExt: band protocol address is not configured");
-            require(bytes(bandPriceBase).length != 0, "PriceFeedExt: pand price base not configured for given token");
-            require(bytes(bandPriceQuote).length != 0, "PriceFeedExt: pand price quote not configured for given token");
-            ReferenceData memory priceDataByBand = bandProtocol.getReferenceData(bandPriceBase, bandPriceQuote);
-            require(priceDataByBand.rate > 0, "PriceFeedExt: band invalid price");
-
-            priceInfo.price = priceDataByBand.rate * (10 ** decimals) / 1e18;
-            priceInfo.conf = (priceDataByBand.rate / 5000) * (10 ** decimals) / 1e18;
-        }
+    function setTokenAddress(address _token) external onlyGov {
+        tokenAddress = _token;
     }
 
-    function setBandUse(bool _bBandUse) external onlyGov {
-        bBandUse = _bBandUse;
+    function setPairAddress(address _pair) external onlyGov {
+        pairAddress = _pair;
     }
 
-    function setPythNetwork(IPyth _pythNetwork) external onlyGov {
-        pythNetwork = _pythNetwork;
+    function setEthAddress(address _weth) external onlyGov {
+        wethAddress = _weth;
     }
 
-    function setMaxPythPriceAge(uint _maxPythPriceAge) external onlyGov {
-        maxPythPriceAge = _maxPythPriceAge;
-    }
-
-    function setPythPriceId(bytes32 _priceId) external onlyGov {
-        pythPriceId = _priceId;
-    }
-
-    function setBandProtocol(IBand _bandProtocol) external onlyGov {
-        bandProtocol = _bandProtocol;
-    }
-
-    function setBandPriceBase(string memory _bandPriceBase) external onlyGov {
-        bandPriceBase = _bandPriceBase;
-    }
-
-    function setBandPriceQuote(string memory _bandPriceQuote) external onlyGov {
-        bandPriceQuote = _bandPriceQuote;
+    function setEthPriceFeed(address _ethPriceFeed) external onlyGov {
+        ethPriceFeed = AggregatorV3Interface(_ethPriceFeed);
     }
 }
